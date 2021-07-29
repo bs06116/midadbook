@@ -187,6 +187,30 @@ i.badge1 {
 .main-div{
   padding-left: 25px !important;
   padding-right: 0px !important;
+  padding-bottom: 30px;
+}
+.add-head{
+  padding-top: 10px;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+  background-color: #F1FBF3;
+  margin-top: -24px;
+}
+
+.form-row{
+  padding: 0px 15px !important;
+}
+.form-col{
+  padding: 0px 15px !important;
+  border: 1px solid !important;
+   border-radius: 50px !important;
+}
+.form-col .form-bor{
+  border:none !important
+}
+.form-col select{
+  float: right;
+  border:none !important
 }
 .upload-img{
   margin-top: 10px;
@@ -195,6 +219,17 @@ i.badge1 {
   padding: 20px 10px;
   background-color: #F7F3F4;
   border-radius: 10px;
+}
+.submit-btn{
+  background-color: #0DA81E !important;
+  color: #fff !important;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff !important;
+  border-color: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 @media(max-width: 320px)
 {
@@ -254,6 +289,9 @@ i.badge1 {
   }
   .twitter{
     line-height: 120px !important;
+  }
+  .u-img{
+    padding-right: 13px;
   }
 }
 @media(min-width: 321px)
@@ -315,6 +353,9 @@ i.badge1 {
   .twitter{
     line-height: 110px !important;
   }
+  .u-img{
+    padding-left: 5px;
+  }
 }
 @media(min-width: 376px)
 {
@@ -355,6 +396,9 @@ i.badge1 {
   .twitter{
     line-height: 120px !important;
   }
+  .u-img{
+    padding-left: 20px;
+  }
 }
 @media(min-width: 426px)
 {
@@ -378,7 +422,9 @@ i.badge1 {
   .social-links{
     display: block !important;
   }
- 
+  .u-img{
+    padding-left: 20px;
+  }
   
 }
 @media(min-width: 768px)
@@ -400,8 +446,11 @@ i.badge1 {
     font-size: 15px;
   }
   .plus-icon{
-    line-height: 37.5px !important;
+    line-height: 28.5px !important;
     margin-right: 5px !important;
+  }
+  .u-img{
+    padding-left: 20px;
   }
 }
 @media(min-width: 1024px)
@@ -412,11 +461,17 @@ i.badge1 {
   .btn-div{
     padding-right: 70px !important;
   }
+  .u-img{
+    padding-left: 45px;
+  }
 }
 @media(min-width: 1440px)
 {
   .btn-div{
     padding-right: 100px !important;
+  }
+  .u-img{
+    padding-left: 100px;
   }
 }
 @media(min-width: 2560px)

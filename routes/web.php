@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'HomeController@index');
+Route::get('/post/create', 'PostController@create')->name('post/create');
 
 // Route::get('/', function () {
 //     return view('welcome');

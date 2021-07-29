@@ -223,6 +223,7 @@ i.badge1 {
 .submit-btn{
   background-color: #0DA81E !important;
   color: #fff !important;
+  border-radius: 50px !important;
 }
 .form-control:focus {
   color: #495057;

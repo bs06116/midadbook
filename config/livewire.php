@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'asset_url' => 'http://localhost/book/public',
+    'asset_url' => 'http://localhost/midadbook/public',
 
     /*
     |--------------------------------------------------------------------------

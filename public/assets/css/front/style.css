@@ -1,0 +1,427 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background: #5d001d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.nav-btn {
+  background-color: hsl(126deg 87% 35%);
+  padding-right: 1px;
+}
+.nav1-btn{
+  background-color: hsl(126deg 87% 35%);
+  padding-right: 1px;
+}
+.nav-btn i {
+  background-color: hsl(126deg 83% 33%);
+  border-radius: 0 15px 15px 0px;
+  padding: 8px 10px 8px 10px;
+  margin-left: 10px;
+}
+.nav1-btn i {
+  background-color: hsl(126deg 83% 33%);
+  border-radius: 0 15px 15px 0px;
+  padding: 8px 10px 8px 10px;
+  margin-left: 10px;
+}
+
+.main {
+  background: #f3ece4;
+  justify-content: center;
+  
+}
+.main form div {
+  background: #fff;
+
+  padding-top: 2px;
+  padding-left: 2px;
+}
+.main form div input {
+  width: 90%;
+  padding: 5px;
+  border: none;
+}
+.main form div input:focus {
+  outline: none;
+}
+.main form div i {
+  font-size: 20px;
+  padding: 7px 15px;
+  background-color: #f3f5f4;
+  color: #5d001d;
+}
+.post-container {
+  background: #fff;
+  border-radius: 20px;
+}
+.post-container .user-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.user-info {
+  position: absolute;
+ 
+  margin-top: -10px;
+}
+.user-img {
+  position: absolute;
+  
+  margin: -10px;
+}
+.butn button {
+  background: #f3ece4;
+  color: #5d001d;
+  border: 1px solid #5d001d;
+  font-weight: bold;
+}
+
+.post-img img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.post-icon {
+  display: flex;
+  width: 100%;
+  font-weight: 500;
+}
+.post-icon .whatsapp {
+  width: 50%;
+  
+  text-align: left;
+}
+.post-icon p {
+  width: 25%;
+  text-align: right;
+}
+.post-icon p img {
+  margin-bottom: 4px;
+}
+.user-name p {
+  padding-bottom: 0px !important;
+}
+.user-name {
+  vertical-align: middle;
+}
+.login-nav .user-profile-img {
+  width: 40%;
+  text-align: right;
+  vertical-align: middle;
+}
+.login-nav div {
+  width: 25%;
+}
+.notifaction-icon {
+  justify-content: space-evenly;
+}
+.notifaction-icon div {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background: #68122d;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 12px !important;
+}
+.notifaction-icon div img {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+}
+
+i.badge1 {
+  position: relative;
+  padding: 0px 8px;
+  left: 20px;
+  bottom: 35px;
+  border-radius: 50%;
+  color: white;
+  background-color: green !important;
+}
+.profile {
+  background: #fff;
+  border-radius: 20px;
+  margin-top: 100px;
+  padding: 20px;
+}
+.profile-info .profile-img {
+  margin-top: -60px;
+}
+.profile-info h6 {
+  font-weight: bold;
+}
+.social-links {
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+.good-reads {
+  background: #f8f3f0;
+  border-radius: 10px;
+  padding: 15px 30px;
+}
+.twitter {
+  padding: 10px 70px;
+  background: #edf8fe;
+  font-size: 30px;
+  border-radius: 10px;
+}
+.counting {
+  background: #fff6d5 !important;
+  padding: 10px 50px !important;
+  border-radius: 10px !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+.counting span {
+  font-size: 16px;
+  font-weight: normal;
+}
+.main-div{
+  padding-left: 25px !important;
+  padding-right: 0px !important;
+}
+.upload-img{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #8080806b;
+  padding: 20px 10px;
+  background-color: #F7F3F4;
+  border-radius: 10px;
+}
+@media(max-width: 320px)
+{
+  .post-title h4{
+    font-size: 17px !important;
+  }
+  .post-title p{
+    font-size: 11px !important;
+  }
+  
+  .post-icon .whatsapp{
+    width: 100%;
+    display: flex;
+  }
+  .post-icon .message{
+    width: 100%;
+    display: flex;
+  }
+  .post-icon .heart{
+    width: 100%;
+    display: flex;
+  }
+  .user-info{
+    right: 26% !important;
+    font-size: 10px !important;
+  }
+  .user-img{
+    right: 11% !important;
+  }
+  .main form div input{
+    width: 78%;
+  }
+  .main form div {
+    margin-top: 10px;
+  }
+  .nav-btn{
+    font-size: 9px;
+  }
+  .nav1-btn{
+    font-size: 9px;
+    display: inline-flex;
+  }
+  .butn button{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 12px;
+  }
+  .plus-icon{
+    line-height: 27.5px !important;
+    margin-right: 5px !important;
+  }
+  .login-user{
+    padding-left: 2.25rem !important;
+  }
+  .social-links{
+    display: block;
+  }
+  .twitter{
+    line-height: 120px !important;
+  }
+}
+@media(min-width: 321px)
+{
+  .post-title h4{
+    font-size: 17px !important;
+  }
+  .post-title p{
+    font-size: 11px !important;
+  }
+  
+  .post-icon .whatsapp{
+    width: 100%;
+    display: flex;
+  }
+  .post-icon .message{
+    width: 100%;
+    display: flex;
+  }
+  .post-icon .heart{
+    width: 100%;
+    display: flex;
+  }
+  .user-info{
+    right: 23% !important;
+    font-size: 10px !important;
+  }
+  .user-img{
+    right: 11% !important;
+  }
+  .main form div input{
+    width: 78%;
+  }
+  .main form div {
+    margin-top: 10px;
+  }
+  .nav-btn{
+    font-size: 9px;
+  }
+  .nav1-btn{
+    font-size: 9px;
+    display: inline-flex;
+  }
+  .butn button{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    font-size: 15px;
+  }
+  .plus-icon{
+    line-height: 27.5px !important;
+    margin-right: 5px !important;
+  }
+  .login-user{
+    padding-left: 2.25rem !important;
+  }
+  .social-links{
+    display: block;
+  }
+  .twitter{
+    line-height: 110px !important;
+  }
+}
+@media(min-width: 376px)
+{
+  .user-info{
+    right: 22% !important;
+  }
+  .user-img{
+    right: 10% !important;
+  }
+  .main form div input{
+    width: 78%;
+  }
+  .main form div {
+    margin-top: 10px;
+  }
+  .nav-btn{
+    font-size: 9px;
+  }
+  .nav1-btn{
+    font-size: 9px;
+    display: inline-flex;
+  }
+  .butn button{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    font-size: 15px;
+  }
+  .plus-icon{
+    line-height: 27.5px !important;
+    margin-right: 5px !important;
+  }
+  .login-user{
+    padding-left: 2.25rem !important;
+  }
+  .social-links{
+    display: block;
+  }
+  .twitter{
+    line-height: 120px !important;
+  }
+}
+@media(min-width: 426px)
+{
+  .user-info{
+    font-size: 16px !important;
+    right: 22% !important;
+  }
+  .user-img{
+    right: 11% !important;
+  }
+  .nav-btn{
+    font-size: 9px;
+  }
+  .nav1-btn{
+    font-size: 9px;
+  }
+  .plus-icon{
+    line-height: 27.5px !important;
+    margin-right: 5px !important;
+  }
+  .social-links{
+    display: block !important;
+  }
+ 
+  
+}
+@media(min-width: 768px)
+{
+  .user-info{
+    font-size: 16px !important;
+    right: 19% !important;
+  }
+  .user-img{
+    right: 11% !important;
+  }
+  .btn-div{
+    padding-right: 50px !important;
+  }
+  .nav-btn{
+    font-size: 15px;
+  }
+  .nav1-btn{
+    font-size: 15px;
+  }
+  .plus-icon{
+    line-height: 37.5px !important;
+    margin-right: 5px !important;
+  }
+}
+@media(min-width: 1024px)
+{
+  .main form div input{
+    width: 88%;
+  }
+  .btn-div{
+    padding-right: 70px !important;
+  }
+}
+@media(min-width: 1440px)
+{
+  .btn-div{
+    padding-right: 100px !important;
+  }
+}
+@media(min-width: 2560px)
+{
+  .btn-div{
+    padding-right: 180px !important;
+  }
+}

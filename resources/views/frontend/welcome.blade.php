@@ -4,8 +4,8 @@
 
 <div class="container-fluid main">
     <div class="row w-100">
-        <div class="col-xs-2 col-sm-2   col-md-3 col-lg-3"></div>
-        <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 main-div">
+        <div class="col-xs-1 col-sm-2   col-md-3 col-lg-3"></div>
+        <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6 main-div">
             <!-- search input -->
             <form>
                 <div class="text-center rounded-pill py-1">
@@ -41,18 +41,21 @@
                 <div class="post-img">
                     <img src="{{asset('assets/img/front/book_cover_img1.jpg') }}" alt="">
                 </div>
-
-                <div class="post-icon pt-3 mx-auto">
-
+                    <div class="row f-post pt-2">
+                    <div class="col-6">
                     <p class="whatsapp mr-2">1005345423 <img src="{{asset('assets/img/front/whatsapp_ic.png') }}" alt=""></p>
-
-                    <p class="message ml-2 ">100 <img src="{{asset('assets/img/front/comment_ic.png') }}" alt=""></p>
-                    <p class=" heart ml-2 ">100 <img src="{{asset('assets/img/front/heart_line.png') }}" alt=""></p>
-
-                </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row d-flex">
+                        <div class="col-6 "><p class="message  ">100 <img src="{{asset('assets/img/front/comment_ic.png') }}" alt=""></p></div>
+                    <div class="col-6"><p class=" heart  ">100 <img src="{{asset('assets/img/front/heart_line.png') }}" alt=""></p></div>
+                        </div>
+                    </div>
+                    
+                    </div>
             </div>
 
-            <div class="post-container mt-4 px-4 pt-4">
+            <div class="post-container mt-4 px-2 pt-4">
 
                 <div class=" ">
                     <div class="butn d-inline">
@@ -64,7 +67,7 @@
                         <span class="d-block text-right text-muted">hello</span>
                     </div>
                     <img src="{{asset('assets/img/front/profile_thumbnail2.png') }}" class="user-img " alt="">
-                    <hr>
+                    <hr >
 
                 </div>
 
@@ -78,19 +81,24 @@
                 <div class="post-img">
                     <img src="{{asset('assets/img/front/book_cover_img2.jpg') }}" alt="">
                 </div>
-
-                <div class="post-icon pt-3">
-                    <p class="whatsapp mr-2">1005345423<img src="{{asset('assets/img/front/whatsapp_ic.png') }}" alt=""></p>
-
-                    <p class="message mr-1"> 105 <img src="{{asset('assets/img/front/comment_ic.png') }}" alt=""></p>
-                    <p class="heart pr-4 ml-1">100 <img src="{{asset('assets/img/front/heart_line.png') }}" alt=""></p>
-
-                </div>
+                <div class="row f-post pt-2">
+                    <div class="col-6">
+                    <p class="whatsapp mr-2">1005345423 <img src="{{asset('assets/img/front/whatsapp_ic.png') }}" alt=""></p>
+                    </div>
+                    <div class="col-6">
+                        <div class="row d-flex">
+                        <div class="col-6 "><p class="message  ">100 <img src="{{asset('assets/img/front/comment_ic.png') }}" alt=""></p></div>
+                    <div class="col-6"><p class=" heart  ">100 <img src="{{asset('assets/img/front/heart_line.png') }}" alt=""></p></div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                
             </div>
 
 
         </div>
-        <div class="col-xs-2  col-sm-2 col-md-3 col-lg-3"></div>
+        <div class="col-xs-1  col-sm-2 col-md-3 col-lg-3"></div>
     </div>
 
 </div>

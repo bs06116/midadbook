@@ -234,6 +234,10 @@ i.badge1 {
 }
 @media(max-width: 320px)
 {
+  .f-post{
+    font-size: 8px;
+    font-weight: bold;
+  }
   .post-title h4{
     font-size: 17px !important;
   }
@@ -254,11 +258,11 @@ i.badge1 {
     display: flex;
   }
   .user-info{
-    right: 26% !important;
+    right: 19% !important;
     font-size: 10px !important;
   }
   .user-img{
-    right: 11% !important;
+    right: 5% !important;
   }
   .main form div input{
     width: 78%;
@@ -292,7 +296,10 @@ i.badge1 {
     line-height: 120px !important;
   }
   .u-img{
-    padding-right: 13px;
+    padding-right: 23px;
+  }
+  .upload-icon{
+    padding: 11px;
   }
 }
 @media(min-width: 321px)
@@ -317,11 +324,11 @@ i.badge1 {
     display: flex;
   }
   .user-info{
-    right: 23% !important;
+    right: 17% !important;
     font-size: 10px !important;
   }
   .user-img{
-    right: 11% !important;
+    right: 5% !important;
   }
   .main form div input{
     width: 78%;
@@ -355,16 +362,19 @@ i.badge1 {
     line-height: 110px !important;
   }
   .u-img{
-    padding-left: 5px;
+    padding-right: 10px;
+  }
+  .upload-icon{
+    padding: 15px;
   }
 }
 @media(min-width: 376px)
 {
   .user-info{
-    right: 22% !important;
+    right: 15% !important;
   }
   .user-img{
-    right: 10% !important;
+    right: 4% !important;
   }
   .main form div input{
     width: 78%;
@@ -398,17 +408,20 @@ i.badge1 {
     line-height: 120px !important;
   }
   .u-img{
-    padding-left: 20px;
+    padding-left: 12px;
+  }
+  .upload-icon{
+    padding: 15px;
   }
 }
 @media(min-width: 426px)
 {
   .user-info{
     font-size: 16px !important;
-    right: 22% !important;
+    right: 15% !important;
   }
   .user-img{
-    right: 11% !important;
+    right: 4% !important;
   }
   .nav-btn{
     font-size: 9px;
@@ -424,7 +437,10 @@ i.badge1 {
     display: block !important;
   }
   .u-img{
-    padding-left: 20px;
+    padding-left: 8px;
+  }
+  .upload-icon{
+    padding: 15px;
   }
   
 }
@@ -432,10 +448,10 @@ i.badge1 {
 {
   .user-info{
     font-size: 16px !important;
-    right: 19% !important;
+    right: 16% !important;
   }
   .user-img{
-    right: 11% !important;
+    right: 5% !important;
   }
   .btn-div{
     padding-right: 50px !important;
@@ -451,11 +467,17 @@ i.badge1 {
     margin-right: 5px !important;
   }
   .u-img{
-    padding-left: 20px;
+    padding-left: 6px;
+  }
+  .upload-icon{
+    padding: 15px;
   }
 }
 @media(min-width: 1024px)
 {
+  .user-info{
+    right: 14% !important;
+  }
   .main form div input{
     width: 88%;
   }
@@ -463,7 +485,10 @@ i.badge1 {
     padding-right: 70px !important;
   }
   .u-img{
-    padding-left: 45px;
+    padding-left: 10px;
+  }
+  .upload-icon{
+    padding: 26px;
   }
 }
 @media(min-width: 1440px)
@@ -472,7 +497,10 @@ i.badge1 {
     padding-right: 100px !important;
   }
   .u-img{
-    padding-left: 100px;
+    padding-left: 20px;
+  }
+  .upload-icon{
+    padding: 42px;
   }
 }
 @media(min-width: 2560px)
@@ -480,4 +508,25 @@ i.badge1 {
   .btn-div{
     padding-right: 180px !important;
   }
+}
+
+
+
+.upload-icon {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #8080806b;
+ 
+  background-color: #F7F3F4;
+  border-radius: 10px;
+  margin: 25px 2px 2px 2px;
+}
+
+.upload-input {
+  position: relative;
+  top: -62px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }

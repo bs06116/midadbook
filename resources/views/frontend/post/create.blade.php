@@ -17,16 +17,37 @@
           </div>
 
 
-          <div class="row gx-5 u-img" >
-            <div class="col-4 text-left  ">
-              <img src="{{asset('assets/img/front/upload_img.png') }}" class=" upload-img" alt="">
+          <div class="row gx-5 u-img " >
+            <div class="col-4 text-center dropzone ">
+              <!-- <img  src="{{asset('assets/img/front/upload_img.png') }}"  class=" upload-img" alt=""> -->
+              
+              
+             <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
+                 <input type="file" class="upload-input" />
+                  
             </div>
-            <div class="col-4 text-left  ">
+            <div class="col-4 text-center dropzone ">
+              <!-- <img  src="{{asset('assets/img/front/upload_img.png') }}"  class=" upload-img" alt=""> -->
+              
+              
+             <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
+                 <input type="file" class="upload-input" />
+                  
+            </div>
+            <div class="col-4 text-center dropzone ">
+              <!-- <img  src="{{asset('assets/img/front/upload_img.png') }}"  class=" upload-img" alt=""> -->
+              
+              
+             <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
+                 <input type="file" class="upload-input" />
+                  
+            </div>
+            <!-- <div class="col-4 text-left  ">
               <img src="{{asset('assets/img/front/upload_img.png') }}" class=" upload-img" alt="">
             </div>
             <div class="col-4 text-left ">
               <img src="{{asset('assets/img/front/upload_img.png') }}" class=" upload-img" alt="">
-            </div>
+            </div> -->
           </div>
 
 

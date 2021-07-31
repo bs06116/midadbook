@@ -23,7 +23,7 @@
         </div>
     </nav>
     <div class="col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 text-center ">
-        <a class="navbar-brand text-light" href="#"><img src="assets/midad_ul_maktaba_logo_header.png" alt=""></a>
+        <a class="navbar-brand text-light" href="#"><img src="{{asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
     </div>
     <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 text-right btn-div">
         <button class="  border nav-btn rounded-pill pull-right mr-4 mt-3 text-light "><span class="p-3">Hello</span> <i

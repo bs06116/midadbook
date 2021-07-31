@@ -17,17 +17,12 @@ class Showposts extends Component
     public function loadPosts()
     {
        // $this->readyToLoad = true;
-        $this->perPage = $this->perPage + 5;
+        $this->perPage = $this->perPage + 15;
 
     }
     public function render()
     {
-
-        $posts = Post::orderBy('id','asc')->paginate($this->perPage);
-        //$this->emit('showpostStore');
+        $posts = Post::with(['user','category'])->paginate($this->perPage);
         return view('livewire.showposts',['posts' => $posts]);
-        // return view('livewire.showposts', [
-        //     'posts' => Post::all()
-        // ]);
     }
 }

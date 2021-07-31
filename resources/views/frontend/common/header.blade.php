@@ -1,6 +1,8 @@
-<header class="d-flex">
+<div class="container-fluid ">
+    <div class="row py-2 d-flex text-center">
+        <div class=" col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 ">
 
-    <nav class="navbar navbar-expand-lg navbar-light py-3 w-100">
+    <nav class="px-1 navbar navbar-expand-lg navbar-light  w-100">
         <div class="container-fluid">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -22,11 +24,13 @@
 
         </div>
     </nav>
-    <div class="col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 text-center ">
-        <a class="navbar-brand text-light" href="#"><img src="{{asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
     </div>
-    <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 text-right btn-div">
-        <button class="  border nav-btn rounded-pill pull-right mr-4 mt-3 text-light "><span class="p-3">Hello</span> <i
+    <div class="  col-4 col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center logo ">
+        <a class="px-4 navbar-brand text-light" href="#"><img src="{{asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
+    </div>
+    <div class="pt-1 col-5 col-xs-5 col-sm-5 col-md-4 col-lg-4 col-xl-4  btn-div">
+        <button class="d-flex mx-auto px-4 py-1   nav-btn rounded-pill pull-right  mt-2 text-light "><span class="mt-1">Hello</span> <i
                 class=" pull-right  fa fa-plus" aria-hidden="true"></i></button>
     </div>
-</header>
+    </div>
+</div>

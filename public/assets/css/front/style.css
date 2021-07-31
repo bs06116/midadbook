@@ -3,13 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-header {
+.container-fluid {
+  font-family: 'DIN NEXT™';
+  font-style: ARABIC LIGHT;
   background: #5d001d;
   color: #fff;
   overflow-x: hidden;
 }
 
 .nav-btn {
+  border: none !important;
   background-color: hsl(126deg 87% 35%);
   padding-right: 1px;
 }
@@ -232,6 +235,10 @@ i.badge1 {
   outline: 0 !important;
   box-shadow: none !important;
 }
+.navbar-collapse ul li{
+  border: 1.5px solid #ffffff99 !important;
+}
+
 @media(max-width: 320px)
 {
   .f-post{
@@ -489,6 +496,9 @@ i.badge1 {
   }
   .upload-icon{
     padding: 26px;
+  }
+  .btn-div .nav-btn{
+    margin-left: 180px !important;
   }
 }
 @media(min-width: 1440px)

@@ -13,10 +13,10 @@
             <div class="collapse navbar-collapse col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4  ml-4"
                 id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item px-2 border rounded-pill mr-2 ">
+                    <li class="nav-item px-4 border rounded-pill mr-2 ">
                         <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item px-2 border rounded-pill">
+                    <li class="nav-item px-4 border rounded-pill">
                         <a class="nav-link text-light" href="#">About</a>
                     </li>
                 </ul>
@@ -29,8 +29,8 @@
         <a class="px-4 navbar-brand text-light" href="#"><img src="{{asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
     </div>
     <div class="pt-1 col-5 col-xs-5 col-sm-5 col-md-4 col-lg-4 col-xl-4  btn-div">
-        <button class="d-flex mx-auto px-4 py-1   nav-btn rounded-pill pull-right  mt-2 text-light "><span class="mt-1">Hello</span> <i
-                class=" pull-right  fa fa-plus" aria-hidden="true"></i></button>
+        <button class="d-flex mx-auto    nav-btn rounded-pill pull-right  mt-2 text-light "><span class="px-4 ">Hello</span> <i
+                class="py-2 pull-right  fa fa-plus" aria-hidden="true"></i></button>
     </div>
     </div>
 </div>

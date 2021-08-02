@@ -2,16 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: arabic-bold;;
+}
+@font-face {
+  font-family: arabic-bold;
+  src: url('../../fonts/DIN\ NEXT™\ ARABIC\ REGULAR.otf');
 }
 .container-fluid {
   font-family: 'DIN NEXT™';
   font-style: ARABIC LIGHT;
   background: #5d001d;
-  color: #fff;
   overflow-x: hidden;
 }
 
 .nav-btn {
+  
   border: none !important;
   background-color: hsl(126deg 87% 35%);
   padding-right: 1px;
@@ -23,7 +28,7 @@
 .nav-btn i {
   background-color: hsl(126deg 83% 33%);
   border-radius: 0 15px 15px 0px;
-  padding: 8px 10px 8px 10px;
+  padding: 9px 10px !important;
   margin-left: 10px;
 }
 .nav1-btn i {
@@ -56,7 +61,7 @@
   font-size: 20px;
   padding: 7px 15px;
   background-color: #f3f5f4;
-  color: #5d001d;
+  color: #5C2E3D;
 }
 .post-container {
   background: #fff;
@@ -73,13 +78,18 @@
  
   margin-top: -10px;
 }
+.user-info h6{
+  color: #5d001d;
+  font-weight: bold;
+}
 .user-img {
   position: absolute;
   
   margin: -10px;
 }
 .butn button {
-  background: #f3ece4;
+  padding-bottom: 4px !important;
+  background: #F6EBEF;
   color: #5d001d;
   border: 1px solid #5d001d;
   font-weight: bold;
@@ -241,6 +251,9 @@ i.badge1 {
 
 @media(max-width: 320px)
 {
+  .btn-div .nav-btn span{
+    margin-top: 4px !important;
+  }
   .f-post{
     font-size: 8px;
     font-weight: bold;
@@ -278,10 +291,10 @@ i.badge1 {
     margin-top: 10px;
   }
   .nav-btn{
-    font-size: 9px;
+    font-size: 11px;
   }
   .nav1-btn{
-    font-size: 9px;
+    font-size: 11px;
     display: inline-flex;
   }
   .butn button{
@@ -311,6 +324,9 @@ i.badge1 {
 }
 @media(min-width: 321px)
 {
+  .btn-div .nav-btn span{
+    margin-top: 4px !important;
+  }
   .post-title h4{
     font-size: 17px !important;
   }
@@ -344,10 +360,10 @@ i.badge1 {
     margin-top: 10px;
   }
   .nav-btn{
-    font-size: 9px;
+    font-size: 15px;
   }
   .nav1-btn{
-    font-size: 9px;
+    font-size: 15px;
     display: inline-flex;
   }
   .butn button{
@@ -377,6 +393,9 @@ i.badge1 {
 }
 @media(min-width: 376px)
 {
+  .btn-div .nav-btn span{
+    margin-top: 4px !important;
+  }
   .user-info{
     right: 15% !important;
   }
@@ -390,7 +409,7 @@ i.badge1 {
     margin-top: 10px;
   }
   .nav-btn{
-    font-size: 9px;
+    font-size: 15px;
   }
   .nav1-btn{
     font-size: 9px;
@@ -423,6 +442,9 @@ i.badge1 {
 }
 @media(min-width: 426px)
 {
+  .btn-div .nav-btn span{
+    margin-top: 4px !important;
+  }
   .user-info{
     font-size: 16px !important;
     right: 15% !important;
@@ -431,7 +453,7 @@ i.badge1 {
     right: 4% !important;
   }
   .nav-btn{
-    font-size: 9px;
+    font-size: 15px;
   }
   .nav1-btn{
     font-size: 9px;
@@ -453,6 +475,9 @@ i.badge1 {
 }
 @media(min-width: 768px)
 {
+  .btn-div .nav-btn span{
+    margin-top: 4px !important;
+  }
   .user-info{
     font-size: 16px !important;
     right: 16% !important;
@@ -464,7 +489,7 @@ i.badge1 {
     padding-right: 50px !important;
   }
   .nav-btn{
-    font-size: 15px;
+    font-size: 18px;
   }
   .nav1-btn{
     font-size: 15px;
@@ -482,6 +507,12 @@ i.badge1 {
 }
 @media(min-width: 1024px)
 {
+  .btn-div .nav-btn span{
+    margin-top: 4px !important;
+  }
+  .nav-btn{
+    font-size: 18px;
+  }
   .user-info{
     right: 14% !important;
   }
@@ -503,6 +534,9 @@ i.badge1 {
 }
 @media(min-width: 1440px)
 {
+  .btn-div .nav-btn span{
+    margin-top: 4px !important;
+  }
   .btn-div{
     padding-right: 100px !important;
   }
@@ -515,6 +549,9 @@ i.badge1 {
 }
 @media(min-width: 2560px)
 {
+  .btn-div .nav-btn span{
+    margin-top: 4px !important;
+  }
   .btn-div{
     padding-right: 180px !important;
   }

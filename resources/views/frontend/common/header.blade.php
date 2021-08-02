@@ -14,10 +14,14 @@
                 id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item px-4 border rounded-pill mr-2 ">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-light" aria-current="page" href="{{route('user/login')}}">  {{__('translation.login')}}
+
+                        </a>
                     </li>
                     <li class="nav-item px-4 border rounded-pill">
-                        <a class="nav-link text-light" href="#">About</a>
+                        <a class="nav-link text-light" href="{{route('user/login')}}">  {{__('translation.signup')}}
+
+                        </a>
                     </li>
                 </ul>
             </div>

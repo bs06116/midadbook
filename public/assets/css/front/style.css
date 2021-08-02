@@ -14,7 +14,25 @@
   background: #5d001d;
   overflow-x: hidden;
 }
-
+.form-col div .twi{
+  background-color: #EDF8FE;
+  color: #1DA1F3;
+  height: 28px;
+  margin-top: 5px !important;
+  border-radius: 100%;
+  padding-top: 10px;
+  width: 30px;
+}
+.form-col div .good{
+  background-color: #E7E3C6;
+ 
+  color: #8A683E;
+  height: 28px;
+  margin-top: 5px !important;
+  border-radius: 100%;
+  padding-top: 10px;
+  width: 30px;
+}
 .nav-btn {
   
   border: none !important;
@@ -221,6 +239,10 @@ i.badge1 {
 .form-col .form-bor{
   border:none !important
 }
+
+.form-link{
+  padding-right: 5px !important
+}
 .form-col select{
   float: right;
   border:none !important
@@ -251,6 +273,13 @@ i.badge1 {
 
 @media(max-width: 320px)
 {
+  .form-col .code{
+    border: none !important;
+    width: 30% !important;
+    height: 30px !important;
+    border-left: 2px solid gainsboro !important;
+  
+  }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
   }
@@ -324,6 +353,13 @@ i.badge1 {
 }
 @media(min-width: 321px)
 {
+  .form-col .code{
+    border: none !important;
+    width: 25% !important;
+    height: 30px !important;
+    border-left: 2px solid gainsboro !important;
+  
+  }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
   }
@@ -393,6 +429,13 @@ i.badge1 {
 }
 @media(min-width: 376px)
 {
+  .form-col .code{
+    border: none !important;
+    width: 10% !important;
+    height: 30px !important;
+    border-left: 2px solid gainsboro !important;
+  
+  }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
   }
@@ -442,6 +485,13 @@ i.badge1 {
 }
 @media(min-width: 426px)
 {
+  .form-col .code{
+    border: none !important;
+    width: 10% !important;
+    height: 30px !important;
+    border-left: 2px solid gainsboro !important;
+  
+  }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
   }
@@ -475,6 +525,13 @@ i.badge1 {
 }
 @media(min-width: 768px)
 {
+  .form-col .code{
+    border: none !important;
+    width: 16% !important;
+    height: 30px !important;
+    border-left: 2px solid gainsboro !important;
+  
+  }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
   }
@@ -507,6 +564,13 @@ i.badge1 {
 }
 @media(min-width: 1024px)
 {
+  .form-col .code{
+    border: none !important;
+    width: 0% !important;
+    height: 30px !important;
+    border-left: 2px solid gainsboro !important;
+  
+  }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
   }
@@ -534,6 +598,13 @@ i.badge1 {
 }
 @media(min-width: 1440px)
 {
+  .form-col .code{
+    border: none !important;
+    width: 0% !important;
+    height: 30px !important;
+    border-left: 2px solid gainsboro !important;
+  
+  }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
   }
@@ -549,6 +620,13 @@ i.badge1 {
 }
 @media(min-width: 2560px)
 {
+  .form-col .code{
+    border: none !important;
+    width: 0% !important;
+    height: 30px !important;
+    border-left: 2px solid gainsboro !important;
+  
+  }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
   }

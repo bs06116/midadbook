@@ -15,6 +15,11 @@ return [
 
     'login' => 'Login',
     'signup' => 'Signup',
+    'email' => 'Email',
+    'password' => 'Password',
+    'fullname' => 'Full Name',
+    'user_name' => 'username',
+    'city' => 'City',
 
 
 ];

@@ -16,7 +16,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/post/create', 'PostController@create')->name('post/create');
 Route::get('/user/login', 'AuthController@login')->name('user/login');
 Route::get('/user/signup', 'AuthController@signup')->name('user/signup');
-Route::get('/{userid}', 'AuthController@profile')->name('{userid}');
+Route::get('/{username}', 'AuthController@profile');
 
 // Route::get('/', function () {
 //     return view('welcome');

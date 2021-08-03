@@ -14,7 +14,7 @@
                 id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item px-4 border rounded-pill mr-2 ">
-                        <a class="nav-link active text-light" aria-current="page" href="{{route('user/login')}}">  {{__('translation.login')}}
+                        <a class="nav-link active text-light" aria-current="page" href="{{route('user/signup')}}">  {{__('translation.login')}}
 
                         </a>
                     </li>
@@ -93,5 +93,6 @@
                 class="py-2 pull-right  fa fa-plus" aria-hidden="true"></i></button>
     </div>
           
+
 </div>
         </div>

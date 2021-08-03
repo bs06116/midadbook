@@ -2,21 +2,16 @@
 @foreach ($posts as $key => $post)
     <div class="post-container mt-4 px-3 pt-4">
 
-        
             <div class="butn d-inline">
                 <button class="rounded-pill "><span class="px-1">hello</span> </button>
             </div>
             <div class="text-right d-inline user-info">
-                <span class="text-muted">@admin</span>
-                <h6 class="d-inline">{{$post->user->name}}</h6>
+                <span class="text-muted"><span>@</span>{{$post->user->username}}</span>
+                <h6 class="d-inline"><a href="{{$post->user->username}}">{{$post->user->name}}</a></h6>
                 <span class="d-block text-right text-muted">hello</span>
             </div>
             <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" class="user-img " alt="">
             <hr class="mt-3">
-
-        
-
-
         <div class="post-title text-right pt-2">
             <h4>{{ $post->post_title }} </h4>
             <p class="text-muted pt-2">{{ $post->post_body }}

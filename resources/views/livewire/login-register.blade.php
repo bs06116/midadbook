@@ -8,7 +8,7 @@
         <div class="post-container mt-4 px-3 pt-4 pb-4">
           <div class="row add-head" >
             <div class="col-12">
-              <p class="text-center">Lorem ipsum <i class="rounded-pill pull-right  fas fa-pencil-alt plus-icon nav1-btn" style="padding: 0px 9px; font-size:10px; color:white" aria-hidden="true"></i></p>
+              <p class="text-center">Lorem ipsum <i class="rounded-pill pull-right  fas fa-pencil-alt plus-icon nav1-btn nav2-btn text-light"  aria-hidden="true"></i></p>
             </div>
           </div>
 
@@ -62,21 +62,21 @@
 
         <div class="col-12 mt-4 form-col" >
           <div class="input-group flex-nowrap">
-          <input type="number" style="width:65% !important"  class="form-control form-bor text-right"  aria-label="Number">
+          <input type="number"   class="form-control form-bor form-width text-right"  aria-label="Number">
           <input type="text"   placeholder="+966" class="mt-1 form-control code text-right disabled"  aria-label="Number">
 
           </div>
         </div>
         <div class="col-12 mt-4 form-col form-link" >
           <div class="input-group flex-nowrap ">
-          <input type="text" style="width:65% !important"   class=" form-control form-bor text-right"  aria-label="Number">
+          <input type="text"    class=" form-control form-bor form-width text-right"  aria-label="Number">
           <i class="fab fa-twitter px-2 py-2 twi"></i>
 
           </div>
         </div>
         <div class="col-12 mt-4 form-col form-link" >
           <div class="input-group flex-nowrap">
-          <input type="text" style="width:65% !important"   class="form-control form-bor text-right"  aria-label="Number">
+          <input type="text"    class="form-control form-bor form-width text-right"  aria-label="Number">
           <i class="fab fa-goodreads-g px-2 py-2 good"></i>
 
           </div>
@@ -86,7 +86,7 @@
           <div class="col-12 text-center">
               <div class="row d-flex pt-4 ">
                   <div class="col-6 text-right">
-                  <button type="submit" class="px-4 btn submit-btn " style="background-color:#f3f8f4 !important; color:#6A686C !important">Submit</button>
+                  <button type="submit" class="px-4 btn submit-btn1 " >Submit</button>
                   </div>
                   <div class="col-6 text-left">
                   <button type="submit" class="px-4 btn submit-btn ">Submit</button>

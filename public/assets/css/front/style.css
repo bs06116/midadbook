@@ -86,8 +86,6 @@
   border-radius: 20px;
 }
 .post-container .user-img {
-  height: 50px;
-  width: 50px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -239,6 +237,9 @@ i.badge1 {
 .form-col .form-bor{
   border:none !important
 }
+.form-col .form-width{
+  width: 65% !important;
+}
 
 .form-link{
   padding-right: 5px !important
@@ -260,6 +261,11 @@ i.badge1 {
   color: #fff !important;
   border-radius: 50px !important;
 }
+.submit-btn1{
+  background-color:#f3f8f4 !important;
+   color:#6A686C !important;
+   border-radius: 50px !important;
+}
 .form-control:focus {
   color: #495057;
   background-color: #fff !important;
@@ -268,11 +274,20 @@ i.badge1 {
   box-shadow: none !important;
 }
 .navbar-collapse ul li{
+  font-size: 12px !important;
+  font-weight: bold;
   border: 1.5px solid #ffffff99 !important;
 }
-
+.post-container .row div .nav2-btn{
+  padding: 0px 9px; 
+  font-size:10px;
+}
 @media(max-width: 320px)
 {
+  .post-container .user-img{
+    width: 40px;
+    height: 40px;
+  }
   .form-col .code{
     border: none !important;
     width: 30% !important;
@@ -308,10 +323,10 @@ i.badge1 {
   }
   .user-info{
     right: 19% !important;
-    font-size: 10px !important;
+    font-size: 13px !important;
   }
   .user-img{
-    right: 5% !important;
+    right: 7% !important;
   }
   .main form div input{
     width: 78%;
@@ -353,6 +368,14 @@ i.badge1 {
 }
 @media(min-width: 321px)
 {
+  .f-post{
+    font-size: 11px;
+    font-weight: bold;
+  }
+  .post-container .user-img{
+    width: 45px;
+    height: 45px;
+  }
   .form-col .code{
     border: none !important;
     width: 25% !important;
@@ -384,7 +407,7 @@ i.badge1 {
   }
   .user-info{
     right: 17% !important;
-    font-size: 10px !important;
+    font-size: 13px !important;
   }
   .user-img{
     right: 5% !important;
@@ -426,9 +449,19 @@ i.badge1 {
   .upload-icon{
     padding: 15px;
   }
+  .main form div i{
+    margin-right: 10px;
+  }
 }
 @media(min-width: 376px)
 {
+  .main form div i{
+    margin-right: 20px;
+  }
+  .f-post{
+    font-size: 11px;
+    font-weight: bold;
+  }
   .form-col .code{
     border: none !important;
     width: 10% !important;
@@ -485,6 +518,13 @@ i.badge1 {
 }
 @media(min-width: 426px)
 {
+  .main form div i{
+    margin-right: 15px;
+  }
+  .f-post{
+    font-size: 13px;
+    font-weight: bold;
+  }
   .form-col .code{
     border: none !important;
     width: 10% !important;
@@ -525,6 +565,13 @@ i.badge1 {
 }
 @media(min-width: 768px)
 {
+  .main form div i{
+    margin-right: 15px;
+  }
+  .f-post{
+    font-size: 15px;
+    font-weight: bold;
+  }
   .form-col .code{
     border: none !important;
     width: 16% !important;
@@ -564,6 +611,9 @@ i.badge1 {
 }
 @media(min-width: 1024px)
 {
+  .main form div i{
+    margin-right: 10px;
+  }
   .form-col .code{
     border: none !important;
     width: 0% !important;
@@ -598,6 +648,12 @@ i.badge1 {
 }
 @media(min-width: 1440px)
 {
+  .main form div i{
+    margin-right: 20px;
+  }
+  .user-info{
+    right: 11% !important;
+  }
   .form-col .code{
     border: none !important;
     width: 0% !important;

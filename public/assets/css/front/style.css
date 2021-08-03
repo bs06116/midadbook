@@ -151,29 +151,30 @@
   justify-content: space-evenly;
 }
 .notifaction-icon div {
-  height: 35px;
-  width: 35px;
+  height: 28px;
+  width: 25px;
   border-radius: 50%;
   background: #68122d;
   vertical-align: middle;
   text-align: center;
-  margin-right: 12px !important;
+  margin-right: 21px !important;
 }
 .notifaction-icon div img {
   position: relative;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   padding: 5px;
 }
 
 i.badge1 {
   position: relative;
-  padding: 0px 8px;
+  padding: 2px 8px;
   left: 20px;
   bottom: 35px;
   border-radius: 50%;
   color: white;
   background-color: green !important;
+  font-size: 12px;
 }
 .profile {
   background: #fff;
@@ -284,6 +285,15 @@ i.badge1 {
 }
 @media(max-width: 320px)
 {
+  .users-img{
+    padding-left: 0px !important;
+  }
+  .nav-btnn{
+    margin-left: 10px !important;
+  }
+  .login-nav1{
+    display: none;
+  }
   .post-container .user-img{
     width: 40px;
     height: 40px;
@@ -353,6 +363,10 @@ i.badge1 {
   .login-user{
     padding-left: 2.25rem !important;
   }
+  .login-user1{
+    font-size: 10px !important;
+    padding-left: 1.25rem !important;
+  }
   .social-links{
     display: block;
   }
@@ -368,6 +382,19 @@ i.badge1 {
 }
 @media(min-width: 321px)
 {
+  .login-user1{
+    font-size: 10px !important;
+    padding-left: 1.25rem !important;
+  }
+  .users-img{
+    padding-left: 0px !important;
+  }
+  .nav-btnn{
+    margin-left: 15px !important;
+  }
+  .login-nav1{
+    display: none;
+  }
   .f-post{
     font-size: 11px;
     font-weight: bold;
@@ -455,6 +482,19 @@ i.badge1 {
 }
 @media(min-width: 376px)
 {
+  .login-user1{
+    font-size: 12px !important;
+    padding-left: 1.25rem !important;
+  }
+  .users-img{
+    padding-left: 0px !important;
+  }
+  .nav-btnn{
+    margin-left: 40px !important;
+  }
+  .login-nav1{
+    display: none;
+  }
   .main form div i{
     margin-right: 20px;
   }
@@ -518,6 +558,13 @@ i.badge1 {
 }
 @media(min-width: 426px)
 {
+  .login-user1{
+    font-size: 12px !important;
+    padding-left: 14px !important;
+  }
+  .login-nav1{
+    display: none;
+  }
   .main form div i{
     margin-right: 15px;
   }
@@ -563,8 +610,30 @@ i.badge1 {
   }
   
 }
+@media(min-width: 576px){
+  .login-nav1{
+    display: flex;
+}
+.notifaction-icon div img {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+}
+}
 @media(min-width: 768px)
 {
+  
+.login-nav2{
+  margin-left: 50px !important;
+}
+  .login-user1{
+    font-size: 13px !important;
+    padding-left: 8px !important;
+  }
+  .users-img{
+    padding-left: 15px !important;
+  }
   .main form div i{
     margin-right: 15px;
   }
@@ -611,6 +680,13 @@ i.badge1 {
 }
 @media(min-width: 1024px)
 {
+  .login-user1{
+    font-size: 13px !important;
+    padding-left: 15px !important;
+  }
+  .btn1-div{
+    padding-left: 120px !important;
+  }
   .main form div i{
     margin-right: 10px;
   }
@@ -648,6 +724,11 @@ i.badge1 {
 }
 @media(min-width: 1440px)
 {
+  .login-nav .user-profile-img {
+    width: 100%;
+    text-align: right;
+    vertical-align: middle;
+  }
   .main form div i{
     margin-right: 20px;
   }

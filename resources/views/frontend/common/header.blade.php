@@ -10,7 +10,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4  ml-4"
+            <div class="collapse navbar-collapse   "
                 id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item px-4 border rounded-pill mr-2 ">
@@ -37,4 +37,5 @@
                 class="py-2 pull-right  fa fa-plus" aria-hidden="true"></i></button>
     </div>
     </div>
+    
 </div>

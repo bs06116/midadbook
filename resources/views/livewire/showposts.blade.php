@@ -12,7 +12,7 @@
                 <span class="d-block text-right text-muted">hello</span>
             </div>
             <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" class="user-img " alt="">
-            <hr class="mt-4">
+            <hr class="mt-3">
 
         
 

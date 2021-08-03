@@ -8,9 +8,9 @@
         <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6 main-div">
             <!-- search input -->
             <form>
-                <div class="text-center rounded-pill px-1 py-1">
+                <div class="text-center rounded-pill mt-4 px-1 py-1">
                     <i class="fa fa-search  rounded-pill " aria-hidden="true"></i>
-                    <input class="px-2 rounded-pill text-right" type="text">
+                    <input class="px-4 rounded-pill text-right" type="text">
                 </div>
             </form>
             <!-- Post -->

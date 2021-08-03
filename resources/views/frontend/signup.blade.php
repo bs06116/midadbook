@@ -2,7 +2,7 @@
 @section('content')
 @include('frontend.common.header')
 
-@livewire('login-register')
+@livewire('register')
 
 @endsection
 

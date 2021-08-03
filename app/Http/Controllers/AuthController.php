@@ -20,6 +20,7 @@ class AuthController extends Controller
     }
     public function signup()
     {
+
         return view('frontend.signup');
 
     }

@@ -13,7 +13,7 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable, HasRoles, LogsActivity, ThrottlesLogins;
-    protected static $ignoreChangedAttributes = ['password'];
+    //protected static $ignoreChangedAttributes = ['password'];
 
     /**
      * The attributes that are mass assignable.
@@ -21,7 +21,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone_number', 'profile_photo', 'status'];
+        'name', 'email','username', 'password', 'phone_number', 'city_id', 'twitter_link','goread_link', 'profile_photo'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -47,13 +47,13 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         $this->attributes['status'] = ($status)? 1 : 0;
     }
-    public function setPasswordAttribute($password)
-    {
-        if(Hash::needsRehash($password)){
-            $password = Hash::make($password);
-            $this->attributes['password'] = $password;
-        }
-    }
+    // public function setPasswordAttribute($password)
+    // {
+    //     if(Hash::needsRehash($password)){
+    //         $password = Hash::make($password);
+    //         $this->attributes['password'] = $password;
+    //     }
+    // }
     public function categories()
     {
         return $this->hasMany('App\Category');

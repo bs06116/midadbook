@@ -8,12 +8,13 @@
         <div class="post-container mt-4 px-3 pt-4 pb-4">
           <div class="row add-head" >
             <div class="col-12">
-              <p class="text-center">{{__('translation.signup')}} <i class="rounded-pill pull-right  fas fa-pencil-alt plus-icon nav1-btn nav2-btn text-light"  aria-hidden="true"></i></p>
+              <p class="text-center">{{__('translation.signup')}} <i class="rounded-pill pull-right  fa fa-plus plus-icon nav1-btn nav2-btn text-light"  aria-hidden="true"></i></p>
             </div>
+            
           </div>
 
           <form>
-          <div class="row gx-5 u-img px-4" >
+          <div class="row gx-5 mx-2  px-4" >
             <div class="col-2 text-center dropzone ">
              <!-- <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
                  <input type="file" class="upload-input" /> -->
@@ -24,6 +25,10 @@
                  <input type="file" class="upload-input" />
 
             </div>
+            <div class="col-2 ml-2 text-center dropzone ">
+             <!-- <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
+                 <input type="file" class="upload-input" /> -->
+                </div>
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -41,7 +46,7 @@
         </div>
 
 
-          <div class="row form-row" >
+          <div class="row mx-2 form-row" >
             <div class="col-12 form-col" >
               <input type="text"  class="form-control form-bor text-right"  wire:model="name" placeholder="{{__('translation.fullname')}}" aria-label="First name">
             </div>
@@ -78,7 +83,7 @@
         <div class="col-12 mt-4 form-col" >
           <div class="input-group flex-nowrap">
           <input type="number"   class="form-control form-bor form-width text-right" wire:model="phone_number"  aria-label="Number">
-          <input type="text"   placeholder="+966" class="mt-1 form-control code text-right disabled"  aria-label="Number">
+          <input type="text"   placeholder="+966" class=" form-control code text-right disabled"  aria-label="Number">
 
           </div>
         </div>
@@ -115,10 +120,11 @@
 
           </div>
         </form>
+        </div>
 
       <div class="col-xs-2  col-sm-2 col-md-3 col-lg-3"></div>
 
-    </div>
+    
 
 
   </div>

@@ -23,4 +23,9 @@ class AuthController extends Controller
         return view('frontend.signup');
 
     }
+    public function profile($id)
+    {
+        return view('frontend.profile');
+
+    }
 }

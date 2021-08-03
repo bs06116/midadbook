@@ -12,7 +12,7 @@
             </div>
           </div>
 
-
+          <form>
           <div class="row gx-5 u-img px-4" >
             <div class="col-2 text-center dropzone ">
              <!-- <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
@@ -24,31 +24,30 @@
                  <input type="file" class="upload-input" />
 
             </div>
-
-            <div class="col-2 text-center dropzone ">
-             <!-- <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
-                 <input type="file" class="upload-input" /> -->
-            </div>
-
-            <!-- <div class="col-4 text-left  ">
-              <img src="{{asset('assets/img/front/upload_img.png') }}" class=" upload-img" alt="">
-            </div>
-            <div class="col-4 text-left ">
-              <img src="{{asset('assets/img/front/upload_img.png') }}" class=" upload-img" alt="">
-            </div> -->
           </div>
 
 
           <div class="row form-row" >
             <div class="col-12 form-col" >
-              <input type="text"  class="form-control form-bor text-right" placeholder="Full Name" aria-label="First name">
+              <input type="text"  class="form-control form-bor text-right"  wire:model="name" placeholder="Full Name" aria-label="First name">
             </div>
+            @error('name') <span class="text-danger error">{{ $message }}</span>@enderror
+
             <div class="col-12 mt-4 form-col" >
               <input type="text"  class="form-control form-bor text-right" placeholder="username" aria-label="First name">
             </div>
+            @error('username') <span class="text-danger error">{{ $username }}</span>@enderror
+
+            <div class="col-12 mt-4 form-col" >
+              <input type="text"  class="form-control form-bor text-right" placeholder="email" aria-label="Email">
+            </div>
+            @error('email') <span class="text-danger error">{{ $email }}</span>@enderror
+
             <div class="col-12 mt-4 form-col" >
               <input type="password"  class="form-control form-bor text-right" placeholder="Password" aria-label="Password">
             </div>
+            @error('password') <span class="text-danger error">{{ $password }}</span>@enderror
+
             <div class="col-12 py-2 mt-4 form-col" >
             <i class="fal fa-map-marker-alt"></i>
               <select class="form-select " class="form-bor"  aria-label="Default select example">
@@ -89,7 +88,7 @@
                   <button type="submit" class="px-4 btn submit-btn " style="background-color:#f3f8f4 !important; color:#6A686C !important">Submit</button>
                   </div>
                   <div class="col-6 text-left">
-                  <button type="submit" class="px-4 btn submit-btn ">Submit</button>
+                  <button type="submit" class="px-4 btn submit-btn"  wire:click.prevent="registerStore">Submit</button>
                   </div>
               </div>
 
@@ -97,12 +96,7 @@
             </div>
 
           </div>
-
-
-
-
-
-
+        </form>
 
       <div class="col-xs-2  col-sm-2 col-md-3 col-lg-3"></div>
 

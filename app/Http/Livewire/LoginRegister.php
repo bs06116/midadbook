@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class LoginRegister extends Component
 {
-    public $users, $email, $password, $name;
+    public $users,$username, $email, $password, $name;
     public $registerForm = false;
 
     public function render()
@@ -17,6 +17,7 @@ class LoginRegister extends Component
     private function resetInputFields()
     {
         $this->name = '';
+        $this->username = '';
         $this->email = '';
         $this->password = '';
     }
@@ -44,7 +45,8 @@ class LoginRegister extends Component
     {
         $validatedDate = $this->validate([
             'name' => 'required',
-            'email' => 'required|email',
+            'username' => 'required|min:4|unique:users,username',
+            'email' => 'required|unique:users|email',
             'password' => 'required',
         ]);
 

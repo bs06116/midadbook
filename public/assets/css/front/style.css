@@ -36,20 +36,22 @@
   background-color: #EDF8FE;
   color: #1DA1F3;
   height: 33px;
-  margin-right: 1px !important;
+  margin-right: -10px ;
   border-radius: 100%;
   padding-top: 10px;
   width: 35px;
+  margin-top: 1.5px;
 }
 .form-col div .good{
   background-color: #E7E3C6;
  
   color: #8A683E;
   height: 33px;
-  margin-right: 1px !important;
+  margin-right: -10px ;
   border-radius: 100%;
   padding-top: 10px;
   width: 35px;
+  margin-top: 1.5px;
 }
 .nav-btn {
   
@@ -403,6 +405,12 @@ i.badge1 {
 }
 @media(min-width: 321px)
 {
+  .form-col div .twi{
+    margin-right: -15px ;
+  }
+  .form-col div .good{
+    margin-right: -15px ;
+  }
   .custom-file label .uimg-icon{
     right: -5%;
   }
@@ -507,6 +515,13 @@ i.badge1 {
 }
 @media(min-width: 376px)
 {
+  .form-col div .twi{
+    margin-right: -15px ;
+  }
+  .form-col div .good{
+    margin-right: -15px ;
+  }
+  
   .custom-file label .uimg-icon{
     right: 8%;
   }
@@ -587,6 +602,12 @@ i.badge1 {
 }
 @media(min-width: 426px)
 {
+  .form-col div .twi{
+    margin-right: -10px ;
+  }
+  .form-col div .good{
+    margin-right: -10px ;
+  }
   .custom-file label .uimg-icon{
     right: 4%;
   }
@@ -847,3 +868,14 @@ i.badge1 {
   height: 100%;
   opacity: 0;
 }
+
+
+
+
+
+
+
+
+
+
+

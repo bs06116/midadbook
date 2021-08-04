@@ -8,7 +8,7 @@
                         <div class="user-profile-img ">
                             <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">
                         </div>
-                        <div class="user-name login-user1 text-light ">
+                        <div class="user-name login-user1 text-light d-bloak ">
                             <span class="d-block font-weight-bold">{{Auth::user()->name}}</span>
                             <span>{{Auth::user()->city->name}}</span>
                         </div>
@@ -21,6 +21,7 @@
                         <div class="noti"><img src="{{ asset('assets/img/front/bell_ic.png') }}" alt="">
                             <i class="badge1">9</i>
                         </div>
+                        
                         <div class=""><img src="{{ asset('assets/img/front/send_ic.png') }}" alt="">
                             <i class="badge1">9</i>
                         </div>

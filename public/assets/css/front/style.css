@@ -742,7 +742,7 @@ i.badge1 {
 @media(min-width: 1024px)
 {
   .custom-file label .uimg-icon{
-    right: 22%;
+    right: 28%;
   }
   .main form div{
     width: 97%;
@@ -868,14 +868,4 @@ i.badge1 {
   height: 100%;
   opacity: 0;
 }
-
-
-
-
-
-
-
-
-
-
 

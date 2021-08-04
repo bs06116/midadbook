@@ -16,14 +16,18 @@ Route::get('/', 'HomeController@index');
 Route::get('/post/create', 'PostController@create')->name('post/create');
 Route::get('/user/login', 'AuthController@login')->name('user/login');
 Route::get('/user/signup', 'AuthController@signup')->name('user/signup');
+Route::get('/user/logout', 'AuthController@logout')->name('user/logout');
+
 Route::get('/{username}', 'AuthController@profile');
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::group(['prefix' => 'admin'], function() {
 
 Auth::routes(['verify'=>true]);
 
+});
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin', 'middleware' => ['auth','verified']], function () {
 

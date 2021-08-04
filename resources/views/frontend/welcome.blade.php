@@ -1,6 +1,12 @@
 @extends('layouts.frontend')
 @section('content')
+@if(Auth::check())
+@include('frontend.common.header_register')
+
+@else
 @include('frontend.common.header')
+
+@endif
 
 <div class="container-fluid main">
     <div class="row w-100">

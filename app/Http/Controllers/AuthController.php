@@ -9,24 +9,34 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use Auth;
 
 
 class AuthController extends Controller
 {
     public function login()
     {
+        if (Auth::check()) {
+            return redirect()->to('/');
+        }
         return view('frontend.login');
-
     }
     public function signup()
     {
-
+        if (Auth::check()) {
+            return redirect()->to('/');
+        }
         return view('frontend.signup');
-
     }
     public function profile($id)
     {
         return view('frontend.profile');
-
+    }
+    public function logout()
+    {
+        //logout user
+        auth()->logout();
+        // redirect to homepage
+        return redirect('/');
     }
 }

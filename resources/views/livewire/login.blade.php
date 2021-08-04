@@ -51,7 +51,9 @@
                             </div>
                             <div class="col-6 text-left">
                                 <button type="submit" class="px-4 btn submit-btn"
-                                    wire:click.prevent="login">{{__('translation.login')}}</button>
+
+                                    wire:click.prevent="login">    <span wire:target="login" wire:loading.class="spinner-border spinner-border-sm"></span>
+                                    {{__('translation.login')}}</button>
                             </div>
                         </div>
                     </div>

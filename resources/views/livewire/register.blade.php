@@ -10,7 +10,7 @@
             <div class="col-12">
               <p class="text-center">{{__('translation.signup')}} <i class="rounded-pill pull-right  fa fa-plus plus-icon nav1-btn nav2-btn text-light"  aria-hidden="true"></i></p>
             </div>
-            
+
           </div>
 
           <form >
@@ -111,7 +111,9 @@
                   {{-- <button type="submit" class="px-4 btn submit-btn1 " >Submit</button> --}}
                   </div>
                   <div class="col-6 text-left">
-                  <button type="submit" class="px-4 btn submit-btn"  wire:click.prevent="registerStore">{{__('translation.signup')}}</button>
+                  <button type="submit" class="px-4 btn submit-btn"  wire:click.prevent="registerStore">
+                    <span wire:target="registerStore" wire:loading.class="spinner-border spinner-border-sm"></span>
+                    {{__('translation.signup')}}</button>
                   </div>
               </div>
 
@@ -124,9 +126,9 @@
 
       <div class="col-xs-2  col-sm-2 col-md-3 col-lg-3"></div>
 
-    
+
 
 
   </div>
 
- 
+

@@ -9,13 +9,18 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
-
+use Auth;
 
 class PostController extends Controller
 {
     public function create()
     {
-        return view('frontend.post.create');
+        if (Auth::check()) {
+            return view('frontend.post.create');
+        }else{
+            return redirect()->route('user/login');
+
+        }
 
     }
 }

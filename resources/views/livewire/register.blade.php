@@ -21,8 +21,18 @@
                 </div>
 
             <div class="col-8 text-center   ">
-             <img src="{{asset('assets/img/front/profile_thumbnail_large.png') }}" id="upload-img" class="mt-4" />
-                 <input type="file" class="upload-input" id="fileupload" />
+             <!-- <img src="{{asset('assets/img/front/profile_thumbnail_large.png') }}" id="upload-img" class="mt-4" />
+                 <input type="file" class="upload-input" id="fileupload" /> -->
+                                <div class="profile-images-card">
+                  <div class="profile-images">
+                    <img src="{{asset('assets/img/front/profile_thumbnail_large.png') }}" id="upload-img" >
+                  </div>
+                  <div class="custom-file">
+                    <label for="fileupload"><i class="rounded-pill pull-right  fas fa-camera plus-icon uimg-icon "  aria-hidden="true"></i></label>
+                    <input type="file" id="fileupload">
+                  </div>
+                </div>
+
 
             </div>
             <div class="col-2 ml-2 text-center dropzone ">
@@ -125,10 +135,17 @@
         </div>
 
       <div class="col-xs-2  col-sm-2 col-md-3 col-lg-3"></div>
-
-
-
-
   </div>
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+	$(function(){
+		$("#fileupload").change(function(event) {
+			var x = URL.createObjectURL(event.target.files[0]);
+			$("#upload-img").attr("src",x);
+			console.log(event);
+		});
+	})
+</script>

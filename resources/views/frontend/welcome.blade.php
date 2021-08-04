@@ -15,8 +15,8 @@
             <!-- search input -->
             <form>
                 <div class="text-center rounded-pill mt-4 px-1 py-1">
-                    <i class="fa fa-search  rounded-pill " aria-hidden="true"></i>
-                    <input class="px-4 rounded-pill text-right" type="text">
+                    <i class="fa fa-search  rounded-pill search" aria-hidden="true"></i>
+                    <input class="px-4 rounded-pill text-right search-input" type="text">
                 </div>
             </form>
             <!-- Post -->

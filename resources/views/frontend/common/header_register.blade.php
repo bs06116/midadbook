@@ -4,15 +4,13 @@
         <div class="col-4   ">
             <div class="row d-flex">
                 <div class="col-6 login-nav d-flex">
-                    <nav class="navbar navbar-expand-lg navbar-light users-img py-2 ">
-
-
+                    <nav class="navbar navbar-expand-lg navbar-light users-img py-2">
                         <div class="user-profile-img ">
                             <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">
                         </div>
                         <div class="user-name login-user1 text-light ">
                             <span class="d-block font-weight-bold">{{Auth::user()->name}}</span>
-                            <span>Country</span>
+                            <span>{{Auth::user()->city->name}}</span>
                         </div>
                     </nav>
                 </div>

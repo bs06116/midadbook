@@ -6,7 +6,25 @@
 }
 @font-face {
   font-family: arabic-bold;
-  src: url('../../fonts/DIN\ NEXT™\ ARABIC\ REGULAR.otf');
+  src: url('../../fonts/DIN\ NEXT™\ ARABIC\ BOLD.otf');
+}
+#fileupload{
+  display: none;
+}
+.profile-images img{
+  height: 100px !important;
+  width: 100px !important;
+  border-radius: 100%;
+}
+.custom-file label .uimg-icon{
+  bottom: 50px;
+    position: absolute;
+    font-size: 12px;
+    padding: 0px 8px;
+    right: 9%;
+    background: #0CA81F;
+  color: white;
+  border: 2px solid;
 }
 .container-fluid {
   font-family: 'DIN NEXT™';
@@ -74,7 +92,8 @@
 .main form div input:focus {
   outline: none;
 }
-.main form div i {
+.main form div .search {
+  background: #F4F4F4;
   font-size: 20px;
   padding: 7px 15px;
   color: #5C2E3D;
@@ -92,9 +111,9 @@
  
   margin-top: -10px;
 }
-.user-info h6{
-  color: #5d001d;
-  font-weight: bold;
+.post-container .user-info h6 a{
+  color: #5d001d !important;
+  font-weight: bold !important;
 }
 .user-img {
   position: absolute;
@@ -283,6 +302,9 @@ i.badge1 {
 }
 @media(max-width: 320px)
 {
+  .custom-file label .uimg-icon{
+    right: -40%;
+  }
   .main form div{
     width: 93%;
   }
@@ -339,8 +361,8 @@ i.badge1 {
   .user-img{
     right: 7% !important;
   }
-  .main form div input{
-    width: 100%;
+  .main form div .search-input{
+    width: 77%;
   }
   
   .nav-btn{
@@ -381,6 +403,9 @@ i.badge1 {
 }
 @media(min-width: 321px)
 {
+  .custom-file label .uimg-icon{
+    right: -5%;
+  }
   .main form div{
     width: 93%;
   }
@@ -441,8 +466,8 @@ i.badge1 {
   .user-img{
     right: 5% !important;
   }
-  .main form div input{
-    width: 100%;
+  .main form div .search-input{
+    width: 78%;
   }
   
   .nav-btn{
@@ -482,6 +507,9 @@ i.badge1 {
 }
 @media(min-width: 376px)
 {
+  .custom-file label .uimg-icon{
+    right: 8%;
+  }
   .main form div{
     width: 94%;
   }
@@ -521,8 +549,8 @@ i.badge1 {
   .user-img{
     right: 4% !important;
   }
-  .main form div input{
-    width: 100%;
+  .main form div .search-input{
+    width: 78%;
   }
   
   .nav-btn{
@@ -559,6 +587,9 @@ i.badge1 {
 }
 @media(min-width: 426px)
 {
+  .custom-file label .uimg-icon{
+    right: 4%;
+  }
   .main form div{
     width: 96%;
   }
@@ -617,6 +648,9 @@ i.badge1 {
 
 @media(min-width: 768px)
 {
+  .custom-file label .uimg-icon{
+    right: 3%;
+  }
   .main form div{
     width: 95%;
   }
@@ -686,6 +720,9 @@ i.badge1 {
 }
 @media(min-width: 1024px)
 {
+  .custom-file label .uimg-icon{
+    right: 22%;
+  }
   .main form div{
     width: 97%;
   }
@@ -715,8 +752,8 @@ i.badge1 {
   .user-info{
     right: 14% !important;
   }
-  .main form div input{
-    width: 100%;
+  .main form div .search-input{
+    width: 85%;
   }
   .btn-div{
     padding-right: 70px !important;
@@ -733,6 +770,9 @@ i.badge1 {
 }
 @media(min-width: 1440px)
 {
+  .custom-file label .uimg-icon{
+    right: 33%;
+  }
   .main form div{
     width: 98%;
   }
@@ -742,7 +782,7 @@ i.badge1 {
     vertical-align: middle;
   }
   .main form div i{
-    margin-right: 20px;
+    margin-right: 40px;
   }
   .user-info{
     right: 11% !important;
@@ -769,7 +809,9 @@ i.badge1 {
 }
 @media(min-width: 2560px)
 {
-  
+  .custom-file label .uimg-icon{
+    right: 42%;
+  }
   .form-col .code{
     border: none !important;
     width: 0% !important;

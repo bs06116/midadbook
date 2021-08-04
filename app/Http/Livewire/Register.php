@@ -3,13 +3,15 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use App\City;
 use App\User;
 use Hash;
 
 class Register extends Component
 {
-    public $users,$name,$username,$email,$password,$phone_number,$city,$twitter_link,$goread_link;
+    use WithFileUploads;
+    public $users,$photo,$name,$username,$email,$password,$phone_number,$city,$twitter_link,$goread_link;
     public $registerForm = false;
     public $cities;
 
@@ -37,6 +39,8 @@ class Register extends Component
     }
     public function registerStore()
     {
+        echo $this->photo;
+        die;
         $validatedDate = $this->validate([
             'name' => 'required|max:255',
             'username' => 'required|unique:users|max:255',
@@ -55,5 +59,5 @@ class Register extends Component
         $this->resetInputFields();
     }
 
-    
+
 }

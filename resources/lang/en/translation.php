@@ -20,6 +20,8 @@ return [
     'fullname' => 'Full Name',
     'user_name' => 'username',
     'city' => 'City',
+    'add_book' => 'Add Book',
+
 
 
 ];

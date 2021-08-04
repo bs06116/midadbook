@@ -166,13 +166,13 @@
 
 i.badge1 {
   position: relative;
-  padding: 2px 8px;
-  left: 20px;
-  bottom: 35px;
+  padding: 2px 7px;
+  left: 12px;
+  bottom: 39px;
   border-radius: 50%;
   color: white;
   background-color: green !important;
-  font-size: 12px;
+  font-size: 10px;
 }
 .profile {
   background: #fff;

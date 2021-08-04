@@ -13,7 +13,7 @@
             
           </div>
 
-          <form>
+          <form >
           <div class="row gx-5 mx-2  px-4" >
             <div class="col-2 text-center dropzone ">
              <!-- <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
@@ -21,8 +21,8 @@
                 </div>
 
             <div class="col-8 text-center   ">
-             <img src="{{asset('assets/img/front/profile_thumbnail_large.png') }}" class="mt-4" />
-                 <input type="file" class="upload-input" />
+             <img src="{{asset('assets/img/front/profile_thumbnail_large.png') }}" id="upload-img" class="mt-4" />
+                 <input type="file" class="upload-input" id="fileupload" />
 
             </div>
             <div class="col-2 ml-2 text-center dropzone ">
@@ -128,3 +128,5 @@
 
 
   </div>
+
+ 

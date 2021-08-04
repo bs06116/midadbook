@@ -170,6 +170,7 @@
     }
   </style>
   <script>
+   
     $(document).ready(function(){
 
       // Define function to open filemanager window

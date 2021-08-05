@@ -21,30 +21,7 @@
 
                         </div>
 
-<<<<<<< Updated upstream
                         <div class="col-8 text-center   ">
-=======
-            </div>
-            <div class="col-2 ml-2 text-center dropzone ">
-             <!-- <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
-                 <input type="file" class="upload-input" /> -->
-                </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 ">
-                @if (session()->has('message'))
-                    <div class="alert alert-success ">
-                        {{ session('message') }}
-                    </div>
-                @endif
-                @if (session()->has('error'))
-                    <div class="alert alert-danger ">
-                        {{ session('error') }}
-                    </div>
-                @endif
-            </div>
-        </div>
->>>>>>> Stashed changes
 
                             <div class="profile-images-card">
                                 <div class="profile-images" >
@@ -55,7 +32,6 @@
                                     >
                                     @endif
 
-<<<<<<< Updated upstream
                                 </div>
                                 <div class="custom-file">
                                     <label for="fileupload"><i
@@ -86,23 +62,6 @@
                             @endif
                         </div>
                     </div>
-=======
-          <div class="row mx-2 form-row" >
-            <div class="col-12 form-col text-right " >
-              <input type="text"  class="form-control form-bor text-right"  wire:model="name" placeholder="{{__('translation.fullname')}}" aria-label="First name">
-            </div>
-            @error('name') <span class="text-danger error ">{{ $message }}</span>@enderror
-
-            <div class="col-12 mt-4 form-col" >
-              <input type="text"  class="form-control form-bor text-right" placeholder="{{__('translation.user_name')}}" wire:model="username" aria-label="Username">
-            </div>
-            @error('username') <span class="text-danger error ">{{ $message }}</span>@enderror
-
-            <div class="col-12 mt-4 form-col" >
-              <input type="text"  class="form-control form-bor text-right" placeholder="{{__('translation.email')}}"  wire:model="email" aria-label="Email">
-            </div>
-            @error('email') <span class="text-danger error ">{{ $message }}</span>@enderror
->>>>>>> Stashed changes
 
 
                     <div class="row mx-2 form-row">

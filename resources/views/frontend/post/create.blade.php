@@ -17,37 +17,44 @@
           </div>
 
 
-          <div class="row gx-5 u-img " >
-            <div class="col-4 text-center dropzone ">
-              <!-- <img  src="{{asset('assets/img/front/upload_img.png') }}"  class=" upload-img" alt=""> -->
-              
-              
-             <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
-                 <input type="file" class="upload-input" />
+          <div class="row d-flex  gx-5  add-img ">
+            
+            <div class="col-4   d-flex text-center dropzone ">
+                              <div class=" profile-images-card">
+                <div class="profile-image">
+                  <img src="http://localhost/midadbook/public/assets/img/front/upload_img.png" class="upload-icon" id="upload-img">
+                </div>
+                <div class="custom-file">
+                  <label for="fileupload"><i class="rounded-pill pull-right  fas fa-camera plus-icon uimg-icon1 " aria-hidden="true"></i></label>
+                  <input type="file" id="fileupload">
+                </div>
+              </div>
                   
             </div>
-            <div class="col-4 text-center dropzone ">
-              <!-- <img  src="{{asset('assets/img/front/upload_img.png') }}"  class=" upload-img" alt=""> -->
-              
-              
-             <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
-                 <input type="file" class="upload-input" />
+            
+            <div class="col-4   d-flex text-center dropzone ">
+                              <div class=" profile-images-card">
+                <div class="profile-image">
+                  <img src="http://localhost/midadbook/public/assets/img/front/upload_img.png" class="upload-icon" id="upload-img">
+                </div>
+                <div class="custom-file">
+                  <label for="fileupload"><i class="rounded-pill pull-right  fas fa-camera plus-icon uimg-icon1 " aria-hidden="true"></i></label>
+                  <input type="file" id="fileupload">
+                </div>
+              </div>
+                  
+            </div><div class="col-4   d-flex text-center dropzone ">
+                              <div class=" profile-images-card">
+                <div class="profile-image">
+                  <img src="http://localhost/midadbook/public/assets/img/front/upload_img.png" class="upload-icon" id="upload-img">
+                </div>
+                <div class="custom-file">
+                  <label for="fileupload"><i class="rounded-pill pull-right  fas fa-camera plus-icon uimg-icon1 " aria-hidden="true"></i></label>
+                  <input type="file" id="fileupload">
+                </div>
+              </div>
                   
             </div>
-            <div class="col-4 text-center dropzone ">
-              <!-- <img  src="{{asset('assets/img/front/upload_img.png') }}"  class=" upload-img" alt=""> -->
-              
-              
-             <img src="{{asset('assets/img/front/upload_img.png') }}" class="upload-icon" />
-                 <input type="file" class="upload-input" />
-                  
-            </div>
-            <!-- <div class="col-4 text-left  ">
-              <img src="{{asset('assets/img/front/upload_img.png') }}" class=" upload-img" alt="">
-            </div>
-            <div class="col-4 text-left ">
-              <img src="{{asset('assets/img/front/upload_img.png') }}" class=" upload-img" alt="">
-            </div> -->
           </div>
 
 
@@ -109,5 +116,13 @@
 
 @endsection
 
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#fileupload").change(function(event) {
+			var x = URL.createObjectURL(event.target.files[0]);
+			$("#upload-img").attr("src",x);
+			console.log(event);
+		});
+	})
+</script>

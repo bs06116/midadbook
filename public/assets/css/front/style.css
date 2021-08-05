@@ -16,8 +16,28 @@
   width: 100px !important;
   border-radius: 100%;
 }
+
+/* .profile-image{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #8080806b;
+  padding: 14px 8px;
+  background-color: #F7F3F4;
+  border-radius: 10px;
+  margin: 25px 2px 2px 2px;
+} */
 .custom-file label .uimg-icon{
   bottom: 50px;
+    position: absolute;
+    font-size: 12px;
+    padding: 0px 8px;
+    right: 9%;
+    background: #0CA81F;
+  color: white;
+  border: 2px solid;
+}
+.custom-file label .uimg-icon1{
+  bottom: 20px;
     position: absolute;
     font-size: 12px;
     padding: 0px 8px;
@@ -304,8 +324,16 @@ i.badge1 {
 }
 @media(max-width: 320px)
 {
+  .profile-image img{
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 10px;
+  }
   .custom-file label .uimg-icon{
     right: -40%;
+  }
+  .custom-file label .uimg-icon1{
+    right: 10%;
   }
   .main form div{
     width: 93%;
@@ -405,6 +433,11 @@ i.badge1 {
 }
 @media(min-width: 321px)
 {
+  .profile-image img{
+    height: 70px !important;
+    width: 70px !important;
+    border-radius: 10px;
+  }
   .form-col div .twi{
     margin-right: -15px ;
   }
@@ -413,6 +446,9 @@ i.badge1 {
   }
   .custom-file label .uimg-icon{
     right: -5%;
+  }
+  .custom-file label .uimg-icon1{
+    right: 22%;
   }
   .main form div{
     width: 93%;
@@ -507,7 +543,7 @@ i.badge1 {
     padding-right: 10px;
   }
   .upload-icon{
-    padding: 15px;
+    padding: 13px;
   }
   .main form div i{
     margin-right: 10px;
@@ -515,6 +551,11 @@ i.badge1 {
 }
 @media(min-width: 376px)
 {
+  .profile-image img{
+    height: 85px !important;
+    width: 85px !important;
+    border-radius: 10px;
+  }
   .form-col div .twi{
     margin-right: -15px ;
   }
@@ -524,6 +565,9 @@ i.badge1 {
   
   .custom-file label .uimg-icon{
     right: 8%;
+  }
+  .custom-file label .uimg-icon1{
+    right: 28%;
   }
   .main form div{
     width: 94%;
@@ -602,6 +646,11 @@ i.badge1 {
 }
 @media(min-width: 426px)
 {
+  .profile-image img{
+    height: 85px !important;
+    width: 85px !important;
+    border-radius: 10px;
+  }
   .form-col div .twi{
     margin-right: -10px ;
   }
@@ -610,6 +659,9 @@ i.badge1 {
   }
   .custom-file label .uimg-icon{
     right: 4%;
+  }
+  .custom-file label .uimg-icon1{
+    right: 25%;
   }
   .main form div{
     width: 96%;
@@ -669,8 +721,16 @@ i.badge1 {
 
 @media(min-width: 768px)
 {
+  .profile-image img{
+    height: 80px !important;
+    width: 80px !important;
+    border-radius: 10px;
+  }
   .custom-file label .uimg-icon{
     right: 3%;
+  }
+  .custom-file label .uimg-icon1{
+    right: 25%;
   }
   .main form div{
     width: 95%;
@@ -741,7 +801,15 @@ i.badge1 {
 }
 @media(min-width: 1024px)
 {
+  .profile-image img{
+    height: 100px !important;
+    width: 100px !important;
+    border-radius: 10px;
+  }
   .custom-file label .uimg-icon{
+    right: 28%;
+  }
+  .custom-file label .uimg-icon1{
     right: 28%;
   }
   .main form div{
@@ -788,11 +856,22 @@ i.badge1 {
   .btn-div .nav-btn{
     margin-left: 180px !important;
   }
+  .add-img{
+    padding-left: 55px !important;
+  }
 }
 @media(min-width: 1440px)
 {
+  .profile-image img{
+    height: 140px !important;
+    width: 140px !important;
+    border-radius: 10px;
+  }
   .custom-file label .uimg-icon{
     right: 33%;
+  }
+  .custom-file label .uimg-icon1{
+    right: 37%;
   }
   .main form div{
     width: 98%;
@@ -830,7 +909,15 @@ i.badge1 {
 }
 @media(min-width: 2560px)
 {
+  .profile-image img{
+    height: 140px !important;
+    width: 140px !important;
+    border-radius: 10px;
+  }
   .custom-file label .uimg-icon{
+    right: 42%;
+  }
+  .custom-file label .uimg-icon1{
     right: 42%;
   }
   .form-col .code{
@@ -868,4 +955,6 @@ i.badge1 {
   height: 100%;
   opacity: 0;
 }
+
+
 

@@ -28,6 +28,7 @@ class Register extends Component
     private function resetInputFields()
     {
         $this->name = '';
+        $this->photo = '';
         $this->username = '';
         $this->email = '';
         $this->password = '';
@@ -48,7 +49,7 @@ class Register extends Component
         ]);
         $imageName = '';
         if ($this->photo) {
-          $imageName = $this->photo->store("avatars",'public');
+          $imageName = $this->photo->storePublicly('avatars');
         }
         $this->password = Hash::make($this->password);
         User::create([
@@ -57,6 +58,7 @@ class Register extends Component
             'goread_link' => $this->goread_link
         ]);
         session()->flash('message', 'Your register successfully Go to the login page.');
+        $this->resetInputFields();
         return redirect()->to('user/login');
        // $this->resetInputFields();
     }

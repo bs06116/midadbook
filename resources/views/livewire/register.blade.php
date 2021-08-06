@@ -159,15 +159,4 @@
         <div class="col-xs-2  col-sm-2 col-md-3 col-lg-3"></div>
     </div>
 
-{{--
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-        $(function() {
-            $("#fileupload").change(function(event) {
-                var x = URL.createObjectURL(event.target.files[0]);
-                $("#upload-img").attr("src", x);
-                console.log(event);
-            });
-        })
-    </script> --}}

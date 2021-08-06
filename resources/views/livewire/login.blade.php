@@ -14,7 +14,7 @@
                 <form>
 
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 mx-4  text-right">
                             @if (session()->has('message'))
                                 <div class="alert alert-success">
                                     {{ session('message') }}
@@ -30,17 +30,23 @@
 
                     <div class="row form-row">
 
-                        <div class="col-12 mt-4 form-col">
+                        <div class="col-12 mt-4 form-col text-right">
                             <input type="text" class="form-control form-bor text-right" placeholder="{{__('translation.email')}}"
                                 wire:model="email" aria-label="Email">
                         </div>
-                        @error('email') <span class="text-danger error">{{ $message }}</span>@enderror
+                        <div class="col-12 text-right">
+                        @error('email') <span class="text-danger error text-right">{{ $message }}</span>@enderror
+                        </div>
+                      
 
                         <div class="col-12 mt-4 form-col">
                             <input type="password" class="form-control form-bor text-right" placeholder="{{__('translation.password')}}"
                                 wire:model="password" aria-label="Password">
                         </div>
-                        @error('password') <span class="text-danger error">{{ $message }}</span>@enderror
+                        <div class="col-12 text-right">
+                        @error('password') <span class="text-danger error text-right">{{ $message }}</span>@enderror
+                        </div>
+                        
 
                     </div>
 

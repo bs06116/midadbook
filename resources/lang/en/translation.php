@@ -21,6 +21,19 @@ return [
     'user_name' => 'username',
     'city' => 'City',
     'add_book' => 'Add Book',
+    'add_title' => 'Add Title',
+    'add_type' => 'Add type',
+    'add_type' => 'Required',
+    'borrow_book' => 'Borrow a book',
+    'sell' => 'Sell',
+    'exchange' => 'Exchange',
+    'description' => 'Description',
+    'submit' => 'Submit',
+
+
+
+
+
 
 
 

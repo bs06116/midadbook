@@ -21,5 +21,13 @@ return [
     'user_name' => 'لاسم المستخدم',
     'city' => 'المدينة',
     'add_book' => 'أضف كتابك',
+    'add_title' => 'عنوان الاعلان',
+    'add_type' => 'نوع الاعلان',
+    'required' => 'مطلوب',
+    'borrow_book' => 'إستعارة',
+    'sell' => 'للبيع',
+    'exchange' => 'تبادل',
+    'description' => 'تفاصيل الإعلان',
+    'submit' => 'نشر الكتاب',
 
 ];

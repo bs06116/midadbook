@@ -405,7 +405,7 @@ i.badge1 {
   }
   
   .nav-btn{
-    font-size: 11px;
+    font-size: 8px;
   }
   .nav1-btn{
     font-size: 11px;
@@ -553,7 +553,7 @@ i.badge1 {
   }
   
   .nav-btn{
-    font-size: 15px;
+    font-size: 8px;
   }
   .nav1-btn{
     font-size: 15px;
@@ -663,7 +663,7 @@ i.badge1 {
   }
   
   .nav-btn{
-    font-size: 15px;
+    font-size: 8px;
   }
   .nav1-btn{
     font-size: 9px;
@@ -760,10 +760,15 @@ i.badge1 {
     right: 4% !important;
   }
   .nav-btn{
-    font-size: 15px;
+    font-size: 8px;
   }
   .nav1-btn{
     font-size: 9px;
+  }
+  .btn1-div button span{
+    font-size: 10px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
   .plus-icon{
     line-height: 27.5px !important;
@@ -783,6 +788,11 @@ i.badge1 {
 
 @media(min-width: 768px)
 {
+  .btn1-div button span{
+    font-size: 14px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
   .notifaction-icon{
     display: flex;
   }
@@ -881,6 +891,9 @@ i.badge1 {
 }
 @media(min-width: 1024px)
 {
+  .user-profile-img{
+    padding-left: 20px !important;
+  }
   .profile-image img{
     height: 100px !important;
     width: 100px !important;
@@ -957,6 +970,7 @@ i.badge1 {
   .login-nav2{
     padding-left: 50px !important;
   }
+
 }
 @media(min-width: 1440px)
 {
@@ -1018,6 +1032,9 @@ i.badge1 {
     left: 17%;
     width: 22%;
     height: 75%;
+  }
+  .user-profile-img{
+    padding-left: 100px !important;
   }
 }
 @media(min-width: 2560px)

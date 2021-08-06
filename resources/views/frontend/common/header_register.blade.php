@@ -160,7 +160,7 @@
         <div class=" col-5 col-xs-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 text-left btn1-div  ">
             <a href="{{route('post/create')}}">
                 <button class="d-flex   nav-btn nav-btnn rounded-pill pull-right  mt-3 text-light "><span
-                        class="pt-1 px-3 "> {{ __('translation.add_book') }}</span> <i class="py-2 pull-right  fa fa-plus"
+                        class="pt-2 px-2 "> {{ __('translation.add_book') }}</span> <i class="py-2 pull-right  fa fa-plus"
                         aria-hidden="true"></i></button>
                     </a>
             

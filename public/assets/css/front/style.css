@@ -254,6 +254,7 @@ i.badge1 {
   font-weight: normal;
 }
 .main-div{
+  position: inherit !important;
   padding-left: 25px !important;
   padding-right: 0px !important;
   padding-bottom: 30px;
@@ -324,6 +325,12 @@ i.badge1 {
 }
 @media(max-width: 320px)
 {
+  .nav2{
+    padding-right: 0 !important;
+  }
+  .notifaction-icon{
+    display: none;
+  }
   .profile-image img{
     height: 50px !important;
     width: 50px !important;
@@ -340,6 +347,7 @@ i.badge1 {
   }
   .users-img{
     padding-left: 0px !important;
+    padding-right: 0 !important;
   }
   .nav-btnn{
     margin-left: 10px !important;
@@ -385,11 +393,12 @@ i.badge1 {
     display: flex;
   }
   .user-info{
-    right: 19% !important;
+    right: 26% !important;
     font-size: 13px !important;
   }
   .user-img{
-    right: 7% !important;
+    right: 15% !important;
+    
   }
   .main form div .search-input{
     width: 77%;
@@ -430,9 +439,38 @@ i.badge1 {
   .upload-icon{
     padding: 11px;
   }
+  .user-menu{
+    top: 16%;
+    left: 3%;
+    width: 40%;
+    height: 20%;
+  }
+  .user-menu h4{
+    font-size: 17px;
+  }
+  .user-profile-img{
+    width: 15%;
+  }
+  .user-profile-img img{
+    width: 35px;
+    height: 35px;
+  }
 }
 @media(min-width: 321px)
 {
+  .user-profile-img img{
+    width: 45px;
+    
+  }
+  .users-img{
+    padding-right: 0px !important;
+  }
+  .nav2{
+    padding-right: 0 !important;
+  }
+  .notifaction-icon{
+    display: none;
+  }
   .profile-image img{
     height: 70px !important;
     width: 70px !important;
@@ -504,11 +542,11 @@ i.badge1 {
     display: flex;
   }
   .user-info{
-    right: 17% !important;
+    right: 24% !important;
     font-size: 13px !important;
   }
   .user-img{
-    right: 5% !important;
+    right: 14% !important;
   }
   .main form div .search-input{
     width: 78%;
@@ -548,9 +586,21 @@ i.badge1 {
   .main form div i{
     margin-right: 10px;
   }
+  .user-menu{
+    top: 17%;
+    width: 40%;
+    height: 20%;
+    left: 3%;
+  }
+  .user-menu h4{
+    font-size: 17px;
+  }
 }
 @media(min-width: 376px)
 {
+  .notifaction-icon{
+    display: none;
+  }
   .profile-image img{
     height: 85px !important;
     width: 85px !important;
@@ -603,10 +653,10 @@ i.badge1 {
     margin-top: 4px !important;
   }
   .user-info{
-    right: 15% !important;
+    right: 24% !important;
   }
   .user-img{
-    right: 4% !important;
+    right: 14% !important;
   }
   .main form div .search-input{
     width: 78%;
@@ -643,9 +693,21 @@ i.badge1 {
   .upload-icon{
     padding: 15px;
   }
+  .user-menu{
+    top: 17%;
+    width: 40%;
+    height: 20%;
+    left: 3%;
+  }
+  .user-menu h4{
+    font-size: 17px;
+  }
 }
 @media(min-width: 426px)
 {
+  .notifaction-icon{
+    display: none;
+  }
   .profile-image img{
     height: 85px !important;
     width: 85px !important;
@@ -721,6 +783,9 @@ i.badge1 {
 
 @media(min-width: 768px)
 {
+  .notifaction-icon{
+    display: flex;
+  }
   .profile-image img{
     height: 80px !important;
     width: 80px !important;
@@ -746,14 +811,14 @@ i.badge1 {
 }
   
 .login-nav2{
-  margin-left: 50px !important;
+  padding-left: 8px !important;
 }
   .login-user1{
     font-size: 13px !important;
     padding-left: 8px !important;
   }
   .users-img{
-    padding-left: 15px !important;
+    padding-left: 0px !important;
   }
   .main form div i{
     margin-right: 15px;
@@ -774,10 +839,10 @@ i.badge1 {
   }
   .user-info{
     font-size: 16px !important;
-    right: 16% !important;
+    right: 37% !important;
   }
   .user-img{
-    right: 5% !important;
+    right: 32% !important;
   }
   .btn-div{
     padding-right: 50px !important;
@@ -797,6 +862,21 @@ i.badge1 {
   }
   .upload-icon{
     padding: 15px;
+  }
+  .user-menu{
+    top: 17%;
+    width: 25%;
+    height: 20%;
+    left: 1%;
+  }
+  .notification_dd{
+    top: 32%;
+    left: 18%;
+    width: 40%;
+    height: 75%;
+  }
+  .user-menu h4{
+    font-size: 17px;
   }
 }
 @media(min-width: 1024px)
@@ -839,7 +919,10 @@ i.badge1 {
     font-size: 18px;
   }
   .user-info{
-    right: 14% !important;
+    right: 34% !important;
+  }
+  .user-img{
+    right: 30% !important;
   }
   .main form div .search-input{
     width: 85%;
@@ -858,6 +941,21 @@ i.badge1 {
   }
   .add-img{
     padding-left: 55px !important;
+  }
+  .user-menu{
+    top: 14%;
+    width: 20%;
+    height: 20%;
+    left: 1%;
+  }
+  .notification_dd{
+    top: 17%;
+    left: 19%;
+    width: 32%;
+    height: 75%;
+  }
+  .login-nav2{
+    padding-left: 50px !important;
   }
 }
 @media(min-width: 1440px)
@@ -885,7 +983,10 @@ i.badge1 {
     margin-right: 40px;
   }
   .user-info{
-    right: 11% !important;
+    right: 32% !important;
+  }
+  .user-img{
+    right: 29% !important;
   }
   .form-col .code{
     border: none !important;
@@ -905,6 +1006,18 @@ i.badge1 {
   }
   .upload-icon{
     padding: 42px;
+  }
+  .user-menu{
+    top: 14%;
+    width: 15%;
+    height: 20%;
+    left: 1%;
+  }
+  .notification_dd{
+    top: 17%;
+    left: 17%;
+    width: 22%;
+    height: 75%;
   }
 }
 @media(min-width: 2560px)
@@ -955,6 +1068,57 @@ i.badge1 {
   height: 100%;
   opacity: 0;
 }
+
+.toggel{
+	display: none;
+  
+}
+.toggle{
+  display: none;
+}
+.active{
+	display: inline;
+}
+.nav2{
+  position: relative;
+}
+.notification_dd{
+  position: absolute;
+  background: white;
+  border-radius: 10px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.starbucks{
+  display: flex;
+  list-style: none;
+  padding: 10px 15px;
+}
+.notify_status{
+  color: #0DA81E;
+  font-weight: normal;
+}
+.notify_data {
+  margin-left: 10px !important;
+}
+.notify_data .sub_title{
+  font-size: 12px;
+  color: #808080ba;
+}
+
+.user-menu{
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    padding: 18px 25px;
+  }
+
+
+
+
+
+
 
 
 

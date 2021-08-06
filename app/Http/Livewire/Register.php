@@ -11,7 +11,7 @@ use Hash;
 class Register extends Component
 {
     use WithFileUploads;
-    public $users,$photo,$name,$username,$email,$password,$phone_number,$city,$twitter_link,$goread_link;
+    public $users, $photo, $name, $username, $email, $password, $phone_number, $city, $twitter_link, $goread_link;
     public $registerForm = false;
     public $cities;
 
@@ -35,12 +35,9 @@ class Register extends Component
         $this->city = '';
         $this->twitter_link = '';
         $this->goread_link = '';
-
     }
     public function registerStore()
     {
-        echo $this->photo;
-        die;
         $validatedDate = $this->validate([
             'name' => 'required|max:255',
             'username' => 'required|unique:users|max:255',
@@ -49,15 +46,18 @@ class Register extends Component
             'phone_number' => 'required|max:9|min:9',
             'city' => 'required|max:255',
         ]);
-
-
+        $imageName = '';
+        if ($this->photo) {
+          $imageName = $this->photo->store("avatars",'public');
+        }
         $this->password = Hash::make($this->password);
-        User::create(['name' => $this->name,'username' => $this->username, 'email' => $this->email, 'password' => $this->password,
-        'phone_number' => $this->phone_number,'city_id' => $this->city,'twitter_link' => $this->twitter_link,
-        'goread_link' => $this->goread_link]);
+        User::create([
+            'name' => $this->name, 'username' => $this->username,'profile_photo'=>$imageName,'email' => $this->email, 'password' => $this->password,
+            'phone_number' => $this->phone_number, 'city_id' => $this->city, 'twitter_link' => $this->twitter_link,
+            'goread_link' => $this->goread_link
+        ]);
         session()->flash('message', 'Your register successfully Go to the login page.');
-        $this->resetInputFields();
+        return redirect()->to('user/login');
+       // $this->resetInputFields();
     }
-
-
 }

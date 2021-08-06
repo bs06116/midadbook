@@ -6,7 +6,7 @@
                 <div class="col-6 login-nav d-flex">
                     <nav class="navbar navbar-expand-lg navbar-light users-img py-2">
                         <div class="user-profile-img ">
-                            <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">
+                            <img src="{{ asset('storage/app/public/'.Auth::user()->profile_photo) }}" alt="">
                         </div>
                         <div class="user-name login-user1 text-light ">
                             <span class="d-block font-weight-bold">{{Auth::user()->name}}</span>
@@ -31,7 +31,7 @@
 
 
         <div class="col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 text-center logo   ">
-            <a class=" px-4 navbar-brand text-light" href="#"><img
+            <a class=" px-4 navbar-brand text-light" href="{{url('/')}}"><img
                     src="{{ asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
         </div>
 

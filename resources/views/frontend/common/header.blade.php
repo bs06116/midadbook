@@ -28,7 +28,7 @@
             </nav>
         </div>
     <div class="col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 text-center logo">
-        <a class="px-4 navbar-brand text-light" href="#"><img src="{{ asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
+        <a class="px-4 navbar-brand text-light"  href="{{url('/')}}"><img src="{{ asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
     </div>
     <div class=" col-5 col-xs-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 text-left btn1-div">
         <a href="{{route('post/create')}}">

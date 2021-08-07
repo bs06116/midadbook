@@ -28,7 +28,6 @@ class Register extends Component
     private function resetInputFields()
     {
         $this->name = '';
-        $this->photo = '';
         $this->username = '';
         $this->email = '';
         $this->password = '';

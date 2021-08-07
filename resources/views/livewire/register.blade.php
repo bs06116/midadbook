@@ -40,6 +40,7 @@
                                     <input type="file" wire:model="photo" id="fileupload">
                                 </div>
                             </div>
+                            @error('photo') <span class="text-danger error">{{ $message }}</span>@enderror
 
 
                         </div>

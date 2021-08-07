@@ -22,7 +22,7 @@ class Showposts extends Component
     }
     public function render()
     {
-        $posts = Post::with(['user','category'])->paginate($this->perPage);
+        $posts = Post::with(['user'])->orderBy('id', 'DESC')->paginate($this->perPage);
         return view('livewire.showposts',['posts' => $posts]);
     }
 }

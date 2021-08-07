@@ -8,9 +8,9 @@
             <div class="text-right d-inline user-info">
                 <span class="text-muted"><span>@</span>{{$post->user->username}}</span>
                 <h6 class="d-inline"><a href="{{$post->user->username}}">{{$post->user->name}}</a></h6>
-                <span class="d-block text-right text-muted">hello</span>
+                <span class="d-block text-right text-muted">{{$post->user->city->name}}</span>
             </div>
-            <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" class="user-img " alt="">
+            <img src="{{ url('storage/' . $post->user->profile_photo) }}" class="user-img " alt="{{$post->user->name}}">
             <hr class="mt-3">
         <div class="post-title text-right pt-2">
             <h4>{{ $post->post_title }} </h4>
@@ -19,11 +19,11 @@
         </div>
 
         <div class="post-img">
-            <img src="{{ asset($post->featured_image) }}" alt="{{ $post->post_title }}">
+            <img src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
         </div>
         <div class="row f-post pt-2">
             <div class="col-5 col-xs-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-                <p class="whatsapp mr-2">1005345423 <img src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
+                <p class="whatsapp mr-2">{{$post->user->phone_number}} <img src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
                 </p>
             </div>
             <div class="col-7 col-xs-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">

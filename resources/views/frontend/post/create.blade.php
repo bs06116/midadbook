@@ -8,21 +8,8 @@
 @include('frontend.common.header')
 
 @endif
-<div class="container-fluid main">
-  @livewire('posts');
+  @livewire('posts')
 
-  </div>
 
 
 @endsection
-
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-	$(function(){
-		$("#fileupload").change(function(event) {
-			var x = URL.createObjectURL(event.target.files[0]);
-			$("#upload-img").attr("src",x);
-			console.log(event);
-		});
-	})
-</script> --}}

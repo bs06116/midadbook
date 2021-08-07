@@ -11,6 +11,9 @@
 #fileupload{
   display: none;
 }
+#fileupload2{
+  display: none;
+}
 .profile-images img{
   height: 100px !important;
   width: 100px !important;
@@ -64,7 +67,7 @@
 }
 .form-col div .good{
   background-color: #E7E3C6;
- 
+
   color: #8A683E;
   height: 33px;
   margin-right: -10px ;
@@ -74,7 +77,7 @@
   margin-top: 1.5px;
 }
 .nav-btn {
-  
+
   border: none !important;
   background-color: hsl(126deg 87% 35%);
   padding-right: 1px;
@@ -99,7 +102,7 @@
 .main {
   background: #f3ece4;
   justify-content: center;
-  
+
 }
 .main form div {
   background: #fff;
@@ -130,7 +133,7 @@
 }
 .user-info {
   position: absolute;
- 
+
   margin-top: -10px;
 }
 .post-container .user-info h6 a{
@@ -139,7 +142,7 @@
 }
 .user-img {
   position: absolute;
-  
+
   margin: -10px;
 }
 .butn button {
@@ -162,7 +165,7 @@
 }
 .post-icon .whatsapp {
   width: 50%;
-  
+
   text-align: left;
 }
 .post-icon p {
@@ -320,7 +323,7 @@ i.badge1 {
   border: 1.5px solid #ffffff99 !important;
 }
 .post-container .row div .nav2-btn{
-  padding: 0px 9px; 
+  padding: 0px 9px;
   font-size:10px;
 }
 @media(max-width: 320px)
@@ -364,7 +367,7 @@ i.badge1 {
     width: 30% !important;
     height: 30px !important;
     border-left: 2px solid gainsboro !important;
-  
+
   }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
@@ -379,7 +382,7 @@ i.badge1 {
   .post-title p{
     font-size: 11px !important;
   }
-  
+
   .post-icon .whatsapp{
     width: 100%;
     display: flex;
@@ -398,12 +401,12 @@ i.badge1 {
   }
   .user-img{
     right: 15% !important;
-    
+
   }
   .main form div .search-input{
     width: 77%;
   }
-  
+
   .nav-btn{
     font-size: 8px;
   }
@@ -460,7 +463,7 @@ i.badge1 {
 {
   .user-profile-img img{
     width: 45px;
-    
+
   }
   .users-img{
     padding-right: 0px !important;
@@ -517,7 +520,7 @@ i.badge1 {
     width: 25% !important;
     height: 30px !important;
     border-left: 2px solid gainsboro !important;
-  
+
   }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
@@ -528,7 +531,7 @@ i.badge1 {
   .post-title p{
     font-size: 11px !important;
   }
-  
+
   .post-icon .whatsapp{
     width: 100%;
     display: flex;
@@ -551,7 +554,7 @@ i.badge1 {
   .main form div .search-input{
     width: 78%;
   }
-  
+
   .nav-btn{
     font-size: 8px;
   }
@@ -612,7 +615,7 @@ i.badge1 {
   .form-col div .good{
     margin-right: -15px ;
   }
-  
+
   .custom-file label .uimg-icon{
     right: 8%;
   }
@@ -647,7 +650,7 @@ i.badge1 {
     width: 10% !important;
     height: 30px !important;
     border-left: 2px solid gainsboro !important;
-  
+
   }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
@@ -661,7 +664,7 @@ i.badge1 {
   .main form div .search-input{
     width: 78%;
   }
-  
+
   .nav-btn{
     font-size: 8px;
   }
@@ -747,7 +750,7 @@ i.badge1 {
     width: 10% !important;
     height: 30px !important;
     border-left: 2px solid gainsboro !important;
-  
+
   }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
@@ -783,7 +786,7 @@ i.badge1 {
   .upload-icon{
     padding: 15px;
   }
-  
+
 }
 
 @media(min-width: 768px)
@@ -819,7 +822,7 @@ i.badge1 {
   width: 25px;
   padding: 5px;
 }
-  
+
 .login-nav2{
   padding-left: 8px !important;
 }
@@ -842,7 +845,7 @@ i.badge1 {
     width: 16% !important;
     height: 30px !important;
     border-left: 2px solid gainsboro !important;
-  
+
   }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
@@ -923,7 +926,7 @@ i.badge1 {
     width: 0% !important;
     height: 30px !important;
     border-left: 2px solid gainsboro !important;
-  
+
   }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
@@ -1007,7 +1010,7 @@ i.badge1 {
     width: 0% !important;
     height: 30px !important;
     border-left: 2px solid gainsboro !important;
-  
+
   }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
@@ -1055,7 +1058,7 @@ i.badge1 {
     width: 0% !important;
     height: 30px !important;
     border-left: 2px solid gainsboro !important;
-  
+
   }
   .btn-div .nav-btn span{
     margin-top: 4px !important;
@@ -1071,7 +1074,7 @@ i.badge1 {
   margin-top: 10px;
   margin-bottom: 15px;
   border: 1px solid #8080806b;
- 
+
   background-color: #F7F3F4;
   border-radius: 10px;
   margin: 25px 2px 2px 2px;
@@ -1088,7 +1091,7 @@ i.badge1 {
 
 .toggel{
 	display: none;
-  
+
 }
 .toggle{
   display: none;

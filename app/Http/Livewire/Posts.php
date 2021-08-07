@@ -5,10 +5,12 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Post;
+use Auth;
 
 class Posts extends Component
 {
-    public $title,$type_add,$description;
+    use WithFileUploads;
+    public $title, $type_add, $description, $book_photo, $book_photo_two;
 
     public function render()
     {
@@ -25,28 +27,36 @@ class Posts extends Component
         $this->title = '';
         $this->type_add = '';
         $this->description = '';
+        $this->book_photo = '';
+        $this->book_photo_two = '';
     }
     public function postStore()
     {
-        $validatedDate = $this->validate([
+        $this->validate([
             'title' => 'required|max:255',
-            'type_add' => 'required|unique:users|max:255',
-            'description' => 'required',
-
+            'type_add' => 'required|max:255',
+            'description' => 'required|max:255',
         ]);
-        $imageName = '';
-        if ($this->photo) {
-          $imageName = $this->photo->storePublicly('avatars');
+        if (!$this->book_photo || !$this->book_photo_two) {
+            $this->validate([
+                'book_photo' => 'required|image',
+            ]);
         }
-        User::create([
-            'name' => $this->name, 'username' => $this->username,'profile_photo'=>$imageName,'email' => $this->email, 'password' => $this->password,
-            'phone_number' => $this->phone_number, 'city_id' => $this->city, 'twitter_link' => $this->twitter_link,
-            'goread_link' => $this->goread_link
-        ]);
-        session()->flash('message', 'Your register successfully Go to the login page.');
-        $this->resetInputFields();
-        return redirect()->to('user/login');
-       // $this->resetInputFields();
-    }
 
+        $imageNameOne = '';
+        if ($this->book_photo) {
+            $imageNameOne = $this->book_photo->storePublicly('books');
+        }
+        $imageNameTwo = '';
+        if ($this->book_photo_two) {
+            $imageNameTwo = $this->book_photo_two->storePublicly('books');
+        }
+        Post::create([
+            'post_title' => $this->title, 'post_body' => $this->description, 'book_type' => $this->type_add, 'featured_image' => $imageNameOne,
+            'image_second' => $imageNameTwo, 'user_id' => Auth::user()->id,
+
+        ]);
+        session()->flash('message', 'Your book add successfully.');
+        $this->resetInputFields();
+    }
 }

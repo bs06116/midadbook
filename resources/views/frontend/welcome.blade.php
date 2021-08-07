@@ -25,34 +25,139 @@
             @livewire('showposts')
 
         </div>
-        <div class="col-xs-1  col-sm-2 col-md-3 col-lg-3 chat-box"></div>
-        <div class="chat togel" id="togel">
-            <ul class="chat_ul">
-                <li class="starbucks success">
-                    <div class="notify_icon">
-                    <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">  
-                    </div>
-                    <div class="notify_data">
-                        <div class="title">
-                            Lorem, ipsum dolor.  
+        <div class="col-xs-1  col-sm-2 col-md-3 col-lg-3 chat-box">
+            <!-- <div class="msg-box" id="msg-box" onclick="dropdown2()">
+                <h4 id="chats"> Message</h4>
+            </div> -->
+            <!-- <div class="chat toggel" id="toggle1">
+                <ul class="chat_ul">
+                    <li class="starbucks success">
+                        <div class="notify_icon">
+                        <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">  
                         </div>
-                        <div class="sub_title">
-                          Lorem ipsum dolor sit amet consectetur.
-                      </div>
-                    </div>
-                    <div class="notify_status">
-                        <p>Success</p>  
-                    </div>
-                </li>
-                
+                        <div class="notify_data">
+                            <div class="title">
+                                Lorem, ipsum dolor.  
+                            </div>
+                            <div class="sub_title">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </div>
+                        </div>
+                        <div class="notify_status">
+                            <p>Success</p>  
+                        </div>
+                    </li>
+                    
                 </ul>
+            </div>  -->
+            <div id="chat-bubble">
+      <div class="chat-container">
+        <div class="chat-header">
+          <div class="user-avatar" onclick="openChatBubble()">
+            <div class="img-container">
+              <img src="https://source.unsplash.com/random/35x35">
+            </div>
+            <div class="user-status-info">
+              <a href="#">John Doe</a>
+              <p>Active now</p>
+            </div>
+          </div>
+
+          <div class="chat-comm">
+            <nav>
+              <a href="#">
+                <img src="./icons/video-call.svg">
+              </a>
+              <a href="#">
+                <img src="./icons/call.svg">
+              </a>
+              <a href="#">
+                <img src="./icons/settings.svg">
+              </a>
+              <a href="#" onclick="openChatBubble()">
+                <img src="./icons/close.svg">
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="chat-body">
+          <div class="sender-other">
+            <div class="user-avatar">
+              <div class="img-container">
+                <img src="https://source.unsplash.com/random/35x35">
               </div>
+              <div class="other-message">
+                Hi there!
+              </div>
+            </div>
+          </div>
+
+          <div class="sender-me">
+            <div class="my-message">
+              Hello
+            </div>
+            <div class="seen-at">
+              <img class="check" src="./icons/check.svg"> Seen 8:00 AM
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-footer">
+          <input type="textarea" placeholder="Type a message...">
+          <div class="chat-media">
+            <nav>
+              <a href="#">
+                <img class="upload" src="./icons/upload.svg" alt="">
+              </a>
+              <a href="#">
+                <img class="emoji" src="./icons/emoji.svg" alt="">
+              </a>
+              <a href="#">
+                <img class="game" src="./icons/game.svg" alt="">
+              </a>
+              <a href="#">
+                <img class="attach" src="./icons/attach.svg" alt="">
+              </a>
+              <a href="#">
+                <img class="camera" src="./icons/camera.svg" alt="">
+              </a>
+            </nav>
+            <a href="#">
+              <img class="like" src="./icons/like.svg">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+         </div>
+    </div>
+        
 
 </div>
 
 
 @endsection
 
+<script>
+// var msg = document.getElementById("msg-box");
 
+// var toggle1 = document.getElementById("toggle1");
 
+// msg.addEventListener("click", dropdown2);
+
+// function dropdown2(){
+
+//     if(!toggle1.classList.value.includes('active')){
+//         toggle1.classList.add('active');
+//     }
+//     else{
+//         toggle1.classList.remove('active');
+//     }
+
+// }
+function openChatBubble() {
+        var element = document.getElementById("chat-bubble");
+        element.classList.toggle("open")
+      }
+</script>

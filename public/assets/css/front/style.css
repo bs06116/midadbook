@@ -1233,7 +1233,12 @@ i.badge1 {
   overflow: auto;
   z-index: 1;
 }
-
+.chat_contacts{
+  background: white;
+  border-radius: 10px;
+  overflow: auto;
+  z-index: 1;
+}
 .starbucks{
   display: flex;
   list-style: none;
@@ -1285,8 +1290,36 @@ i.badge1 {
     border: none;
 }
 
-
-
+.contacts{
+  display: flex;
+    justify-content: space-between;
+}
+.user_data{
+  display: flex;
+  float: right;
+}
+.contacts .chat_title i{
+  color: gray;
+}
+.contacts .chat_title {
+  color: #5D001D;
+}
+.contacts .date{
+  font-size: 10px;
+    color: gray;
+}
+.user_data .user_name .desc{
+  line-height: 0px;
+    font-size: 12px;
+    color: gray;
+}
+.user_data .user_name p span{
+  font-size: 11px;
+  color: gray;
+}
+.chat-header .user-avatar h5{
+  margin-left: 175px;
+}
 
 
 
@@ -1316,7 +1349,7 @@ i.badge1 {
   background-color: #fff;
   position: fixed;
   bottom: 0;
-  right: 50px;
+  
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border: 1px solid #e4e4e4;

@@ -52,32 +52,11 @@
             </div>  -->
             <div id="chat-bubble">
       <div class="chat-container">
-        <div class="chat-header">
+        <div class="chat-header ">
           <div class="user-avatar" onclick="openChatBubble()">
-            <div class="img-container">
-              <img src="https://source.unsplash.com/random/35x35">
+            <div >
+            <h5 >Message</h5>
             </div>
-            <div class="user-status-info">
-              <a href="#">John Doe</a>
-              <p>Active now</p>
-            </div>
-          </div>
-
-          <div class="chat-comm">
-            <nav>
-              <a href="#">
-                <img src="./icons/video-call.svg">
-              </a>
-              <a href="#">
-                <img src="./icons/call.svg">
-              </a>
-              <a href="#">
-                <img src="./icons/settings.svg">
-              </a>
-              <a href="#" onclick="openChatBubble()">
-                <img src="./icons/close.svg">
-              </a>
-            </nav>
           </div>
         </div>
 
@@ -100,32 +79,6 @@
             <div class="seen-at">
               <img class="check" src="./icons/check.svg"> Seen 8:00 AM
             </div>
-          </div>
-        </div>
-
-        <div class="chat-footer">
-          <input type="textarea" placeholder="Type a message...">
-          <div class="chat-media">
-            <nav>
-              <a href="#">
-                <img class="upload" src="./icons/upload.svg" alt="">
-              </a>
-              <a href="#">
-                <img class="emoji" src="./icons/emoji.svg" alt="">
-              </a>
-              <a href="#">
-                <img class="game" src="./icons/game.svg" alt="">
-              </a>
-              <a href="#">
-                <img class="attach" src="./icons/attach.svg" alt="">
-              </a>
-              <a href="#">
-                <img class="camera" src="./icons/camera.svg" alt="">
-              </a>
-            </nav>
-            <a href="#">
-              <img class="like" src="./icons/like.svg">
-            </a>
           </div>
         </div>
       </div>

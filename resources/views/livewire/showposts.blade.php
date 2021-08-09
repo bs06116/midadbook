@@ -17,10 +17,18 @@
             <p class="text-muted pt-2">{{ $post->post_body }}
             </p>
         </div>
-
-        <div class="post-img">
-            <img src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
+        <div class="post-img ">
+            <img  src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
         </div>
+        <br>
+        <div class="d-flex post_images">
+            <img class="w-50 mr-1" src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
+            <img class="w-50" src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
+        </div>
+       
+                
+            
+        
         <div class="row f-post pt-2">
             <div class="col-5 col-xs-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
                 <p class="whatsapp mr-2">{{$post->user->phone_number}} <img src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
@@ -39,5 +47,10 @@
 
         </div>
     </div>
+
+
+
+
+    
 @endforeach
 </div>

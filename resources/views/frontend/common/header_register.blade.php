@@ -15,7 +15,7 @@
 
 
             <div class="notifaction-icon  login-nav2">
-                <div class="noti mt-4"><img src="{{ asset('assets/img/front/bell_ic.png') }}" alt=""></div>
+                
                 <div class="noti mt-4" id="bell-icon"><img src="{{ asset('assets/img/front/bell_ic.png') }}" alt="">
                     <i class="badge1">9</i>
                 </div>

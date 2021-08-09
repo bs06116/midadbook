@@ -21,8 +21,7 @@
 
                         </div>
 
-                        <div class="col-8 text-center   ">
-
+                        <div class="col-8 text-center">
                             <div class="profile-images-card">
                                 <div class="profile-images" >
                                   @if( !empty( $photo ) )
@@ -39,8 +38,9 @@
                                             aria-hidden="true"></i></label>
                                     <input type="file" wire:model="photo" id="fileupload">
                                 </div>
+                                @error('photo') <span class="text-danger error">{{ $message }}</span>@enderror
+
                             </div>
-                            @error('photo') <span class="text-danger error">{{ $message }}</span>@enderror
 
 
                         </div>

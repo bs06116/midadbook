@@ -29,7 +29,7 @@ return [
     'exchange' => 'Exchange',
     'description' => 'Description',
     'submit' => 'Submit',
-
+    'logout' => 'Logout',
 
 
 

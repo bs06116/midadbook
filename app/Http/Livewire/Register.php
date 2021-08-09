@@ -40,11 +40,12 @@ class Register extends Component
     {
         $validatedDate = $this->validate([
             'name' => 'required|max:255',
-            'username' => 'required|unique:users|max:255',
+            'username' => 'required|unique:users|max:255|string|alpha_dash',
             'email' => 'required|unique:users|email|max:255',
             'password' => 'required|max:255',
             'phone_number' => 'required|max:9|min:9',
             'city' => 'required|max:255',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $imageName = '';
         if ($this->photo) {
@@ -56,7 +57,7 @@ class Register extends Component
             'phone_number' => $this->phone_number, 'city_id' => $this->city, 'twitter_link' => $this->twitter_link,
             'goread_link' => $this->goread_link
         ]);
-        session()->flash('message', 'Your register successfully Go to the login page.');
+        session()->flash('message', 'Your register successfully. Please login to add book.');
         $this->resetInputFields();
         return redirect()->to('user/login');
        // $this->resetInputFields();

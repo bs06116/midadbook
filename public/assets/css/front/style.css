@@ -145,14 +145,38 @@
 }
 .user-img {
   position: absolute;
-
   margin: -10px;
 }
 .butn button {
+  width:86px;
   padding-bottom: 4px !important;
   background: #F6EBEF;
   color: #5d001d;
   border: 1px solid #5d001d;
+  font-weight: bold;
+}
+.butnsell button {
+  width:86px;
+  padding-bottom: 4px !important;
+  background: #dcf3d7;
+  color: #15cf34;
+  border: 1px solid #15cf34;
+  font-weight: bold;
+}
+.butnborrow button {
+  width:86px;
+  padding-bottom: 4px !important;
+  background: #fff3dc;
+  color: #f0b944;
+  border: 1px solid #f0b944;
+  font-weight: bold;
+}
+.butnexchange button {
+  width:86px;
+  padding-bottom: 4px !important;
+  background: #d1e0f7;
+  color: #1e45c5;
+  border: 1px solid #1e45c5;
   font-weight: bold;
 }
 
@@ -1135,6 +1159,8 @@ i.badge1 {
     background: white;
     border-radius: 10px;
     padding: 18px 25px;
+    z-index: 1;
+
   }
 
 .chat{

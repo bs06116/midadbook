@@ -29,5 +29,6 @@ return [
     'exchange' => 'تبادل',
     'description' => 'تفاصيل الإعلان',
     'submit' => 'نشر الكتاب',
+    'logout' => 'تسجيل الخروج',
 
 ];

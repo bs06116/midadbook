@@ -11,7 +11,7 @@
 <div class="container-fluid main">
     <div class="row w-100">
         <div class="col-xs-1 col-sm-2  px-4 col-md-3 col-lg-3">
-      
+
         </div>
         <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6 main-div">
             <!-- search input -->
@@ -26,27 +26,27 @@
 
         </div>
         <div class="col-xs-1  col-sm-2 col-md-3 col-lg-3 chat-box"></div>
-        <div class="chat togel" id="togel">
+        {{-- <div class="chat togel" id="togel">
             <ul class="chat_ul">
                 <li class="starbucks success">
                     <div class="notify_icon">
-                    <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">  
+                    <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">
                     </div>
                     <div class="notify_data">
                         <div class="title">
-                            Lorem, ipsum dolor.  
+                            Lorem, ipsum dolor.
                         </div>
                         <div class="sub_title">
                           Lorem ipsum dolor sit amet consectetur.
                       </div>
                     </div>
                     <div class="notify_status">
-                        <p>Success</p>  
+                        <p>Success</p>
                     </div>
                 </li>
-                
+
                 </ul>
-              </div>
+              </div> --}}
     </div>
 
 </div>

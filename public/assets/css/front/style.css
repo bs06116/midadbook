@@ -987,9 +987,9 @@ i.badge1 {
     left: 2%;
   }
   .notification_dd{
-    top: 1%;
-    left: 18%;
-    width: 18%;
+    top: 17%;
+    left: 15%;
+    width: 41%;
     height: 75%;
   }
   .user-menu h4{
@@ -1036,7 +1036,7 @@ i.badge1 {
     padding-left: 120px !important;
   }
   .main form div i{
-    margin-right: 10px;
+    margin-right: 28px;
   }
   .form-col .code{
     border: none !important;
@@ -1346,7 +1346,9 @@ i.badge1 {
 .chat-header .user-avatar h5{
   margin-left: 175px;
 }
-
+.notification_ul hr{
+  margin-top: 2rem;
+}
 
 
 

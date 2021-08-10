@@ -29,7 +29,11 @@
                 <p class="d-inline text-secondary pl-3">{{$user->city->name}}
                    <i class="fal fa-map-marker-alt"></i></p>
                    <br>
-
+                   <div class="social-links ">
+                   <a class=" good-reads" href=""><img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt=""></a>
+                   <a class=" twitter " href=""><i class="fab fa-twitter"></i></a>
+                   <button class="btn counting">30 <span>counting</span></button>
+                  </div>
               </div>
                 </div>
               </div>
@@ -40,9 +44,7 @@
             <div class="post-container mt-4 px-3 pt-4">
 
                 @if ($post->book_type === 1)
-                    <div class="butn d-inline">
-                        <button class='rounded-pill'><span class='px-1'>{{ __('translation.required') }}</span>
-                        </div>
+                    
                  @elseif($post->book_type === 2)
                     <div class="butnborrow d-inline">
                         <button class='rounded-pill'><span class='px-1'>{{ __('translation.borrow_book') }}</span>
@@ -60,7 +62,7 @@
 
 
 
-                <hr class="mt-3">
+                
                 <div class="post-title text-right pt-2">
                     <h4>{{ $post->post_title }} </h4>
                     <p class="text-muted pt-2">{{ $post->post_body }}
@@ -72,9 +74,12 @@
                 </div>
                 <div class="row f-post pt-2">
                     <div class="col-5 col-xs-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-                        <p class="whatsapp mr-2">{{ $post->user->phone_number }} <img
+                        <!-- <p class="whatsapp mr-2">{{ $post->user->phone_number }} <img
                                 src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
-                        </p>
+                        </p> -->
+                        <div class="butn d-inline">
+                        <button class='rounded-pill'><span class='px-1'>{{ __('translation.required') }}</span>
+                        </div>
                     </div>
                     <div class="col-7 col-xs-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">
                         <div class="row d-flex">

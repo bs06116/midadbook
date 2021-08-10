@@ -1,6 +1,6 @@
 <div>
     @foreach ($posts as $key => $post)
-        <div class="post-container mt-4 px-3 pt-4">
+        <div class="post-container  mt-4 px-3 pt-4">
 
             @if ($post->book_type === 1)
                 <div class="butn d-inline">
@@ -82,8 +82,24 @@
                         </div>
                     </div>
                 </div>
-
+                
+        </div>
+        <hr>
+        
+        <div class="row pb-3 d-flex comment_div">
+            <div class="col-2 pl-1 img">
+                <img src="{{ url('storage/' . $post->user->profile_photo) }}" 
+                alt="{{ $post->user->name }}">
+            </div>
+                <div class="col-8 comment_box">
+                
+                <input type="text" class="form-control" id="validationCustom01"  >
+                </div>
+                <div class="col-2 comment_btn">
+                    <button class="btn mt-1 " type="submit"><i class="far fa-paper-plane"></i></button>
+                </div>
         </div>
     </div>
+    
 @endforeach
 </div>

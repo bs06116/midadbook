@@ -89,14 +89,8 @@
                     </div>
 
                 </li>
-
-
-            </ul>
-
-        </div>
-        <hr>
-        <div class="chat-body chat_contacts " >
-            <ul class="notification_ul">
+                <br>
+                <hr>
                 <li class="chat_list">
                 <div class="contacts">
                   <div class="date text-left">
@@ -119,7 +113,60 @@
                       <div class="user_profile_img">
                     <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">
                     </div>
+                    </div>
 
+                </li>
+                <br>
+                <hr>
+                <li class="chat_list">
+                <div class="contacts">
+                  <div class="date text-left">
+                  <p>5:40 PM</p>
+                  </div>
+                  <div class="chat_title">
+                    <div class="title text-right">
+
+                       Lorem, ipsum dolor.
+                        <i class="far fa-book"></i>
+                    </div>
+
+                    </div>
+                    </div>
+                    <div class="user_data">
+                      <div class="user_name">
+                        <p class="name"><span>@waleedKhalid.</span>asim </p>
+                        <p class="desc"> Lorem ipsum dolor sit .</p>
+                      </div>
+                      <div class="user_profile_img">
+                    <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">
+                    </div>
+                    </div>
+
+                </li>
+                <br>
+                <hr>
+                <li class="chat_list">
+                <div class="contacts">
+                  <div class="date text-left">
+                  <p>5:40 PM</p>
+                  </div>
+                  <div class="chat_title">
+                    <div class="title text-right">
+
+                       Lorem, ipsum dolor.
+                        <i class="far fa-book"></i>
+                    </div>
+
+                    </div>
+                    </div>
+                    <div class="user_data">
+                      <div class="user_name">
+                        <p class="name"><span>@waleedKhalid.</span>asim </p>
+                        <p class="desc"> Lorem ipsum dolor sit .</p>
+                      </div>
+                      <div class="user_profile_img">
+                    <img src="{{ asset('assets/img/front/profile_thumbnail1.png') }}" alt="">
+                    </div>
                     </div>
 
                 </li>
@@ -128,7 +175,7 @@
             </ul>
 
         </div>
-        <hr>
+        
 
     </div>
 

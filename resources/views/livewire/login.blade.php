@@ -1,5 +1,5 @@
 <div class="container-fluid main">
-    <div class="row w-100">
+    <div class="row login_page w-100">
         <div class="col-xs-2 col-sm-2   col-md-3 col-lg-3"></div>
         <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 main-div">
 
@@ -56,7 +56,7 @@
                                 {{-- <button type="submit" class="px-4 btn submit-btn1 ">Submit</button> --}}
                             </div>
                             <div class="col-6 text-left">
-                                <button type="submit" class="px-4 btn submit-btn"
+                                <button type="submit" class=" btn  login_btn"
 
                                     wire:click.prevent="login">    <span wire:target="login" wire:loading.class="spinner-border spinner-border-sm"></span>
                                     {{__('translation.login')}}</button>

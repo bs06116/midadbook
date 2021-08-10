@@ -20,17 +20,16 @@
                             <div class=" profile-images-card">
                                 <div class="profile-image">
                                     @if (!empty($book_photo_two))
-                                        <img src="{{ $book_photo_two->temporaryUrl() }}" class="upload-icon">
+                                        <img src="{{ $book_photo_two->temporaryUrl() }}" class="">
                                     @else
-                                        <img src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}"
-                                            class="upload-icon">
+                                    <label for="fileupload2"> <img src="{{ asset('assets/img/front/Screenshot_8.png') }}"
+                                            class="upload-icon"></label>
+                                       
 
                                     @endif
                                 </div>
                                 <div class="custom-file">
-                                    <label for="fileupload2"><i
-                                            class="rounded-pill pull-right  fas fa-camera plus-icon uimg-icon1 "
-                                            aria-hidden="true"></i></label>
+                                    
                                     <input type="file" id="fileupload2" wire:model="book_photo_two"
                                         style="display: none">
                                 </div>
@@ -42,19 +41,18 @@
                             <div class=" profile-images-card">
                                 <div class="profile-image">
                                     @if (!empty($book_photo))
-                                        <img src="{{ $book_photo->temporaryUrl() }}" class="upload-icon">
+                                        <img src="{{ $book_photo->temporaryUrl() }}" class="">
                                     @else
-                                        <img src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}"
-                                            class="upload-icon">
+                                    <label for="fileupload"><img src="{{ asset('assets/img/front/Screenshot_8.png') }}"
+                                            class="upload-icon"></label>
+                                        
 
                                     @endif
                                 </div>
                                 <div wire:loading wire:target="book_photo">Uploading Slide Images...</div>
 
                                 <div class="custom-file">
-                                    <label for="fileupload"><i
-                                            class="rounded-pill pull-right  fas fa-camera plus-icon uimg-icon1 "
-                                            aria-hidden="true"></i></label>
+                                    
                                     <input type="file" wire:model="book_photo" id="fileupload">
                                 </div>
                             </div>
@@ -90,7 +88,7 @@
 
 
                     </div>
-                    <div class="col-12 mt-4 mb-4 form-col">
+                    <div class="px-4 col-12 mt-4 mb-4 form-col">
                         <textarea type="text" wire:model="description"
                             placeholder="{{ __('translation.description') }}"
                             class="form-control form-bor text-right"

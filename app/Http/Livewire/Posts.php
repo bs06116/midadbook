@@ -10,7 +10,7 @@ use Auth;
 class Posts extends Component
 {
     use WithFileUploads;
-    public $title, $type_add, $description, $book_photo, $book_photo_two;
+    public $title, $book_type, $description, $book_photo, $book_photo_two;
 
     public function render()
     {
@@ -25,7 +25,7 @@ class Posts extends Component
     private function resetInputFields()
     {
         $this->title = '';
-        $this->type_add = '';
+        $this->book_type = '';
         $this->description = '';
         $this->book_photo = '';
         $this->book_photo_two = '';
@@ -34,7 +34,7 @@ class Posts extends Component
     {
         $this->validate([
             'title' => 'required|max:255',
-            'type_add' => 'required|max:255',
+            'book_type' => 'required|max:255',
             'description' => 'required|max:255',
         ]);
         if (!$this->book_photo || !$this->book_photo_two) {
@@ -51,8 +51,9 @@ class Posts extends Component
         if ($this->book_photo_two) {
             $imageNameTwo = $this->book_photo_two->storePublicly('books');
         }
+
         Post::create([
-            'post_title' => $this->title, 'post_body' => $this->description, 'book_type' => $this->type_add, 'featured_image' => $imageNameOne,
+            'post_title' => $this->title, 'post_body' => $this->description, 'book_type' => $this->book_type, 'featured_image' => $imageNameOne,
             'image_second' => $imageNameTwo, 'user_id' => Auth::user()->id,
 
         ]);

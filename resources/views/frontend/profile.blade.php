@@ -19,7 +19,7 @@
 
             <div class="profile w-100 text-center">
                 <div class="profile-info">
-                <img class="profile-img pb-4 " src="{{ url('storage/' . $user->profile_photo) }}" alt="">
+                <img class="profile-img  " src="{{ url('storage/' . $user->profile_photo) }}" alt="">
                 <div class="">
                 <p class="d-inline pr-3"><span>@</span>{{$user->username}}</p>
                 <h6 class="d-inline-block ml-3 pl-3">{{$user->name}}</h6>

@@ -24,12 +24,14 @@
                                     @else
                                     <label for="fileupload2"> <img src="{{ asset('assets/img/front/Screenshot_8.png') }}"
                                             class="upload-icon"></label>
-                                       
+
 
                                     @endif
                                 </div>
+                                <div wire:loading wire:target="book_photo_two">Uploading Images...</div>
+
                                 <div class="custom-file">
-                                    
+
                                     <input type="file" id="fileupload2" wire:model="book_photo_two"
                                         style="display: none">
                                 </div>
@@ -45,14 +47,14 @@
                                     @else
                                     <label for="fileupload"><img src="{{ asset('assets/img/front/Screenshot_8.png') }}"
                                             class="upload-icon"></label>
-                                        
+
 
                                     @endif
                                 </div>
-                                <div wire:loading wire:target="book_photo">Uploading Slide Images...</div>
+                                <div wire:loading wire:target="book_photo">Uploading Images...</div>
 
                                 <div class="custom-file">
-                                    
+
                                     <input type="file" wire:model="book_photo" id="fileupload">
                                 </div>
                             </div>
@@ -73,7 +75,7 @@
                         @error('title') <span class="text-danger error">{{ $message }}</span>@enderror
 
                         <div class="col-12 mt-4 form-col">
-                            <select wire:model="type_add" class="form-select" class="form-bor"
+                            <select wire:model="book_type" class="form-select" class="form-bor"
                                 aria-label="Default select example">
                                 <option selected> {{ __('translation.add_type') }}</option>
                                 <option value="1"> {{ __('translation.required') }}</option>
@@ -83,7 +85,7 @@
 
                             </select>
                         </div>
-                        @error('type_add') <span class="text-danger error">{{ $message }}</span>@enderror
+                        @error('book_type') <span class="text-danger error">{{ $message }}</span>@enderror
 
 
 

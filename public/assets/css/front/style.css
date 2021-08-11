@@ -217,6 +217,7 @@
   vertical-align: middle;
 }
 #user-icon{
+  cursor: pointer;
   border-radius: 50px !important;
 }
 .login-nav .user-profile-img {
@@ -231,6 +232,7 @@
   justify-content: space-evenly;
 }
 .notifaction-icon div {
+  cursor: pointer;
   height: 28px;
   width: 25px;
   border-radius: 50%;
@@ -263,7 +265,9 @@ i.badge1 {
   padding: 20px;
 }
 .profile-info .profile-img {
-  margin-top: -60px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }
 .profile-info h6 {
   font-weight: bold;
@@ -440,7 +444,7 @@ i.badge1 {
   }
   .user-info{
     right: 26% !important;
-    font-size: 13px !important;
+    font-size: 8px !important;
   }
   .user-img{
     right: 15% !important;
@@ -519,6 +523,14 @@ i.badge1 {
     font-size: 10px !important;
     padding: 10px 7px !important;
   }
+  .comment_div{
+    padding-right: 35px;
+  }
+  .comment_div .comment_box input{
+      width: auto;
+  }
+  
+  
 }
 @media(min-width: 321px)
 {
@@ -607,7 +619,7 @@ i.badge1 {
   }
   .user-info{
     right: 24% !important;
-    font-size: 13px !important;
+    font-size: 10px !important;
   }
   .user-img{
     right: 14% !important;
@@ -675,6 +687,16 @@ i.badge1 {
   .login_btn{
     font-size: 12px !important;
     padding: 10px 13px !important;
+  }
+  .comment_div{
+    padding-right: 26px;
+  }
+  .comment_div .comment_box input{
+      width: 150%;
+  }
+ 
+  .comment_div .img img{
+    margin-left: 7px;
   }
 }
 @media(min-width: 376px)
@@ -795,6 +817,16 @@ i.badge1 {
   .login_btn{
     font-size: 12px !important;
     padding: 10px 13px !important;
+  }
+  .comment_div{
+    padding-right: 20px;
+  }
+  .comment_div .comment_box input{
+      width: 140%;
+  }
+  
+  .comment_div .comment_box{
+    padding-left: 3px;
   }
 }
 @media(min-width: 426px)
@@ -1008,6 +1040,16 @@ i.badge1 {
     font-size: 14px !important;
     padding: 12px 15px !important;
   }
+  .comment_div{
+    padding-right: 20px;
+  }
+  .comment_div .comment_box input{
+      width: 142%;
+  }
+  
+  .comment_div .comment_box{
+    padding-left: 3px;
+  }
 }
 @media(min-width: 1024px)
 {
@@ -1101,6 +1143,19 @@ i.badge1 {
     font-size: 14px !important;
     padding: 12px 15px !important;
   }
+  .comment_div{
+    padding-right: 10px;
+  }
+  .comment_div .comment_box input{
+      width: 130%;
+  }
+  
+  .comment_div .comment_box{
+    padding-left: 3px;
+  }
+  .comment_div .img img {
+    margin-left: 18px;
+}
 }
 @media(min-width: 1440px)
 {
@@ -1172,6 +1227,19 @@ i.badge1 {
     font-size: 16px !important;
     padding: 14px 18px !important;
 }
+.comment_div{
+  padding-right: 0px;
+}
+.comment_div .comment_box input{
+    width: 120%;
+}
+
+.comment_div .comment_box{
+  padding-left: 0px;
+}
+.comment_div .img img {
+  margin-left: 30px;
+}
 }
 @media(min-width: 2560px)
 {
@@ -1210,6 +1278,22 @@ i.badge1 {
   left: 10%;
   width: 15%;
   height: 68%;
+}
+.comment_div{
+  padding-right: 0px;
+}
+.comment_div .comment_box input{
+    width: 111%;
+}
+
+.comment_div .comment_box{
+  padding-left: 0px;
+}
+.comment_div .img img {
+  margin-left: 120px;
+}
+.post-title p{
+  font-size: 20px !important;
 }
 }
 
@@ -1350,9 +1434,16 @@ i.badge1 {
   margin-top: 2rem;
 }
 
+.comment_div .img img{
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50px;
+}
 
-
-
+.comment_div .comment_btn button i{
+  font-size: 18px !important;
+  color: #5d001d;
+}
 
 
 
@@ -1384,7 +1475,7 @@ i.badge1 {
 }
 
 #chat-bubble.open {
-  min-height: 350px;
+  min-height: 400px;
 }
 
 .chat-header {
@@ -1461,6 +1552,9 @@ i.badge1 {
 }
 
 .chat-body {
+  padding-bottom: 40px;
+    height: 350px;
+    overflow: auto;
   padding: 8px;
 }
 

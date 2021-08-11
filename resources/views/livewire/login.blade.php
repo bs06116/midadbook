@@ -6,7 +6,7 @@
             <!-- Register -->
             <div class="post-container mt-4 px-3 pt-4 pb-4">
                 <div class="row add-head">
-                    <div class="col-12">
+                    <div class="col-12 mx-4">
                         <p class="text-center">{{__('translation.login')}} </p>
                     </div>
                 </div>

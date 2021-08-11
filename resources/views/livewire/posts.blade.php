@@ -6,7 +6,7 @@
             <form>
                 <div class="post-container mt-4 px-3 pt-4 pb-4">
                     <div class="row add-head">
-                        <div class="col-12">
+                        <div class="col-12 mx-4">
                             <p class="text-center">{{ __('translation.add_book') }} <i
                                     class="rounded-pill pull-right  fa fa-plus plus-icon nav1-btn"
                                     style="padding: 0px 10px; font-size:10px; color:white" aria-hidden="true"></i></p>

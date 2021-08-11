@@ -15,12 +15,7 @@
         </div>
         <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6 main-div">
             <!-- search input -->
-            <form>
-                <div class="text-center rounded-pill mt-4 px-1 py-1">
-                    <i class="fa fa-search  rounded-pill search" aria-hidden="true"></i>
-                    <input class="px-4 rounded-pill text-right search-input" type="text">
-                </div>
-            </form>
+
             <!-- Post -->
             @livewire('showposts')
 

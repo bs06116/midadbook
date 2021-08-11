@@ -10,54 +10,39 @@ use DB;
 
 class Showposts extends Component
 {
-    public $readyToLoad = false;
+    //public $readyToLoad = false;
     public $perPage = 15;
-    public $allike = true;
-    public $totalLike = 0;
-     public $alldislike = false;
-
+    public $search = '';
+    public $posts;
     protected $listeners = [
         'load-more' => 'loadPosts',
-        'postLikeCount' => 'postTotalLike',
+        'filterItems' => 'filterItems',
+
 
     ];
     public function mount(){
-
-        // if(Auth::check())
-        //    DB::table('posts_like')->where('post_id', $post_id)->where('user_id', Auth::id())->delete();
-
-        // else
-        // endif;
+        $this->posts = Post::with(['user','like'])->orderBy('id', 'DESC')->get();
     }
     public function loadPosts()
     {
        // $this->readyToLoad = true;
         $this->perPage = $this->perPage + 15;
+
     }
     public function render()
     {
-        $posts = Post::with(['user'])->orderBy('id', 'DESC')->paginate($this->perPage);
-        return view('livewire.showposts',['posts' => $posts]);
+        return view('livewire.showposts');
     }
-
-    public function like($post_id)
+    public function updated()
     {
-        DB::table('posts_like')->insert([
-            'post_id' => $post_id,
-            'user_id' => Auth::id()
-        ]);
-        $this->allike = false;
-        $this->postTotalLike($post_id);
-        redirect('/');
-    }
 
-    public function dislike($post_id)
+        $this->emit('filterItems',(string) $this->search);
+    }
+    public function filterItems(string $search)
     {
-        DB::table('posts_like')->where('post_id', $post_id)->where('user_id', Auth::id())->delete();
-        $this->allike = false;
-        $this->postTotalLike($post_id);
-    }
+        $this->posts = Post::with(['user','like'])->where('post_title', 'like', '%'.$search.'%')->orderBy('id', 'DESC')->get();
 
+    }
     public function postTotalLike($post_id)
     {
         $this->totalLike = DB::table('posts_like')->where('post_id', $post_id)->count();

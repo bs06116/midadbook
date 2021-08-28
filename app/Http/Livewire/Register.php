@@ -7,6 +7,7 @@ use Livewire\WithFileUploads;
 use App\City;
 use App\User;
 use Hash;
+use GetStream\StreamChat\Client as StreamClient;
 
 class Register extends Component
 {
@@ -43,10 +44,25 @@ class Register extends Component
             'username' => 'required|unique:users|max:255|string|alpha_dash',
             'email' => 'required|unique:users|email|max:255',
             'password' => 'required|max:255',
-            'phone_number' => 'required|max:9|min:9',
+            'phone_number' => 'required|regex:/(05)[0-9]/|size:10',
             'city' => 'required|max:255',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+        $client = new StreamClient(
+            getenv("STREAM_API_KEY"),
+            getenv("STREAM_API_SECRET"),
+            null,
+            null,
+            9 // timeout
+        );
+
+        $user = [
+            'id' => preg_replace('/[@\.]/', '_', $this->email),
+            'name' => $this->name,
+            'role' => 'user'
+        ];
+        $client->updateUser($user);
+
         $imageName = '';
         if ($this->photo) {
           $imageName = $this->photo->storePublicly('avatars');

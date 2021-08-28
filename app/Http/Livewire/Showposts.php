@@ -11,17 +11,20 @@ use DB;
 class Showposts extends Component
 {
     //public $readyToLoad = false;
-    public $perPage = 15;
+    public $perPage = 5;
     public $search = '';
-    public $posts;
+    // public $posts;
     protected $listeners = [
         'load-more' => 'loadPosts',
         'filterItems' => 'filterItems',
 
 
     ];
-    public function mount(){
-        $this->posts = Post::with(['user','like'])->orderBy('id', 'DESC')->get();
+    public function hydrate(){
+        // dd( Post::with(['user','like'])->orderBy('id', 'DESC')->paginate(5));
+       // $this->posts = Post::with(['user','like'])->orderBy('id', 'DESC')->get();
+      // $posts = Post::with(['user','like'])->orderBy('id', 'DESC')->paginate(5);
+
     }
     public function loadPosts()
     {
@@ -31,7 +34,9 @@ class Showposts extends Component
     }
     public function render()
     {
-        return view('livewire.showposts');
+        $posts = Post::with(['user','like'])->orderBy('id', 'DESC')->paginate($this->perPage);
+
+        return view('livewire.showposts',['posts' => $posts]);
     }
     public function updated()
     {

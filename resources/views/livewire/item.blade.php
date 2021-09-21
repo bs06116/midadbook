@@ -55,7 +55,7 @@
 
             <div class="row d-flex">
                 <div class="col-6 text-right">
-                    <p class="message">100 <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
+                    <p class="message">{{ $comment_count }} <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
                     </p>
                 </div>
 
@@ -64,7 +64,7 @@
                         {{-- {{ $post->like }} --}}
                         {{ $post->like->count() }}
                         @if (!Auth::check())
-                            <img wire:key="like-{{ $post->id }}" wire:click="like({{ $post->id }})"
+                            <img wire:key="like-{{ $post->id }}" 
                                 wire:loading.attr="disabled" src="{{ asset('assets/img/front/heart_line.png') }}"
                                 alt="">
                         @else
@@ -86,18 +86,23 @@
         </div>
 
     </div>
-    <div class="row pb-3 d-flex comment_div">
-        <div class="col-2 pl-1 img">
-            <img src="{{ url('storage/' . $post->user->profile_photo) }}"
-            alt="{{ $post->user->name }}">
-        </div>
-            <div class="col-8 comment_box">
-
-            <input type="text" class="form-control" id="validationCustom01"  >
+    <div class="pb-3 comment_div">
+        @if(Auth::check())
+            <div class="row mb-3">
+                <div class="col-2 pl-1 img">
+                    <img src="{{ url('storage/' . Auth::user()->profile_photo) }}"
+                    alt="{{ Auth::user()->name }}">
+                </div>
+                <div class="col-8 comment_box">
+                    <input type="text" class="form-control" wire:model="comment">
+                    @error('comment') <span class="text-danger error">{{ $message }}</span>@enderror
+                </div>
+                <div class="col-2 comment_btn">
+                    <button class="btn mt-1 " wire:click.prevent="commentStore({{ $post->id }})"><i class="far fa-paper-plane"></i></button>
+                </div>
             </div>
-            <div class="col-2 comment_btn">
-                <button class="btn mt-1 " type="submit"><i class="far fa-paper-plane"></i></button>
-            </div>
+        @endif
+        @livewire('comment-list', ['post_id' => $post->id])
     </div>
 </div>
 

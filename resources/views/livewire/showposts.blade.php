@@ -10,3 +10,16 @@
              @livewire('item', ['post' => $post], key($post->id))
     @endforeach
 </div>
+
+@push('scripts')
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            Livewire.on('triggerCommentDelete', array => {
+                var r = confirm("Are you sure you want to delete comment?");
+                if (r == true) {
+                    Livewire.emit('deletePostComment', array.comment_id, array.post_id);
+                } 
+            });
+        })
+    </script>
+@endpush

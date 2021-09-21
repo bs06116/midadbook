@@ -5,15 +5,11 @@ use App\Post as MidadPost;
 use App\Like;
 use Auth;
 use DB;
+use App\Comment;
 
 class Item extends Component
 {
-    public $post,$postId;
-
-    // protected $listeners = [
-    //     'itemRemoved' => 'removeRowId',
-    //     'cartDestroyed' => 'updated',
-    // ];
+    public $post,$postId, $comment, $comment_count;
 
     public function mount(MidadPost $post)
     {
@@ -28,6 +24,7 @@ class Item extends Component
         } else{
             $this->postId = null;
         }
+        $this->comment_count = Comment::where('post_id', $this->post->id)->count();
         return view('livewire.item');
     }
     public function like($post_id)
@@ -49,5 +46,24 @@ class Item extends Component
         $this->postId = null;
         //$this->postTotalLike($post_id);
     }
+
+    public function commentStore($post_id)
+    {
+        $this->validate([
+            'comment' => 'required|max:255',
+        ]);
+
+        Comment::create([
+            'comment' => $this->comment,
+            'user_id' => Auth::user()->id,
+            'post_id' => $post_id,
+
+        ]);
+        session()->flash('message', 'Your comment was added successfully.');
+        $this->comment = '';
+        $this->emitTo('comment-list','addNewCommentToList'.$post_id);
+        $this->comment_count = Comment::where('post_id', $this->post->id)->count();
+    }
+
 
 }

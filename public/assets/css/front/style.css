@@ -413,8 +413,8 @@ i.badge1 {
     display: none;
   }
   .post-container .user-img{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   .form-col .code{
     border: none !important;
@@ -450,7 +450,7 @@ i.badge1 {
     display: flex;
   }
   .user-info{
-    right: 26% !important;
+    right: 22% !important;
     font-size: 8px !important;
   }
   .user-img{
@@ -519,8 +519,8 @@ i.badge1 {
     width: 15%;
   }
   .user-profile-img img{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
   .btn1-div{
     padding-left: 33px !important;
@@ -544,7 +544,7 @@ i.badge1 {
 @media(min-width: 321px)
 {
   .user-profile-img img{
-    width: 45px;
+    width: 30px;
 
   }
   .users-img{
@@ -594,8 +594,8 @@ i.badge1 {
     font-weight: bold;
   }
   .post-container .user-img{
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
   }
   .form-col .code{
     border: none !important;
@@ -627,18 +627,18 @@ i.badge1 {
     display: flex;
   }
   .user-info{
-    right: 24% !important;
+    right: 21% !important;
     font-size: 10px !important;
   }
   .user-img{
     right: 14% !important;
   }
   .main form div .search-input{
-    width: 78%;
+    width: 73%;
   }
 
   .nav-btn{
-    font-size: 8px;
+    font-size: 7px;
   }
   .nav1-btn{
     font-size: 15px;
@@ -1472,6 +1472,16 @@ i.badge1 {
 .comment_div .comment_btn button i{
   font-size: 18px !important;
   color: #5d001d;
+}
+
+.comment_div .comment_btn button, .comment_div .comment_btn button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.load-previous-comments-btn, .load-previous-comments-btn:focus{
+  outline: none;
+  box-shadow: none;
 }
 
 

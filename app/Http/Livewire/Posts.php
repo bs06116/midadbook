@@ -58,5 +58,6 @@ class Posts extends Component
 
         ]);
         session()->flash('message', 'Your book add successfully.');
-        return redirect()->to('/');    }
+        $this->resetInputFields();
+    }
 }

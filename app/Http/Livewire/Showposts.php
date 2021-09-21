@@ -7,24 +7,22 @@ use App\Post;
 use Illuminate\Database\Eloquent\Model;
 use Auth;
 use DB;
+use App\Comment;
 
 class Showposts extends Component
 {
     //public $readyToLoad = false;
-    public $perPage = 5;
+    public $perPage = 15;
     public $search = '';
-    // public $posts;
+    public $posts;
     protected $listeners = [
         'load-more' => 'loadPosts',
         'filterItems' => 'filterItems',
-
+        'deletePostComment' => 'deleteComment'
 
     ];
-    public function hydrate(){
-        // dd( Post::with(['user','like'])->orderBy('id', 'DESC')->paginate(5));
-       // $this->posts = Post::with(['user','like'])->orderBy('id', 'DESC')->get();
-      // $posts = Post::with(['user','like'])->orderBy('id', 'DESC')->paginate(5);
-
+    public function mount(){
+        $this->posts = Post::with(['user','like'])->orderBy('id', 'DESC')->get();
     }
     public function loadPosts()
     {
@@ -34,9 +32,7 @@ class Showposts extends Component
     }
     public function render()
     {
-        $posts = Post::with(['user','like'])->orderBy('id', 'DESC')->paginate($this->perPage);
-
-        return view('livewire.showposts',['posts' => $posts]);
+        return view('livewire.showposts');
     }
     public function updated()
     {
@@ -53,4 +49,12 @@ class Showposts extends Component
         $this->totalLike = DB::table('posts_like')->where('post_id', $post_id)->count();
     }
 
+    public function deleteComment($comment_id, $post_id){
+        $comment = Comment::find($comment_id);
+        if($comment->user_id == Auth::user()->id){
+            $comment->delete();
+            session()->flash('message', 'Your comment was deleted successfully.');
+            $this->emitTo('comment-list','rerenderComments'.$post_id);
+        }
+    }
 }

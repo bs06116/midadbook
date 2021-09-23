@@ -88,17 +88,17 @@
     </div>
     <div class="pb-3 comment_div">
         @if(Auth::check())
-            <div class="row mb-3">
-                <div class="col-2 pl-1 img">
-                    <img src="{{ url('storage/' . Auth::user()->profile_photo) }}"
-                    alt="{{ Auth::user()->name }}">
+            <div class="row single_comment mb-3 py-2 m-2">
+                <div class="col-2 icons_container comment_btn h-100 ">
+                    <button class="btn mt-1 " wire:click.prevent="commentStore({{ $post->id }})"><i class="far fa-paper-plane"></i></button>
                 </div>
-                <div class="col-8 comment_box">
+                <div class="col-10 comment_box">
                     <input type="text" class="form-control" wire:model="comment">
                     @error('comment') <span class="text-danger error">{{ $message }}</span>@enderror
                 </div>
-                <div class="col-2 comment_btn">
-                    <button class="btn mt-1 " wire:click.prevent="commentStore({{ $post->id }})"><i class="far fa-paper-plane"></i></button>
+                <div class="col-2 pl-1 img d-flex justify-content-center align-items-center">
+                    <img src="{{ url('storage/' . Auth::user()->profile_photo) }}"
+                    alt="{{ Auth::user()->name }}">
                 </div>
             </div>
         @endif

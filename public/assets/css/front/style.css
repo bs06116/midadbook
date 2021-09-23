@@ -701,7 +701,7 @@ i.badge1 {
     padding-right: 26px;
   }
   .comment_div .comment_box input{
-      width: 150%;
+      /* width: 150%; */
   }
  
   .comment_div .img img{
@@ -834,7 +834,7 @@ i.badge1 {
     padding-right: 20px;
   }
   .comment_div .comment_box input{
-      width: 140%;
+      /* width: 140%; */
   }
   
   .comment_div .comment_box{
@@ -1062,7 +1062,7 @@ i.badge1 {
     padding-right: 20px;
   }
   .comment_div .comment_box input{
-      width: 142%;
+      /* width: 142%; */
   }
   
   .comment_div .comment_box{
@@ -1171,7 +1171,7 @@ i.badge1 {
     padding-right: 10px;
   }
   .comment_div .comment_box input{
-      width: 130%;
+      /* width: 130%; */
   }
   
   .comment_div .comment_box{
@@ -1255,7 +1255,7 @@ i.badge1 {
   padding-right: 0px;
 }
 .comment_div .comment_box input{
-    width: 120%;
+    /* width: 120%; */
 }
 
 .comment_div .comment_box{
@@ -1307,7 +1307,7 @@ i.badge1 {
   padding-right: 0px;
 }
 .comment_div .comment_box input{
-    width: 111%;
+    /* width: 111%; */
 }
 
 .comment_div .comment_box{
@@ -1414,7 +1414,7 @@ i.badge1 {
     right: 0;
     background: white;
     border-radius: 10px;
-    padding: 18px 25px;
+    /* padding: 18px 25px; */
 }
 .msg-box{
   position: fixed;
@@ -1456,7 +1456,7 @@ i.badge1 {
   font-size: 11px;
   color: gray;
 }
-.chat-header .user-avatar h5{
+.msg-chat-header .user-avatar h5{
   margin-left: 175px;
 }
 .notification_ul hr{
@@ -1501,23 +1501,23 @@ i.badge1 {
 
 
 #chat-bubble {
-  height: 55px;
-  overflow: hidden;
-  min-width: 285px;
+  height: 50px;
+    overflow: hidden;
+  min-width: 450px;
   background-color: #fff;
   position: fixed;
   bottom: 0;
-  
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border: 1px solid #e4e4e4;
+  right: 25px;
 }
 
 #chat-bubble.open {
-  min-height: 400px;
+  min-height: 450px;
 }
 
-.chat-header {
+.msg-chat-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1531,7 +1531,7 @@ i.badge1 {
   transition: background-color 0.3s ease-in;
 }
 
-.chat-header:hover {
+.msg-chat-header:hover {
   background-color: #f7f7f7;
 }
 
@@ -1694,3 +1694,28 @@ i.badge1 {
   width: 16px;
 }
 
+.comment_div .comment_box input{
+  text-align: right;
+}
+.comment_div .comment_box {
+  text-align: right;
+}
+
+.comment_div .comment_box a{
+  color: #5d001d !important;
+}
+
+.comment_div .single_comment{
+  position: relative;
+}
+
+.comment_div .icons_container{
+  position: absolute;
+  z-index: 99999;
+}
+
+.chat_user_img img{
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50px;
+}

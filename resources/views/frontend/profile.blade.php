@@ -33,6 +33,7 @@
                    <a class=" good-reads" href=""><img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt=""></a>
                    <a class=" twitter " href=""><i class="fab fa-twitter"></i></a>
                    <button class="btn counting">30 <span>counting</span></button>
+                   @livewire('chat.profile-chat-button', ['user_id' => $user->id])
                   </div>
               </div>
                 </div>

@@ -8,19 +8,21 @@
                 </div>
                 <div class="user-name login-user1 text-light ">
                     <span class="d-block font-weight-bold">{{ Auth::user()->name }}</span>
-                    <span>{{ Auth::user()->city->name }}</span>
                 </div>
             </nav>
 
 
 
             <div class="notifaction-icon  login-nav2">
-                
+                <div class="mt-4">
+                    <i class="fa fa-cog text-white"></i>
+                </div>
                 <div class="noti mt-4" id="bell-icon"><img src="{{ asset('assets/img/front/bell_ic.png') }}" alt="">
                     <i class="badge1">9</i>
                 </div>
-                <div class="mt-4"><img src="{{ asset('assets/img/front/send_ic.png') }}" alt="">
-                    <i class="badge1">9</i>
+                
+                <div class="mt-4">
+                    @livewire('chat.chat-header-notification')
                 </div>
             </div>
 
@@ -28,6 +30,7 @@
         <div class="user-menu toggle text-right" id="toggle">
             {{-- <h4><a href="#"></a> Login</h4> --}}
             <h4><a href="{{route('user/logout')}}"> {{ __('translation.logout') }}</a></h4>
+            <h4><a href="{{route('user_profile',Auth::user()->name)}}"> My profile</a></h4>
         </div>
         <div class="notification_dd toggel" id="toggel">
             <ul class="notification_ul">

@@ -17,8 +17,12 @@
             Livewire.on('triggerCommentDelete', array => {
                 var r = confirm("Are you sure you want to delete comment?");
                 if (r == true) {
-                    Livewire.emit('deletePostComment', array.comment_id, array.post_id);
+                    Livewire.emit('deletePostComment'+array.post_id, array.comment_id, array.post_id);
                 } 
+            });
+
+            Livewire.on('triggerPostReport', (msg) => {
+                confirm(msg);
             });
         })
     </script>

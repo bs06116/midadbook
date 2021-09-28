@@ -17,9 +17,9 @@
                 <div class="mt-4">
                     <a href="{{ route('myprofile.edit') }}"><i class="fa fa-cog text-white"></i></a>
                 </div>
-                <div class="noti mt-4" id="bell-icon"><img src="{{ asset('assets/img/front/bell_ic.png') }}" alt="">
+                {{-- <div class="noti mt-4" id="bell-icon"><img src="{{ asset('assets/img/front/bell_ic.png') }}" alt="">
                     <i class="badge1">9</i>
-                </div>
+                </div> --}}
                 
                 <div class="mt-4">
                     @livewire('chat.chat-header-notification')

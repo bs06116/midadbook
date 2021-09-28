@@ -46,9 +46,14 @@
 
     <div class="row f-post pt-2">
         <div class="col-5 col-xs-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-            <p class="whatsapp mr-2"><a
-                    href=" https://wa.me/{{ $post->user->phone_number }}">{{ $post->user->phone_number }}</a> <img
-                    src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
+            <p class="whatsapp mr-2">
+                @if($post->user->show_phone_number)
+                    <a href=" https://wa.me/{{ $post->user->phone_number }}">{{ $post->user->phone_number }}</a> 
+                    <img src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
+                @else
+                    {{$post->user->show_phone_number ? $post->user->phone_number : str_repeat("*", strlen($post->user->phone_number))}}
+                    <img src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
+                @endif
             </p>
         </div>
         <div class="col-7 col-xs-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">
@@ -77,6 +82,8 @@
                                     wire:loading.attr="disabled" src="{{ asset('assets/img/front/heart_line.png') }}"
                                     alt="">
                             @endisset
+
+                            <a href="#" class="pl-5 ml-3 text-danger" wire:click.prevent="report({{ $post->id }})"><i class="fas fa-exclamation-triangle"></i></a>
                         @endif
 
                     </p>

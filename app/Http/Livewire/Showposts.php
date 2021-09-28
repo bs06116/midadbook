@@ -18,8 +18,6 @@ class Showposts extends Component
     protected $listeners = [
         'load-more' => 'loadPosts',
         'filterItems' => 'filterItems',
-        'deletePostComment' => 'deleteComment'
-
     ];
     public function mount(){
         $this->posts = Post::with(['user','like'])->orderBy('id', 'DESC')->get();
@@ -49,12 +47,5 @@ class Showposts extends Component
         $this->totalLike = DB::table('posts_like')->where('post_id', $post_id)->count();
     }
 
-    public function deleteComment($comment_id, $post_id){
-        $comment = Comment::find($comment_id);
-        if($comment->user_id == Auth::user()->id){
-            $comment->delete();
-            session()->flash('message', 'Your comment was deleted successfully.');
-            $this->emitTo('comment-list','rerenderComments'.$post_id);
-        }
-    }
+    
 }

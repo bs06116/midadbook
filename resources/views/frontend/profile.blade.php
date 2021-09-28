@@ -61,77 +61,8 @@
             <!-- Post -->
 
             @foreach ($posts as $key => $post)
-            <div class="post-container mt-4 px-3 pt-4">
-
-                @if ($post->book_type === 1)
-                    
-                 @elseif($post->book_type === 2)
-                    <div class="butnborrow d-inline">
-                        <button class='rounded-pill'><span class='px-1'>{{ __('translation.borrow_book') }}</span>
-                    </div>
-                @elseif($post->book_type === 3)
-                    <div class="butnsell d-inline">
-                        <button class='rounded-pill'><span class='px-1'>{{ __('translation.sell') }}</span>
-                    </div>
-                @else
-                    <div class="butnexchange d-inline">
-                        <button class='rounded-pill'><span class='px-1'>{{ __('translation.exchange') }}</span>
-                    </div>
-
-                @endif
-
-
-
-                
-                <div class="post-title text-right pt-2">
-                    <h4>{{ $post->post_title }} </h4>
-                    <p class="text-muted pt-2">{{ $post->post_body }}
-                    </p>
-                </div>
-
-                <div class="post-img">
-                    <img src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
-                </div>
-                <div class="row f-post pt-2">
-                    <div class="col-5 col-xs-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-                        <!-- <p class="whatsapp mr-2">{{ $post->user->phone_number }} <img
-                                src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
-                        </p> -->
-                        <div class="butn d-inline">
-                        <button class='rounded-pill'><span class='px-1'>{{ __('translation.required') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-7 col-xs-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">
-                        <div class="row d-flex">
-                            <div class="col-6 text-right">
-                                <p class="message">100 <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
-                                </p>
-                            </div>
-                            <div class="col-6 text-center">
-                                <p class=" heart ">100 <img src="{{ asset('assets/img/front/heart_line.png') }}" alt="">
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <hr>
-        
-        <div class="row pb-3 d-flex comment_div">
-            <div class="col-2 pl-1 img">
-                <img src="{{ url('storage/' . $post->user->profile_photo) }}" 
-                alt="{{ $post->user->name }}">
-            </div>
-                <div class="col-8 comment_box">
-                
-                <input type="text" class="form-control" id="validationCustom01"  >
-                </div>
-                <div class="col-2 comment_btn">
-                    <button class="btn mt-1 " type="submit"><i class="far fa-paper-plane"></i></button>
-                </div>
-        </div>
-            </div>
-        @endforeach
+                @livewire('item', ['post' => $post], key($post->id))
+            @endforeach
         </div>
         <div class="col-xs-1  col-sm-2 col-md-3 col-lg-3"></div>
     </div>
@@ -140,6 +71,19 @@
 
 
 @endsection
+
+@push('scripts')
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            Livewire.on('triggerCommentDelete', array => {
+                var r = confirm("Are you sure you want to delete comment?");
+                if (r == true) {
+                    Livewire.emit('deletePostComment'+array.post_id, array.comment_id, array.post_id);
+                } 
+            });
+        })
+    </script>
+@endpush
 
 
 

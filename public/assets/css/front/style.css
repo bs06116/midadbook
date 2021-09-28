@@ -1719,3 +1719,49 @@ i.badge1 {
   height: 40px !important;
   border-radius: 50px;
 }
+
+/* rating starts */
+.rating-stars {
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  clear: both;
+}
+.rating-stars li.stars-active {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.rating-stars li {
+  display: block;
+  text-overflow: clip;
+  white-space: nowrap;
+  z-index: 1;
+}
+.rating-stars img {
+  height: 14px;
+  max-width: none;
+}
+.label-rating {
+  margin-left: 7px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.rating-stars li.stars-active i {
+  color: orange;
+}
+.rating-stars li a:hover {
+  text-decoration: none;
+}
+.rating-stars i {
+  font-size: 14px;
+  color: #ccc;
+  display: inline;
+}
+/* rating ends */

@@ -42,4 +42,8 @@ class AuthController extends Controller
         // redirect to homepage
         return redirect('/');
     }
+    public function myprofileEdit()
+    {
+        return view('frontend.myprofile_edit');
+    }
 }

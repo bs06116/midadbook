@@ -21,7 +21,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email','username', 'password', 'phone_number', 'city_id', 'twitter_link','goread_link', 'profile_photo'];
+        'name', 'email','username', 'password', 'phone_number', 'city_id', 'twitter_link','goread_link', 'profile_photo', 'show_phone_number'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -70,6 +70,10 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(City::class);
     }
 
+    public function ratings()
+    {
+        return $this->hasMany('App\UserRating','user_id','id');
+    }
 
     /**
      * A user can have many messages

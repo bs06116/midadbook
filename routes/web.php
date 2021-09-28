@@ -20,6 +20,10 @@ Route::get('/user/logout', 'AuthController@logout')->name('user/logout');
 
 Route::get('/{username}', 'AuthController@profile')->name('user_profile');
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('myprofile/edit', 'AuthController@myprofileEdit')->name('myprofile.edit');
+});
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });

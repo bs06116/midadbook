@@ -90,6 +90,32 @@
 
 
                     </div>
+
+                    <div class="col-12 py-2 mt-4 form-col">
+                        <i class="fal fa-map-marker-alt"></i>
+                        <select class="form-select " class="form-bor" wire:model="country"
+                            aria-label="Default select example">
+                            <option selected value="">Country</option>
+                            @foreach ($countries_options as $option)
+                                <option value="{{ $option->id }}">{{ $option->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    @error('country') <span class="text-danger error">{{ $message }}</span>@enderror
+
+                    <div class="col-12 py-2 mt-4 form-col">
+                        <i class="fal fa-map-marker-alt"></i>
+                        <select class="form-select " class="form-bor" wire:model="city"
+                            aria-label="Default select example">
+                            <option selected value="">{{ __('translation.city') }}</option>
+                            {{-- <option value="1">One <img src="{{asset('assets/img/front/upload_img.png') }}"  /></option> --}} --}}
+                            @foreach ($cities_options as $option)
+                                <option value="{{ $option->id }}">{{ $option->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    @error('city') <span class="text-danger error">{{ $message }}</span>@enderror
+
                     <div class="px-4 col-12 mt-4 mb-4 form-col">
                         <textarea type="text" wire:model="description"
                             placeholder="{{ __('translation.description') }}"

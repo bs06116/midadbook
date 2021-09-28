@@ -24,10 +24,26 @@
                 <p class="d-inline pr-3"><span>@</span>{{$user->username}}</p>
                 <h6 class="d-inline-block ml-3 pl-3">{{$user->name}}</h6>
                 <br>
-                <p class="whatsapp d-inline text-secondary pr-3">{{$user->phone_number}}
+                <p class="whatsapp d-inline text-secondary pr-3">{{$user->show_phone_number ? $user->phone_number : str_repeat("*", strlen($user->phone_number))}}
                   <img  class=" ml-" src="{{asset('assets/img/front/whatsapp_ic.png ') }}" alt=""></p>
                 <p class="d-inline text-secondary pl-3">{{$user->city->name}}
                    <i class="fal fa-map-marker-alt"></i></p>
+
+                    <div class="rating-wrap">
+                        <ul class="rating-stars">
+                            <li style="width:{{ ($user->ratings->sum('rating')/($user->ratings->count() == 0 ? 1 : $user->ratings->count()))*20 }}%" class="stars-active">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <i class="fa fa-star"></i> 
+                                @endfor
+                            </li>
+                            <li>
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <i class="fa fa-star"></i> 
+                                @endfor
+                            </li>
+                        </ul>
+                    </div>
+
                    <br>
                    <div class="social-links ">
                    <a class=" good-reads" href=""><img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt=""></a>
@@ -37,6 +53,9 @@
                   </div>
               </div>
                 </div>
+                @auth
+                    @livewire('user-rating-form',['user_id' => $user->id])
+                @endauth
               </div>
 
             <!-- Post -->

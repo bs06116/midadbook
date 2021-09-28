@@ -15,7 +15,7 @@
 
             <div class="notifaction-icon  login-nav2">
                 <div class="mt-4">
-                    <i class="fa fa-cog text-white"></i>
+                    <a href="{{ route('myprofile.edit') }}"><i class="fa fa-cog text-white"></i></a>
                 </div>
                 <div class="noti mt-4" id="bell-icon"><img src="{{ asset('assets/img/front/bell_ic.png') }}" alt="">
                     <i class="badge1">9</i>

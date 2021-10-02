@@ -179,11 +179,11 @@
 
 
 <script>
-    var bell = document.getElementById("bell-icon");
+    // var bell = document.getElementById("bell-icon");
 
     var toggel = document.getElementById("toggel");
 
-    bell.addEventListener("click", dropdown);
+    // bell.addEventListener("click", dropdown);
 
     function dropdown() {
 

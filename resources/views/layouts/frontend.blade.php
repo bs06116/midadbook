@@ -89,6 +89,8 @@
             var element = document.getElementById("chat-bubble");
             element.classList.toggle("open")
         }
+
+        Pusher.logToConsole = true; 
     </script>
     @stack('scripts')
 

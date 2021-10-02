@@ -1503,7 +1503,7 @@ i.badge1 {
 #chat-bubble {
   height: 50px;
     overflow: hidden;
-  min-width: 450px;
+  min-width: 350px;
   background-color: #fff;
   position: fixed;
   bottom: 0;

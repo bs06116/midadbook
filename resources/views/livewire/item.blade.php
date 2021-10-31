@@ -1,14 +1,14 @@
 <div class="post-container mt-4 px-3 pt-4">
 
-    @if ($post->book_type === 1)
+    @if ($post->book_type == 1)
         <div class="butn d-inline">
             <button class='rounded-pill'><span class='px-1'>{{ __('translation.required') }}</span>
         </div>
-    @elseif($post->book_type === 2)
+    @elseif($post->book_type == 2)
         <div class="butnborrow d-inline">
             <button class='rounded-pill'><span class='px-1'>{{ __('translation.borrow_book') }}</span>
         </div>
-    @elseif($post->book_type === 3)
+    @elseif($post->book_type == 3)
         <div class="butnsell d-inline">
             <button class='rounded-pill'><span class='px-1'>{{ __('translation.sell') }}</span>
         </div>
@@ -48,7 +48,7 @@
         <div class="col-5 col-xs-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
             <p class="whatsapp mr-2">
                 @if($post->user->show_phone_number)
-                    <a href=" https://wa.me/{{ $post->user->phone_number }}">{{ $post->user->phone_number }}</a> 
+                    <a href=" https://wa.me/{{ $post->user->phone_number }}">{{ $post->user->phone_number }}</a>
                     <img src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
                 @else
                     {{$post->user->show_phone_number ? $post->user->phone_number : str_repeat("*", strlen($post->user->phone_number))}}
@@ -69,7 +69,7 @@
                         {{-- {{ $post->like }} --}}
                         {{ $post->like->count() }}
                         @if (!Auth::check())
-                            <img wire:key="like-{{ $post->id }}" 
+                            <img wire:key="like-{{ $post->id }}"
                                 wire:loading.attr="disabled" src="{{ asset('assets/img/front/heart_line.png') }}"
                                 alt="">
                         @else

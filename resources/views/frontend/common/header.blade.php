@@ -7,7 +7,7 @@
                     <button class="nav-toggle-menu pt-2">
                         <i id="menu" class="fas fa-align-justify"></i>
                     </button>
-                        
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item px-4 border rounded-pill mr-2 ">
@@ -29,7 +29,7 @@
         <div class="menu toggle text-right" id="toggle">
         <h4><a class="nav-link active text-light" aria-current="page"
             href="{{ route('user/login') }}"> {{ __('translation.login') }}
-        </a></h4> 
+        </a></h4>
         </div>
     <div class="col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 text-center logo">
         <a class="px-4 navbar-brand text-light"  href="{{url('/')}}"><img src="{{ asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>

@@ -33,12 +33,12 @@
                         <ul class="rating-stars">
                             <li style="width:{{ ($user->ratings->sum('rating')/($user->ratings->count() == 0 ? 1 : $user->ratings->count()))*20 }}%" class="stars-active">
                                 @for ($i = 1; $i <= 5; $i++)
-                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i>
                                 @endfor
                             </li>
                             <li>
                                 @for ($i = 1; $i <= 5; $i++)
-                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i>
                                 @endfor
                             </li>
                         </ul>
@@ -46,10 +46,13 @@
 
                    <br>
                    <div class="social-links ">
-                   <a class=" good-reads" href=""><img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt=""></a>
-                   <a class=" twitter " href=""><i class="fab fa-twitter"></i></a>
-                   <button class="btn counting">30 <span>counting</span></button>
-                   @livewire('chat.profile-chat-button', ['user_id' => $user->id])
+                   <a class="good-reads" target="_blank" href="{{$user->twitter_link}}"><img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt=""></a>
+                   <a class="twitter" target="_blank" href="{{$user->goread_link}}"><i class="fab fa-twitter"></i></a>
+                   {{-- <button class="btn counting">30 <span>counting</span></button> --}}
+                   <div style="position: absolute; margin: 0 0;float: right;right: 33%;top: 468px">
+                    @livewire('chat.profile-chat-button', ['user_id' => $user->id])
+
+                   </div>
                   </div>
               </div>
                 </div>
@@ -79,7 +82,7 @@
                 var r = confirm("Are you sure you want to delete comment?");
                 if (r == true) {
                     Livewire.emit('deletePostComment'+array.post_id, array.comment_id, array.post_id);
-                } 
+                }
             });
         })
     </script>

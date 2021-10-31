@@ -30,6 +30,7 @@ return [
     'description' => 'Description',
     'submit' => 'Submit',
     'logout' => 'Logout',
+    'profile' => 'Profile'
 
 
 

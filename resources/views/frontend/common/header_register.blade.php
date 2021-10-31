@@ -20,7 +20,7 @@
                 {{-- <div class="noti mt-4" id="bell-icon"><img src="{{ asset('assets/img/front/bell_ic.png') }}" alt="">
                     <i class="badge1">9</i>
                 </div> --}}
-                
+
                 <div class="mt-4">
                     @livewire('chat.chat-header-notification')
                 </div>
@@ -29,8 +29,9 @@
         </div>
         <div class="user-menu toggle text-right" id="toggle">
             {{-- <h4><a href="#"></a> Login</h4> --}}
+            <h4><a href="{{route('user_profile',Auth::user()->username)}}">{{ __('translation.profile') }}</a></h4>
+
             <h4><a href="{{route('user/logout')}}"> {{ __('translation.logout') }}</a></h4>
-            <h4><a href="{{route('user_profile',Auth::user()->name)}}"> My profile</a></h4>
         </div>
         <div class="notification_dd toggel" id="toggel">
             <ul class="notification_ul">

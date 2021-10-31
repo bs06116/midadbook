@@ -30,7 +30,13 @@ return [
     'description' => 'Description',
     'submit' => 'Submit',
     'logout' => 'Logout',
-    'profile' => 'Profile'
+    'profile' => 'Profile',
+    'update' => 'Update',
+    'update_profile' => 'Update Profile',
+
+    'show_phone_number' => 'Show Phone Number'
+
+
 
 
 

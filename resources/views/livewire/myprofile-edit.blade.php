@@ -7,7 +7,7 @@
             <div class="post-container mt-4 px-3 pt-4 pb-4">
                 <div class="row add-head">
                     <div class="col-12">
-                        <p class="text-center">Update Profile <i
+                        <p class="text-center">  {{ __('translation.update_profile') }} <i
                                 class="rounded-pill pull-right  fa fa-cog plus-icon nav1-btn nav2-btn text-light"
                                 aria-hidden="true"></i></p>
                     </div>
@@ -119,7 +119,7 @@
                         <div class="col-12 mt-4 text-right">
                             <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" id="showPhoneNumber" wire:model="show_phone_number">
-                                <label class="custom-control-label" for="showPhoneNumber">Show Phone Number</label>
+                                <label class="custom-control-label" for="showPhoneNumber">  {{ __('translation.show_phone_number') }}</label>
                             </div>
                         </div>
 
@@ -152,7 +152,7 @@
                                         wire:loading.class="spinner-border spinner-border-sm">
 
                                     </span>
-                                    Update</button>
+                                    {{ __('translation.update') }}</button>
                             </div>
                         </div>
 

@@ -33,7 +33,8 @@ return [
     'profile' => ' الملف الشخصي',
     'update' => 'حفظ',
     'update_profile' => 'تحديث الملف الشخصي',
-    'show_phone_number' => 'أظهر رقم الهاتف'
+    'show_phone_number' => 'أظهر رقم الهاتف',
+    'country' => 'بلد'
 
 
 

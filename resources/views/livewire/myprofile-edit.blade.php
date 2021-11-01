@@ -97,7 +97,7 @@
                             <i class="fal fa-map-marker-alt"></i>
                             <select class="form-select " class="form-bor" wire:model="country"
                                 aria-label="Default select example">
-                                <option selected value="">Country</option>
+                                <option selected value="">{{ __('translation.country') }}</option>
                                 @foreach ($countries_options as $option)
                                     <option value="{{ $option->id }}">{{ $option->name }}</option>
                                 @endforeach

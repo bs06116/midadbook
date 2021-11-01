@@ -24,19 +24,20 @@
                         <div class="col-8 text-center">
                             <div class="profile-images-card">
                                 <div class="profile-images" >
-                                  @if( !empty( $photo ) )
-                                  <img src="{{$photo->temporaryUrl()}}" >
-                                    @else
-                                    <img src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}"
-                                    >
-                                    @endif
-
-                                </div>
-                                <div class="custom-file">
-                                    <label for="fileupload"><i
+                                    <div class="position-relative w-fit-content mx-auto"> 
+                                        @if( !empty( $photo ) )
+                                        <img src="{{$photo->temporaryUrl()}}" >
+                                        @else
+                                        <img src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}"
+                                        >
+                                        @endif
+                                        <div class="custom-file">
+                                            <label for="fileupload"><i
                                             class="rounded-pill pull-right  fas fa-camera plus-icon uimg-icon "
                                             aria-hidden="true"></i></label>
-                                    <input type="file" wire:model="photo" id="fileupload">
+                                            <input type="file" wire:model="photo" id="fileupload">
+                                        </div>
+                                    </div> 
                                 </div>
                                 @error('photo') <span class="text-danger error">{{ $message }}</span>@enderror
 
@@ -65,35 +66,47 @@
                     </div>
 
 
-                    <div class="row mx-2 form-row">
+                    <div class="row mx-0 form-row">
                         <div class="col-12 form-col">
-                            <input type="text" class="form-control form-bor text-right" wire:model="name"
+                            <div class="position-relative form-ele-with-icon">
+                                <input type="text" class="form-control form-bor text-right" wire:model="name"
                                 placeholder="{{ __('translation.fullname') }}" aria-label="First name">
+                                <i class="fa fa-user position-absolute"></i>
+                            </div>
                         </div>
                         @error('name') <span class="text-danger error">{{ $message }}</span>@enderror
 
                         <div class="col-12 mt-4 form-col">
-                            <input type="text" class="form-control form-bor text-right"
+                            <div class="position-relative form-ele-with-icon">
+                                <input type="text" class="form-control form-bor text-right"
                                 placeholder="{{ __('translation.user_name') }}" wire:model="username"
                                 aria-label="Username">
+                                <i class="fa fa-user position-absolute"></i>
+                            </div>
                         </div>
                         @error('username') <span class="text-danger error">{{ $message }}</span>@enderror
 
                         <div class="col-12 mt-4 form-col">
-                            <input type="text" class="form-control form-bor text-right"
-                                placeholder="{{ __('translation.email') }}" wire:model="email" aria-label="Email">
+                            <div class="position-relative form-ele-with-icon">
+                                <input type="text" class="form-control form-bor text-right"
+                                placeholder="{{ __('translation.email') }}" wire:model="email" aria-label="Email" />
+                                <i class="fa fa-envelope position-absolute"></i>
+                            </div>
                         </div>
                         @error('email') <span class="text-danger error">{{ $message }}</span>@enderror
 
                         <div class="col-12 mt-4 form-col">
-                            <input type="password" class="form-control form-bor text-right"
+                            <div class="position-relative form-ele-with-icon">
+                                <input type="password" class="form-control form-bor text-right"
                                 placeholder="{{ __('translation.password') }}" wire:model="password"
-                                aria-label="Password">
+                                aria-label="Password" />
+                                <i class="fa fa-lock position-absolute"></i>
+                            </div>
                         </div>
                         @error('password') <span class="text-danger error">{{ $message }}</span>@enderror
 
                         <div class="col-12 py-2 mt-4 form-col">
-                            <i class="fal fa-map-marker-alt"></i>
+                            <i class="fa fa-map-marker-alt"></i>
                             <select class="form-select " class="form-bor" wire:model="city"
                                 aria-label="Default select example">
                                 <option selected>{{ __('translation.city') }}</option>
@@ -107,48 +120,44 @@
 
 
                         <div class="col-12 mt-4 form-col">
-                            <div class="input-group flex-nowrap">
-                                <input type="number" class="form-control form-bor form-width text-right"
+                            <div class="position-relative form-ele-with-icon">
+                                <div class="input-group flex-nowrap">
+                                    <input type="number" class="form-control form-bor form-width text-right"
                                     wire:model="phone_number" aria-label="Number">
-                                <input type="text" placeholder="+966" class=" form-control code text-right disabled"
+                                    <input type="text" placeholder="+966" class=" form-control code text-right disabled"
                                     aria-label="Number">
-
+                                </div>
+                                <i class="fa fa-phone position-absolute"></i>
                             </div>
                         </div>
                         @error('phone_number') <span class="text-danger error">{{ $message }}</span>@enderror
 
-                        <div class="col-12 mt-4 form-col form-link">
+                        <div class="col-12 mt-4 form-col form-link overflow-hidden">
                             <div class="input-group flex-nowrap ">
+                                <i class="fab fa-twitter px-2 py-2 twi"></i>
                                 <input type="text" class=" form-control form-bor form-width text-right"
                                     wire:model="twitter_link" aria-label="Number">
-                                <i class="fab fa-twitter px-2 py-2 twi"></i>
-
                             </div>
                         </div>
-                        <div class="col-12 mt-4 form-col form-link">
+                        <div class="col-12 mt-4 form-col form-link overflow-hidden">
                             <div class="input-group flex-nowrap">
+                                <i class="fab fa-goodreads-g px-2 py-2 good"></i>
                                 <input type="text" class="form-control form-bor form-width text-right"
                                     wire:model="goread_link" aria-label="Number">
-                                <i class="fab fa-goodreads-g px-2 py-2 good"></i>
-
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 text-center">
-                        <div class="row d-flex pt-4 ">
-                            <div class="col-6 text-right">
-                                {{-- <button type="submit" class="px-4 btn submit-btn1 " >Submit</button> --}}
-                            </div>
-                            <div class="col-6 text-left">
+                    <div class="px-3 text-center mt-4">
+                            <div class="text-center">
                                 <button type="submit" class="px-4 btn submit-btn" wire:click.prevent="registerStore">
                                     <span wire:target="registerStore"
                                         wire:loading.class="spinner-border spinner-border-sm">
 
                                     </span>
-                                    {{ __('translation.signup') }}</button>
+                                    {{ __('translation.signup') }}
+                                </button>
                             </div>
-                        </div>
 
 
                     </div>

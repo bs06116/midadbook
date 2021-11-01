@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: arabic-bold;
-  src: url('../../fonts/DIN\ NEXT™\ ARABIC\ BOLD.otf');
+  src: url('../../fonts/Cairo/Cairo-Bold.ttf');
 }
 .chat-box{
   position: relative;
@@ -22,7 +22,9 @@
   width: 100px !important;
   border-radius: 100%;
 }
-
+.w-fit-content{
+  width:fit-content !important;
+}
 /* .profile-image{
   margin-top: 10px;
   margin-bottom: 15px;
@@ -37,10 +39,10 @@
     position: absolute;
     font-size: 12px;
     padding: 0px 8px;
-    right: 9%;
+    right: -10px;
     background: #0CA81F;
   color: white;
-  border: 2px solid;
+  border: 3px solid;
 }
 .custom-file label .uimg-icon1{
   bottom: 20px;
@@ -69,6 +71,9 @@
   padding-top: 10px;
   width: 35px;
   margin-top: 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .form-col div .good{
   background-color: #E7E3C6;
@@ -80,6 +85,9 @@
   padding-top: 10px;
   width: 35px;
   margin-top: 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-btn {
 
@@ -394,12 +402,6 @@ i.badge1 {
     width: 50px !important;
     border-radius: 10px;
   }
-  .custom-file label .uimg-icon{
-    right: -40%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 10%;
-  }
   .main form div{
     width: 100%;
   }
@@ -563,16 +565,12 @@ i.badge1 {
     border-radius: 10px;
   }
   .form-col div .twi{
-    margin-right: -15px ;
+    margin-right: -0px !important;
+    margin-left:-10px !important;
   }
   .form-col div .good{
-    margin-right: -15px ;
-  }
-  .custom-file label .uimg-icon{
-    right: -5%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 22%;
+    margin-right: -0px !important;
+    margin-left:-10px !important;
   }
   .main form div{
     width: 100%;
@@ -729,12 +727,6 @@ i.badge1 {
     margin-right: -15px ;
   }
 
-  .custom-file label .uimg-icon{
-    right: 8%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 28%;
-  }
   .main form div{
     width: 100%;
   }
@@ -861,12 +853,6 @@ i.badge1 {
   .form-col div .good{
     margin-right: -10px ;
   }
-  .custom-file label .uimg-icon{
-    right: 4%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 25%;
-  }
   .main form div{
     width: 100%;
   }
@@ -959,12 +945,7 @@ i.badge1 {
     width: 80px !important;
     border-radius: 10px;
   }
-  .custom-file label .uimg-icon{
-    right: 3%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 25%;
-  }
+
   .main form div{
     width: 100%;
   }
@@ -1086,12 +1067,6 @@ i.badge1 {
     width: 120px !important;
     border-radius: 10px;
   }
-  .custom-file label .uimg-icon{
-    right: 28%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 28%;
-  }
   .main form div{
     width: 100%;
   }
@@ -1189,12 +1164,6 @@ i.badge1 {
     width: 140px !important;
     border-radius: 10px;
   }
-  .custom-file label .uimg-icon{
-    right: 33%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 37%;
-  }
   .main form div{
     width: 100%;
   }
@@ -1272,12 +1241,6 @@ i.badge1 {
     height: 140px !important;
     width: 140px !important;
     border-radius: 10px;
-  }
-  .custom-file label .uimg-icon{
-    right: 42%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 42%;
   }
   .form-col .code{
     border: none !important;
@@ -1764,5 +1727,13 @@ i.badge1 {
   font-size: 14px;
   color: #ccc;
   display: inline;
+}
+.form-ele-with-icon input{
+  padding-left:25px !important;
+}
+.form-ele-with-icon i{
+  top:12px;
+  left:0;
+  color:#495057;
 }
 /* rating ends */

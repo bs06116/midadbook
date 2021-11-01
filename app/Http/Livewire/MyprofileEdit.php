@@ -7,12 +7,15 @@ use Livewire\WithFileUploads;
 use App\City;
 use App\User;
 use Hash;
+use App\Country;
+
 use Illuminate\Support\Facades\Auth;
 
 class MyprofileEdit extends Component
 {
     use WithFileUploads;
-    public $users, $photo, $name, $username, $email, $password, $phone_number, $city, $twitter_link, $goread_link, $photo_url, $user_id, $show_phone_number;
+    public $users, $photo, $name, $username, $email, $password, $phone_number,$cities_options, $countries_options,
+    $country,  $city, $twitter_link, $goread_link, $photo_url, $user_id, $show_phone_number;
     public $registerForm = false;
     public $cities;
 
@@ -23,13 +26,15 @@ class MyprofileEdit extends Component
 
     public function mount()
     {
-        $this->cities = City::all();
+        $this->countries_options = Country::all();
+        $this->cities_options = City::all();
         $this->user_id = Auth::user()->id;
         $this->name = Auth::user()->name;
         $this->username = Auth::user()->username;
         $this->email = Auth::user()->email;
         $this->phone_number = Auth::user()->phone_number;
         $this->city = Auth::user()->city_id;
+        $this->country = Auth::user()->country_id;
         $this->twitter_link = Auth::user()->twitter_link;
         $this->goread_link = Auth::user()->goread_link;
         $this->photo_url = Auth::user()->profile_photo;

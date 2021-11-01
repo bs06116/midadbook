@@ -108,11 +108,11 @@
                         <div class="col-12 py-2 mt-4 form-col">
                             <i class="fa fa-map-marker-alt"></i>
                             <select class="form-select " class="form-bor" wire:model="city"
-                                aria-label="Default select example">
-                                <option selected>{{ __('translation.city') }}</option>
+                                aria-label="Default select example" style="font-size:14px">
+                                <option selected value="">{{ __('translation.city') }}</option>
                                 {{-- <option value="1">One <img src="{{asset('assets/img/front/upload_img.png') }}"  /></option> --}} --}}
-                                @foreach ($cities as $city)
-                                    <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                @foreach ($cities_options as $option)
+                                    <option value="{{ $option->id }}">{{ $option->name }}</option>
                                 @endforeach
                             </select>
                         </div>

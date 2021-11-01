@@ -33,15 +33,6 @@ return [
     'profile' => 'Profile',
     'update' => 'Update',
     'update_profile' => 'Update Profile',
-
-    'show_phone_number' => 'Show Phone Number'
-
-
-
-
-
-
-
-
-
+    'show_phone_number' => 'Show Phone Number',
+    'country' => 'Country'
 ];

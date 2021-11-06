@@ -1736,4 +1736,91 @@ i.badge1 {
   left:0;
   color:#495057;
 }
+.custom-edit-modal .modal-header button{
+  right:20px;
+  font-family: initial;
+}
+.custom-edit-modal .modal-header button span{
+  font-family: initial;
+}
+.custom-edit-modal .modal-header h5{
+  font-size:18px;
+}
+.custom-edit-modal .modal-header{
+  background-color:#f1fbf3;
+  border-top-left-radius: 20px;
+  border-top-right-radius:20px;
+}
+.custom-edit-modal  .modal-content{
+  border-radius: 20px;
+}
+*[data-direction="rtl"]{
+  direction:rtl;
+  text-align: right;
+}
+*[data-direction="ltr"]{
+  direction:ltr;
+  text-align: left;
+}
+.added-data-name h5{
+  color:#6d293e;
+  font-size:14px;
+}
+.added-data-tag{
+  color:#aeadaf;
+  font-weight:400;
+  font-size:13px;
+  letter-spacing: 0.8px;
+}
+.added-data-name p{
+  font-size:12px;
+  color:#aeadaf;
+}
+.added-comment{
+  padding-right: 57px;
+  color:#515151;
+  font-size: 12px;
+}
+.flex-1{
+  flex:1;
+}
+.comment-post-field input{
+  height:35px;
+  border-radius: 30px;
+  font-size:12px; 
+  padding-left:12px;
+  padding-right:12px;
+  outline:none;
+  color:#515151;
+}
+.comment-post-field input::placeholder{
+  color:#515151;
+  font-size:12px; 
+}
+.comment-post-field:not(.text-success){
+  color:#515151;
+}
+.comment-post-field i{
+  font-size:25px;
+}
+.cursor-pointer{
+  cursor:pointer;
+}
+.rating-feedback-area textarea{
+  resize:none;
+  color:#515151;
+  font-size:12px; 
+  padding:15px;
+  outline:none;
+  border-radius: 16px;
+}
+.rating-feedback-area button{
+  font-size:12px; 
+  outline:none;
+  border-radius: 30px;
+  height:40px;
+}
+.no-radius{
+  border-radius: 0px !important;
+}
 /* rating ends */

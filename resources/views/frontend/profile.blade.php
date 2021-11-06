@@ -107,7 +107,7 @@
             </div>
             <div class="mt-3 mb-4 px-3 rating-feedback-area" data-direction="rtl">
                 <textarea placeholder=" منذ شهر" rows="4" class="w-100 border"></textarea>
-                <button class="mt-4 btn-success border-0 text-white px-5" type="button">شهر</button>
+                <button class="mt-3 btn-success border-0 text-white px-5" type="button">شهر</button>
             </div>
             <div class="modal-header no-radius text-center py-2">
                 <h5 class="modal-title mx-auto">الطائف</h5>

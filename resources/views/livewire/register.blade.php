@@ -24,7 +24,7 @@
                         <div class="col-8 text-center">
                             <div class="profile-images-card">
                                 <div class="profile-images" >
-                                    <div class="position-relative w-fit-content mx-auto"> 
+                                    <div class="position-relative w-fit-content mx-auto">
                                         @if( !empty( $photo ) )
                                         <img src="{{$photo->temporaryUrl()}}" >
                                         @else
@@ -37,7 +37,7 @@
                                             aria-hidden="true"></i></label>
                                             <input type="file" wire:model="photo" id="fileupload">
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
                                 @error('photo') <span class="text-danger error">{{ $message }}</span>@enderror
 
@@ -104,6 +104,17 @@
                             </div>
                         </div>
                         @error('password') <span class="text-danger error">{{ $message }}</span>@enderror
+                        <div class="col-12 py-2 mt-4 form-col">
+                            <i class="fal fa-map-marker-alt"></i>
+                            <select class="form-select " class="form-bor" wire:model="country"
+                                aria-label="Default select example">
+                                <option selected value="">{{ __('translation.country') }}</option>
+                                @foreach ($countries_options as $option)
+                                    <option value="{{ $option->id }}">{{ $option->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        @error('country') <span class="text-danger error">{{ $message }}</span>@enderror
 
                         <div class="col-12 py-2 mt-4 form-col">
                             <i class="fa fa-map-marker-alt"></i>

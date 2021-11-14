@@ -60,7 +60,7 @@
 
             <div class="row d-flex">
                 <div class="col-6 text-right">
-                    <p class="message" data-toggle="modal" data-target="#commentModal">{{ $comment_count }} <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
+                    <p class="message" data-toggle="modal" data-target="#commentModal{{$post->id}}">{{ $comment_count }} <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
                     </p>
                 </div>
 
@@ -94,7 +94,7 @@
 
     </div>
     <div class="pb-3 comment_div">
-        @if(Auth::check())
+        {{-- @if(Auth::check())
             <div class="row single_comment mb-3 py-2 m-2">
                 <div class="col-2 icons_container comment_btn h-100 ">
                     <button class="btn mt-1 " wire:click.prevent="commentStore({{ $post->id }})"><i class="far fa-paper-plane"></i></button>
@@ -108,124 +108,8 @@
                     alt="{{ Auth::user()->name }}">
                 </div>
             </div>
-        @endif
+        @endif --}}
         @livewire('comment-list', ['post_id' => $post->id])
     </div>
-</div>
-<!-- Comment Modal -->
-<div class="modal fade custom-edit-modal" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-        <div class="modal-header text-center py-2">
-            <h5 class="modal-title mx-auto" id="commentModalLabel">الطائف</h5>
-            <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body p-0">
-            <div class="body-added-data p-3 border-bottom" data-direction="rtl">
-                <div class="d-flex">
-                    <div class="added-user-avatar ml-3">
-                        <img src="{{asset('assets/img/front/profile_thumbnail1.png')}}" width="40px" height="40px" alt="username" />
-                    </div>
-                    <div class="added-data-name">
-                        <h5 class="mb-0 d-flex flex-wrap">
-                            منذ شهر
-                            <div class="added-data-tag" data-direction="ltr">
-                                <p class="mb-0">@waleedKhalid<span class="d-inline-block dot-tag mx-3"> . </span></p>
-                            </div>
-                        </h5>
-                        <p class="mb-0 mt-1">منذ أسبوعين</p>
-                    </div>
-                </div>
-                <div class="added-comment text-right">
-                    <p class="mb-0 mt-2">الكاتب ت-هارف ايكر من خط الفقر إلى المليارديرية في سنة ونصف ابحث عن هذا الكتاب ارجوا التواصل معي إذا كنت تمتلك هذا الكتاب شكرا</p>
-                </div>
-            </div>
-            <div class="body-added-data p-3 border-bottom" data-direction="rtl">
-                <div class="d-flex">
-                    <div class="added-user-avatar ml-3">
-                        <img src="{{asset('assets/img/front/profile_thumbnail1.png')}}" width="40px" height="40px" alt="username" />
-                    </div>
-                    <div class="added-data-name">
-                        <h5 class="mb-0 d-flex flex-wrap">
-                            منذ شهر
-                            <div class="added-data-tag" data-direction="ltr">
-                                <p class="mb-0">@waleedKhalid<span class="d-inline-block dot-tag mx-3"> . </span></p>
-                            </div>
-                        </h5>
-                        <p class="mb-0 mt-1">منذ أسبوعين</p>
-                    </div>
-                </div>
-                <div class="added-comment text-right">
-                    <p class="mb-0 mt-2">الكاتب ت-هارف ايكر من خط الفقر إلى المليارديرية في سنة ونصف ابحث عن هذا الكتاب ارجوا التواصل معي إذا كنت تمتلك هذا الكتاب شكرا</p>
-                </div>
-            </div>
-            <div class="body-added-data p-3 border-bottom" data-direction="rtl">
-                <div class="d-flex">
-                    <div class="added-user-avatar ml-3">
-                        <img src="{{asset('assets/img/front/profile_thumbnail1.png')}}" width="40px" height="40px" alt="username" />
-                    </div>
-                    <div class="added-data-name">
-                        <h5 class="mb-0 d-flex flex-wrap">
-                            منذ شهر
-                            <div class="added-data-tag" data-direction="ltr">
-                                <p class="mb-0">@waleedKhalid<span class="d-inline-block dot-tag mx-3"> . </span></p>
-                            </div>
-                        </h5>
-                        <p class="mb-0 mt-1">منذ أسبوعين</p>
-                    </div>
-                </div>
-                <div class="added-comment text-right">
-                    <p class="mb-0 mt-2">الكاتب ت-هارف ايكر من خط الفقر إلى المليارديرية في سنة ونصف ابحث عن هذا الكتاب ارجوا التواصل معي إذا كنت تمتلك هذا الكتاب شكرا</p>
-                </div>
-            </div>
-            <div class="body-added-data p-3 border-bottom" data-direction="rtl">
-                <div class="d-flex">
-                    <div class="added-user-avatar ml-3">
-                        <img src="{{asset('assets/img/front/profile_thumbnail1.png')}}" width="40px" height="40px" alt="username" />
-                    </div>
-                    <div class="added-data-name">
-                        <h5 class="mb-0 d-flex flex-wrap">
-                            منذ شهر
-                            <div class="added-data-tag" data-direction="ltr">
-                                <p class="mb-0">@waleedKhalid<span class="d-inline-block dot-tag mx-3"> . </span></p>
-                            </div>
-                        </h5>
-                        <p class="mb-0 mt-1">منذ أسبوعين</p>
-                    </div>
-                </div>
-                <div class="added-comment text-right">
-                    <p class="mb-0 mt-2">الكاتب ت-هارف ايكر من خط الفقر إلى المليارديرية في سنة ونصف ابحث عن هذا الكتاب ارجوا التواصل معي إذا كنت تمتلك هذا الكتاب شكرا</p>
-                </div>
-            </div>
-        </div>
-        <div class="modal-footer mt-5">
-            <div data-direction="rtl" class="w-100">
-                <ul class="list-unstyled d-flex w-100 mb-0 align-items-center">
-                    <li class="ml-2">
-                        <img src="{{asset('assets/img/front/profile_thumbnail1.png')}}" width="35px" height="35px" alt="username" />
-                    </li>
-                    <li class="flex-1">
-                        <div class="comment-post-field position-relative">
-                            <input type="text" name="post_comment" placeholder="الكاتب ت-هارف" class="w-100 border" />
-                        </div>
-                    </li>
-                    <!-- <li class="mr-3">
-                        <label class="comment-post-field cursor-pointer position-relative mb-0">
-                            <i class="fa fa-camera"></i>
-                            <input type="file" class="d-none" name="post_photo"/>
-                        </label>
-                    </li> -->
-                    <li class="mr-3">
-                        <button type="button" class="border-0 comment-post-field p-0 bg-transparent text-success">
-                            <i class="fa fa-paper-plane"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-  </div>
 </div>
 

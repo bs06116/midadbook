@@ -37,7 +37,10 @@
                                             aria-hidden="true"></i></label>
                                             <input type="file" wire:model="photo" id="fileupload">
                                         </div>
+
                                     </div>
+                                    <div wire:loading wire:target="photo">Uploading Images...</div>
+
                                 </div>
                                 @error('photo') <span class="text-danger error">{{ $message }}</span>@enderror
 

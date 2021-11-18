@@ -5,7 +5,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
           <div class="modal-header text-center py-2">
-              <h5 class="modal-title mx-auto" id="commentModalLabel">الطائف</h5>
+              <h5 class="modal-title mx-auto" id="commentModalLabel">التعليقات</h5>
               <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
               </button>

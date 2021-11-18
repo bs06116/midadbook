@@ -522,7 +522,7 @@ i.badge1 {
     width: 15%;
   }
   .user-profile-img img{
-    width: 30px;
+    width: 50px;
     height: 30px;
   }
   .btn1-div{
@@ -547,7 +547,7 @@ i.badge1 {
 @media(min-width: 321px)
 {
   .user-profile-img img{
-    width: 30px;
+    width: 50px;
 
   }
   .users-img{
@@ -1787,7 +1787,7 @@ i.badge1 {
 .comment-post-field input{
   height:35px;
   border-radius: 30px;
-  font-size:12px; 
+  font-size:12px;
   padding-left:12px;
   padding-right:12px;
   outline:none;
@@ -1795,7 +1795,7 @@ i.badge1 {
 }
 .comment-post-field input::placeholder{
   color:#515151;
-  font-size:12px; 
+  font-size:12px;
 }
 .comment-post-field:not(.text-success){
   color:#515151;
@@ -1809,13 +1809,13 @@ i.badge1 {
 .rating-feedback-area textarea{
   resize:none;
   color:#515151;
-  font-size:12px; 
+  font-size:12px;
   padding:15px;
   outline:none;
   border-radius: 16px;
 }
 .rating-feedback-area button{
-  font-size:12px; 
+  font-size:12px;
   outline:none;
   border-radius: 30px;
   height:40px;

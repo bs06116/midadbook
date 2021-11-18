@@ -31,17 +31,20 @@
         <p class="text-muted pt-2">{{ $post->post_body }}
         </p>
     </div>
-    @if (!empty($post->featured_image) && !empty($post->image_second))
         <div class="d-flex post_images ">
-            <img class="w-50 mr-1" src="{{ url('storage/' . $post->featured_image) }}"
+            <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover" src="{{ url('storage/' . $post->featured_image) }}"
                 alt="{{ $post->post_title }}">
-            <img class="w-50" src="{{ url('storage/' . $post->image_second) }}" alt="{{ $post->post_title }}">
+
+            <img class="w-50"  style="max-height: 200px;object-fit:cover" src="{{ url('storage/' . $post->image_second) }}"  alt="">
+
         </div>
-    @else
-        <div class="post-img">
-            <img src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
+        <div class="d-flex post_images mt-1">
+
+                    <img  class="w-50 mr-1" style="max-height: 200px;object-fit:cover" src="{{ url('storage/' . $post->image_third) }}" alt="{{ $post->image_third }}">
+
+                    <img  class="w-50" style="max-height: 200px;object-fit:cover" src="{{ url('storage/' . $post->image_fourth) }}" alt="{{ $post->image_fourth }}">
+
         </div>
-    @endif
 
 
     <div class="row f-post pt-2">

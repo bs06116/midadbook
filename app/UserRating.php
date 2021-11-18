@@ -17,6 +17,6 @@ class UserRating extends Model
     ];
 
     public function ratingBy() {
-        return $this->belongsTo(User::class,'id','rating_by_user');
+        return $this->belongsTo(User::class,'rating_by_user');
     }
 }

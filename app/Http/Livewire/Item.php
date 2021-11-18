@@ -12,7 +12,7 @@ use App\Mail\PostReportMail;
 
 class Item extends Component
 {
-    public $post,$postId, $comment, $comment_count;
+    public $post,$postId,  $comment_count;
 
     protected function getListeners()
     {
@@ -56,32 +56,6 @@ class Item extends Component
         //$this->postTotalLike($post_id);
     }
 
-    public function commentStore($post_id)
-    {
-        $this->validate([
-            'comment' => 'required|max:255',
-        ]);
-
-        Comment::create([
-            'comment' => $this->comment,
-            'user_id' => Auth::user()->id,
-            'post_id' => $post_id,
-
-        ]);
-        session()->flash('message', 'Your comment was added successfully.');
-        $this->comment = '';
-        $this->emitTo('comment-list','addNewCommentToList'.$post_id);
-        $this->comment_count = Comment::where('post_id', $this->post->id)->count();
-    }
-
-    public function deleteComment($comment_id, $post_id){
-        $comment = Comment::find($comment_id);
-        if($comment->user_id == Auth::user()->id){
-            $comment->delete();
-            session()->flash('message', 'Your comment was deleted successfully.');
-            $this->emitTo('comment-list','rerenderComments'.$post_id);
-        }
-    }
 
     public function report($post_id){
         if(is_null(PostReport::where('user_id', Auth::user()->id)->where('post_id', $post_id)->first())){
@@ -92,7 +66,7 @@ class Item extends Component
         }else{
             $this->emit('triggerPostReport', 'You have already reported for this post');
         }
-        
+
     }
 
 }

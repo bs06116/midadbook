@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\UserRating;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class UserRatingForm extends Component
@@ -15,13 +16,16 @@ class UserRatingForm extends Component
 
     public function render()
     {
-        $user_rating = UserRating::where('user_id',$this->user_id)->where('rating_by_user',Auth::user()->id)->get();
+        $user_rating = UserRating::where('user_id',$this->user_id)->where(function($query) {
+            if(Auth::check()) $query->where('rating_by_user', Auth::user()->id);
+        })->get();
+        $user = User::find($this->user_id);
         if($user_rating->count() > 0){
             $this->rating = $user_rating[0]->rating;
             $this->comment = $user_rating[0]->comment;
         }
         $this->already_rated =  $user_rating->count() > 0 ? true : false;
-        return view('livewire.user-rating-form',['user_rating' => $user_rating]);
+        return view('livewire.user-rating-form',['user_rating' => $user_rating, 'user' => $user]);
     }
 
     public function mount($user_id)

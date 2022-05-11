@@ -24,7 +24,9 @@
         <h6 class="d-inline"><a href="{{ $post->user->username }}">{{ $post->user->name }}</a></h6>
         <span class="d-block text-right text-muted">{{ $post->user->city->name }}</span>
     </div>
-    <img src="{{ url('storage/' . $post->user->profile_photo) }}" class="user-img "
+    <!-- <img src="{{ url('storage/' . $post->user->profile_photo) }}" class="user-img "
+        alt="{{ $post->user->name }}"> -->
+        <img src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" class="user-img "
         alt="{{ $post->user->name }}">
     <hr class="mt-3">
     <div class="post-title text-right pt-2">
@@ -33,12 +35,18 @@
         </p>
     </div>
     <div class="d-flex post_images ">
-        <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
+        <!-- <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
             src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
+        
+
+        <img class="w-50" style="max-height: 200px;object-fit:cover"
+            src="{{ url('storage/' . $post->image_second) }}" alt=""> -->
+            <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
+            src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" alt="{{ $post->post_title }}">
             @if ($post->image_second != '')
 
         <img class="w-50" style="max-height: 200px;object-fit:cover"
-            src="{{ url('storage/' . $post->image_second) }}" alt="">
+            src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" alt="">
             @endif
 
 
@@ -61,10 +69,10 @@
 
 
     <div class="row f-post pt-2">
-        <div class="col-5 col-xs-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-            <p class="whatsapp mr-2">
+        <div class="col-5 col-xs-5 mt-3 col-sm-5 col-md-6 col-lg-6 col-xl-6">
+            <p class="whatsapp mr-2 d-flex align-items-center">
                 @if ($post->user->show_phone_number)
-                    <a href=" https://wa.me/{{ $post->user->phone_number }}">{{ $post->user->phone_number }}</a>
+                    <a href=" https://wa.me/{{ $post->user->phone_number }}" class="mr-3">{{ $post->user->phone_number }}</a>
                     <img src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
                 @else
                     {{ $post->user->show_phone_number ? $post->user->phone_number : str_repeat('*', strlen($post->user->phone_number)) }}
@@ -75,16 +83,16 @@
         <div class="col-7 col-xs-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">
 
             <div class="row d-flex">
-                <div class="col-6 text-right">
-                    <p class="message" data-toggle="modal" data-target="#commentModal{{ $post->id }}">
-                        {{ $comment_count }} <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
+                <div class="col-6 mt-3 text-right">
+                    <p class="message d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#commentModal{{ $post->id }}">
+                       <span class="counter_span mr-2">{{ $comment_count }}</span> <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
                     </p>
                 </div>
 
-                <div class="col-6 text-center">
-                    <p class="heart">
+                <div class="col-6 mt-3 text-center">
+                    <p class="heart d-flex align-items-center justify-content-end">
                         {{-- {{ $post->like }} --}}
-                        {{ $post->like->count() }}
+                        <span class="counter_span mr-2">{{ $post->like->count() }}</span>
                         @if (!Auth::check())
                             <img wire:key="like-{{ $post->id }}" wire:loading.attr="disabled"
                                 src="{{ asset('assets/img/front/heart_line.png') }}" alt="">

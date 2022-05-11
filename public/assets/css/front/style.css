@@ -132,9 +132,11 @@
 }
 .main form div .search {
   background: #F4F4F4;
-  font-size: 20px;
-  padding: 7px 15px;
+  font-size: 22px;
   color: #5C2E3D;
+  width:56px;
+  height:40px;
+  padding-top: 11px;
 }
 .post-container {
   background: #fff;
@@ -197,7 +199,7 @@
 
 }
 .post_images{
-  border: 1px solid rgb(207, 217, 222);
+  /* border: 1px solid rgb(207, 217, 222); */
   border-radius: 15px;
   overflow: hidden;
 }
@@ -384,7 +386,9 @@ i.badge1 {
 }
 .f-post div p a{
   text-decoration: none;
-  color: black;
+}
+.counter_span,.f-post div p a{
+  color: #29252D;
 }
 .add-img{
   margin: 0 !important;
@@ -437,7 +441,7 @@ i.badge1 {
     font-size: 17px !important;
   }
   .post-title p{
-    font-size: 11px !important;
+    font-size: 14px !important;
   }
 
   .post-icon .whatsapp{
@@ -593,8 +597,8 @@ i.badge1 {
     font-weight: bold;
   }
   .post-container .user-img{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
   .form-col .code{
     border: none !important;
@@ -1822,5 +1826,8 @@ i.badge1 {
 }
 .no-radius{
   border-radius: 0px !important;
+}
+*:focus{
+  outline:none !important;
 }
 /* rating ends */

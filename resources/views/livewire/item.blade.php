@@ -35,18 +35,15 @@
         </p>
     </div>
     <div class="d-flex post_images ">
-        <!-- <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
-            src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
-        
-
-        <img class="w-50" style="max-height: 200px;object-fit:cover"
-            src="{{ url('storage/' . $post->image_second) }}" alt=""> -->
+            <!-- <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
+            src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" alt="{{ $post->post_title }}"> -->
             <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
-            src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" alt="{{ $post->post_title }}">
+            src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
             @if ($post->image_second != '')
-
-        <img class="w-50" style="max-height: 200px;object-fit:cover"
-            src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" alt="">
+            <img class="w-50" style="max-height: 200px;object-fit:cover"
+            src="{{ url('storage/' . $post->image_second) }}" alt="">
+        <!-- <img class="w-50" style="max-height: 200px;object-fit:cover"
+            src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" alt=""> -->
             @endif
 
 

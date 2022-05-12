@@ -24,10 +24,10 @@
         <h6 class="d-inline"><a href="{{ $post->user->username }}">{{ $post->user->name }}</a></h6>
         <span class="d-block text-right text-muted">{{ $post->user->city->name }}</span>
     </div>
-    <!-- <img src="{{ url('storage/' . $post->user->profile_photo) }}" class="user-img "
-        alt="{{ $post->user->name }}"> -->
-        <img src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" class="user-img "
+    <img src="{{ url('storage/' . $post->user->profile_photo) }}" class="user-img "
         alt="{{ $post->user->name }}">
+        <!-- <img src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" class="user-img "
+        alt="{{ $post->user->name }}"> -->
     <hr class="mt-3">
     <div class="post-title text-right pt-2">
         <h4>{{ $post->post_title }} </h4>

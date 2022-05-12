@@ -16,7 +16,7 @@
 
                     <div class="row d-flex  gx-5  add-img ">
 
-                        <div class="col-6   d-flex text-center dropzone ">
+                        {{-- <div class="col-6   d-flex text-center dropzone ">
                             <div class=" profile-images-card">
                                 <div class="profile-image">
                                     @if (!empty($book_photo_two))
@@ -37,13 +37,16 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </div> --}}
 
                         <div class="col-6 d-flex text-center dropzone ">
                             <div class=" profile-images-card">
                                 <div class="profile-image">
                                     @if (!empty($book_photo))
-                                        <img src="{{ $book_photo->temporaryUrl() }}" class="">
+                                             @foreach ($book_photo as $images)
+                                                <img src="{{ $images->temporaryUrl() }}">
+                                            @endforeach
+                                        {{-- <img src="{{ $book_photo->temporaryUrl() }}" class=""> --}}
                                     @else
                                     <label for="fileupload"><img src="{{ asset('assets/img/front/Screenshot_8.png') }}"
                                             class="upload-icon"></label>
@@ -55,7 +58,7 @@
 
                                 <div class="custom-file">
 
-                                    <input type="file" wire:model="book_photo" id="fileupload">
+                                    <input type="file" wire:model="book_photo" id="fileupload" accept="image/*"  multiple>
                                 </div>
                             </div>
                             @error('book_photo') <span class="text-danger error">{{ $message }}</span>@enderror
@@ -95,7 +98,7 @@
                         <i class="fal fa-map-marker-alt"></i>
                         <select class="form-select " class="form-bor" wire:model="country"
                             aria-label="Default select example">
-                            <option selected value="">Country</option>
+                            <option selected value="">{{ __('translation.country') }}</option>
                             @foreach ($countries_options as $option)
                                 <option value="{{ $option->id }}">{{ $option->name }}</option>
                             @endforeach

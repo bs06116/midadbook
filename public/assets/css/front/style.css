@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: arabic-bold;
-  src: url('../../fonts/DIN\ NEXT™\ ARABIC\ BOLD.otf');
+  src: url('../../fonts/Cairo/Cairo-Bold.ttf');
 }
 .chat-box{
   position: relative;
@@ -22,7 +22,9 @@
   width: 100px !important;
   border-radius: 100%;
 }
-
+.w-fit-content{
+  width:fit-content !important;
+}
 /* .profile-image{
   margin-top: 10px;
   margin-bottom: 15px;
@@ -37,10 +39,10 @@
     position: absolute;
     font-size: 12px;
     padding: 0px 8px;
-    right: 9%;
+    right: -10px;
     background: #0CA81F;
   color: white;
-  border: 2px solid;
+  border: 3px solid;
 }
 .custom-file label .uimg-icon1{
   bottom: 20px;
@@ -69,6 +71,9 @@
   padding-top: 10px;
   width: 35px;
   margin-top: 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .form-col div .good{
   background-color: #E7E3C6;
@@ -80,6 +85,9 @@
   padding-top: 10px;
   width: 35px;
   margin-top: 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-btn {
 
@@ -124,9 +132,11 @@
 }
 .main form div .search {
   background: #F4F4F4;
-  font-size: 20px;
-  padding: 7px 15px;
+  font-size: 22px;
   color: #5C2E3D;
+  width:56px;
+  height:40px;
+  padding-top: 11px;
 }
 .post-container {
   background: #fff;
@@ -186,10 +196,10 @@
   border: 1px solid rgb(207, 217, 222);
   border-radius: 15px;
   width: 100%;
-  
+
 }
 .post_images{
-  border: 1px solid rgb(207, 217, 222);
+  /* border: 1px solid rgb(207, 217, 222); */
   border-radius: 15px;
   overflow: hidden;
 }
@@ -279,10 +289,11 @@ i.badge1 {
 .good-reads {
   background: #f8f3f0;
   border-radius: 10px;
+  font-size: 30px;
   padding: 15px 30px;
 }
 .twitter {
-  padding: 10px 70px;
+  padding: 15px 30px;
   background: #edf8fe;
   font-size: 30px;
   border-radius: 10px;
@@ -375,7 +386,9 @@ i.badge1 {
 }
 .f-post div p a{
   text-decoration: none;
-  color: black;
+}
+.counter_span,.f-post div p a{
+  color: #29252D;
 }
 .add-img{
   margin: 0 !important;
@@ -392,12 +405,6 @@ i.badge1 {
     height: 50px !important;
     width: 50px !important;
     border-radius: 10px;
-  }
-  .custom-file label .uimg-icon{
-    right: -40%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 10%;
   }
   .main form div{
     width: 100%;
@@ -434,7 +441,7 @@ i.badge1 {
     font-size: 17px !important;
   }
   .post-title p{
-    font-size: 11px !important;
+    font-size: 14px !important;
   }
 
   .post-icon .whatsapp{
@@ -519,7 +526,7 @@ i.badge1 {
     width: 15%;
   }
   .user-profile-img img{
-    width: 30px;
+    width: 50px;
     height: 30px;
   }
   .btn1-div{
@@ -539,12 +546,12 @@ i.badge1 {
   #chat-bubble{
     display: none;
   }
-  
+
 }
 @media(min-width: 321px)
 {
   .user-profile-img img{
-    width: 30px;
+    width: 50px;
 
   }
   .users-img{
@@ -562,16 +569,12 @@ i.badge1 {
     border-radius: 10px;
   }
   .form-col div .twi{
-    margin-right: -15px ;
+    margin-right: -0px !important;
+    margin-left:-10px !important;
   }
   .form-col div .good{
-    margin-right: -15px ;
-  }
-  .custom-file label .uimg-icon{
-    right: -5%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 22%;
+    margin-right: -0px !important;
+    margin-left:-10px !important;
   }
   .main form div{
     width: 100%;
@@ -594,8 +597,8 @@ i.badge1 {
     font-weight: bold;
   }
   .post-container .user-img{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
   .form-col .code{
     border: none !important;
@@ -703,7 +706,7 @@ i.badge1 {
   .comment_div .comment_box input{
       /* width: 150%; */
   }
- 
+
   .comment_div .img img{
     margin-left: 7px;
   }
@@ -728,12 +731,6 @@ i.badge1 {
     margin-right: -15px ;
   }
 
-  .custom-file label .uimg-icon{
-    right: 8%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 28%;
-  }
   .main form div{
     width: 100%;
   }
@@ -836,7 +833,7 @@ i.badge1 {
   .comment_div .comment_box input{
       /* width: 140%; */
   }
-  
+
   .comment_div .comment_box{
     padding-left: 3px;
   }
@@ -859,12 +856,6 @@ i.badge1 {
   }
   .form-col div .good{
     margin-right: -10px ;
-  }
-  .custom-file label .uimg-icon{
-    right: 4%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 25%;
   }
   .main form div{
     width: 100%;
@@ -958,12 +949,7 @@ i.badge1 {
     width: 80px !important;
     border-radius: 10px;
   }
-  .custom-file label .uimg-icon{
-    right: 3%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 25%;
-  }
+
   .main form div{
     width: 100%;
   }
@@ -1064,7 +1050,7 @@ i.badge1 {
   .comment_div .comment_box input{
       /* width: 142%; */
   }
-  
+
   .comment_div .comment_box{
     padding-left: 3px;
   }
@@ -1084,12 +1070,6 @@ i.badge1 {
     height: 100px !important;
     width: 120px !important;
     border-radius: 10px;
-  }
-  .custom-file label .uimg-icon{
-    right: 28%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 28%;
   }
   .main form div{
     width: 100%;
@@ -1153,7 +1133,7 @@ i.badge1 {
   .menu{
     display: none !important;
   }
-  
+
   .notification_dd{
     top: 14%;
     left: 19%;
@@ -1173,7 +1153,7 @@ i.badge1 {
   .comment_div .comment_box input{
       /* width: 130%; */
   }
-  
+
   .comment_div .comment_box{
     padding-left: 3px;
   }
@@ -1187,12 +1167,6 @@ i.badge1 {
     height: 140px !important;
     width: 140px !important;
     border-radius: 10px;
-  }
-  .custom-file label .uimg-icon{
-    right: 33%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 37%;
   }
   .main form div{
     width: 100%;
@@ -1236,8 +1210,8 @@ i.badge1 {
     height: 20%;
     left: 7%;
   }
-  
- 
+
+
   .notification_dd{
     top: 14%;
     left: 17%;
@@ -1271,12 +1245,6 @@ i.badge1 {
     height: 140px !important;
     width: 140px !important;
     border-radius: 10px;
-  }
-  .custom-file label .uimg-icon{
-    right: 42%;
-  }
-  .custom-file label .uimg-icon1{
-    right: 42%;
   }
   .form-col .code{
     border: none !important;
@@ -1503,7 +1471,7 @@ i.badge1 {
 #chat-bubble {
   height: 50px;
     overflow: hidden;
-  min-width: 450px;
+  min-width: 350px;
   background-color: #fff;
   position: fixed;
   bottom: 0;
@@ -1572,7 +1540,7 @@ i.badge1 {
 .user-avatar .user-status-info p {
   font-size: 11px;
   color: gray;
-} 
+}
 
 .chat-comm {
   display: none;
@@ -1763,5 +1731,103 @@ i.badge1 {
   font-size: 14px;
   color: #ccc;
   display: inline;
+}
+.form-ele-with-icon input{
+  padding-left:25px !important;
+}
+.form-ele-with-icon i{
+  top:12px;
+  left:0;
+  color:#495057;
+}
+.custom-edit-modal .modal-header button{
+  right:20px;
+  font-family: initial;
+}
+.custom-edit-modal .modal-header button span{
+  font-family: initial;
+}
+.custom-edit-modal .modal-header h5{
+  font-size:18px;
+}
+.custom-edit-modal .modal-header{
+  background-color:#f1fbf3;
+  border-top-left-radius: 20px;
+  border-top-right-radius:20px;
+}
+.custom-edit-modal  .modal-content{
+  border-radius: 20px;
+}
+*[data-direction="rtl"]{
+  direction:rtl;
+  text-align: right;
+}
+*[data-direction="ltr"]{
+  direction:ltr;
+  text-align: left;
+}
+.added-data-name h5{
+  color:#6d293e;
+  font-size:14px;
+}
+.added-data-tag{
+  color:#aeadaf;
+  font-weight:400;
+  font-size:13px;
+  letter-spacing: 0.8px;
+}
+.added-data-name p{
+  font-size:12px;
+  color:#aeadaf;
+}
+.added-comment{
+  padding-right: 57px;
+  color:#515151;
+  font-size: 12px;
+}
+.flex-1{
+  flex:1;
+}
+.comment-post-field input{
+  height:35px;
+  border-radius: 30px;
+  font-size:12px;
+  padding-left:12px;
+  padding-right:12px;
+  outline:none;
+  color:#515151;
+}
+.comment-post-field input::placeholder{
+  color:#515151;
+  font-size:12px;
+}
+.comment-post-field:not(.text-success){
+  color:#515151;
+}
+.comment-post-field i{
+  font-size:25px;
+}
+.cursor-pointer{
+  cursor:pointer;
+}
+.rating-feedback-area textarea{
+  resize:none;
+  color:#515151;
+  font-size:12px;
+  padding:15px;
+  outline:none;
+  border-radius: 16px;
+}
+.rating-feedback-area button{
+  font-size:12px;
+  outline:none;
+  border-radius: 30px;
+  height:40px;
+}
+.no-radius{
+  border-radius: 0px !important;
+}
+*:focus{
+  outline:none !important;
 }
 /* rating ends */

@@ -7,7 +7,7 @@
     </form>
 
     @foreach ($posts as $key => $post)
-             @livewire('item', ['post' => $post], key($post->id))
+        @livewire('item', ['post' => $post], key($post->id))
     @endforeach
 </div>
 

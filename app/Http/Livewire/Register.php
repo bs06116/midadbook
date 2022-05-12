@@ -6,12 +6,14 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\City;
 use App\User;
+use App\Country;
 use Hash;
 
 class Register extends Component
 {
     use WithFileUploads;
-    public $users, $photo, $name, $username, $email, $password, $phone_number, $city, $twitter_link, $goread_link;
+    public $users, $photo, $name, $username, $email, $password, $phone_number, $cities_options, $countries_options,
+    $country, $city, $twitter_link, $goread_link;
     public $registerForm = false;
     public $cities;
 
@@ -22,6 +24,8 @@ class Register extends Component
 
     public function mount()
     {
+        $this->countries_options = Country::all();
+        $this->cities_options = [];
         $this->cities = City::all();
     }
 
@@ -44,6 +48,7 @@ class Register extends Component
             'email' => 'required|unique:users|email|max:255',
             'password' => 'required|max:255',
             'phone_number' => 'required|max:9|min:9',
+            'country' => 'required',
             'city' => 'required|max:255',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -54,12 +59,19 @@ class Register extends Component
         $this->password = Hash::make($this->password);
         User::create([
             'name' => $this->name, 'username' => $this->username,'profile_photo'=>$imageName,'email' => $this->email, 'password' => $this->password,
-            'phone_number' => $this->phone_number, 'city_id' => $this->city, 'twitter_link' => $this->twitter_link,
+            'phone_number' => $this->phone_number, 'country_id' => $this->country, 'city_id' => $this->city, 'twitter_link' => $this->twitter_link,
             'goread_link' => $this->goread_link
         ]);
         session()->flash('message', 'Your register successfully. Please login to add book.');
         $this->resetInputFields();
         return redirect()->to('user/login');
        // $this->resetInputFields();
+    }
+    public function updatedCountry(){
+        if($this->country != null){
+            $this->cities_options = City::where('country_id',$this->country)->get();
+        }else{
+            $this->cities_options = [];
+        }
     }
 }

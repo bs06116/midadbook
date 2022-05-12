@@ -10,7 +10,7 @@ class CommentList extends Component
 {
     public $loadCommentCount;
     public $perPage;
-    public $post_id, $edit_comment_id, $edit_comment_value;
+    public $post_id, $edit_comment_id,$comment, $edit_comment_value;
 
     protected function getListeners()
     {
@@ -18,8 +18,8 @@ class CommentList extends Component
         $addNewCommentToListkey = "addNewCommentToList".$this->post_id;
         return [$rerenderCommentskey => 'rerenderComments', $addNewCommentToListkey =>  'addNewCommentToList'];
     }
-  
-    public function mount($post_id) 
+
+    public function mount($post_id)
     {
         $this->perPage = 10;
         $this->loadCommentCount = 10;
@@ -52,6 +52,33 @@ class CommentList extends Component
             $this->render();
         }
     }
+    public function commentStore($post_id)
+    {
+        $this->validate([
+            'comment' => 'required|max:255',
+        ]);
+
+        Comment::create([
+            'comment' => $this->comment,
+            'user_id' => Auth::user()->id,
+            'post_id' => $post_id,
+
+        ]);
+        session()->flash('message', 'Your comment was added successfully.');
+        $this->comment = '';
+        $this->emitTo('comment-list','addNewCommentToList'.$post_id);
+        $this->comment_count = Comment::where('post_id', $this->post->id)->count();
+    }
+
+    public function deleteComment($comment_id, $post_id){
+        $comment = Comment::find($comment_id);
+        if($comment->user_id == Auth::user()->id){
+            $comment->delete();
+            session()->flash('message', 'Your comment was deleted successfully.');
+            $this->emitTo('comment-list','rerenderComments'.$post_id);
+        }
+    }
+
 
     public function rerenderComments(){
         $this->render();
@@ -61,7 +88,7 @@ class CommentList extends Component
         $this->loadCommentCount = 1 + $this->loadCommentCount;
     }
 
-    public function loadMoreItems() 
+    public function loadMoreItems()
     {
         $this->loadCommentCount = $this->perPage + $this->loadCommentCount;
     }

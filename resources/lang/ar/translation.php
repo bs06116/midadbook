@@ -20,7 +20,7 @@ return [
     'fullname' => 'الاسم',
     'user_name' => 'اسم المستخدم',
     'city' => 'المدينة',
-    'add_book' => 'أنشئ اعلان',
+    'add_book' => 'اضف اعلان',
     'add_title' => 'عنوان الاعلان',
     'add_type' => 'نوع الاعلان',
     'required' => 'مطلوب',

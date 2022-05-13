@@ -2,26 +2,28 @@
     <div class="row py-2 d-flex ">
         <div class="col-4  d-flex nav2">
 
-            <nav class="navbar navbar-expand-lg navbar-light users-img py-2">
+            <nav class="navbar navbar-expand-lg align-items-center navbar-light users-img py-2">
                 <div class="user-profile-img ">
-                    <img id="user-icon" src="{{ url('storage/' . Auth::user()->profile_photo) }}" alt="">
+                    <!-- <img id="user-icon" src="{{ url('storage/' . Auth::user()->profile_photo) }}" alt=""> -->
+                    <img id="user-icon" src="https://www.postplanner.com/hs-fs/hub/513577/file-2886416984-png/blog-files/facebook-profile-pic-vs-cover-photo-sq.png?width=250&height=250&name=facebook-profile-pic-vs-cover-photo-sq.png" alt="">
                 </div>
                 <div class="user-name login-user1 text-light ">
                     <span class="d-block font-weight-bold">{{ Auth::user()->name }}</span>
+                    <p class="mb-0">السعودیۃ، جدہ</p>
                 </div>
             </nav>
 
 
 
-            <div class="notifaction-icon  login-nav2">
-                <div class="mt-4">
+            <div class="notifaction-icon align-self-center login-nav2">
+                <div>
                     <a href="{{ route('myprofile.edit') }}"><i class="fa fa-cog text-white"></i></a>
                 </div>
                 {{-- <div class="noti mt-4" id="bell-icon"><img src="{{ asset('assets/img/front/bell_ic.png') }}" alt="">
                     <i class="badge1">9</i>
                 </div> --}}
 
-                <div class="mt-4">
+                <div>
                     @livewire('chat.chat-header-notification')
                 </div>
             </div>
@@ -160,9 +162,9 @@
                     src="{{ asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
         </div>
 
-        <div class=" col-5 col-xs-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 text-left btn1-div  ">
+        <div class=" col-5 col-xs-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 text-left btn1-div align-self-center">
             <a href="{{ route('post/create') }}">
-                <button class="d-flex   nav-btn nav-btnn rounded-pill pull-right  mt-3 text-light "><span
+                <button class="d-flex   nav-btn nav-btnn rounded-pill pull-right text-light "><span
                         class="pt-2 px-2 "> {{ __('translation.add_book') }}</span> <i
                         class="py-2 pull-right  fa fa-plus" aria-hidden="true"></i></button>
             </a>

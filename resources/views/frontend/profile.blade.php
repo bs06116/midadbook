@@ -19,10 +19,10 @@
 
             <div class="profile w-100 text-center">
                 <div class="profile-info">
-                <img class="profile-img  " src="{{ url('storage/' . $user->profile_photo) }}" alt="">
-                <div class="">
-                <p class="d-inline pr-3"><span>@</span>{{$user->username}}</p>
-                <h6 class="d-inline-block ml-3 pl-3">{{$user->name}}</h6>
+                <img class="profile-img  " src="https://www.postplanner.com/hs-fs/hub/513577/file-2886416984-png/blog-files/facebook-profile-pic-vs-cover-photo-sq.png?width=250&height=250&name=facebook-profile-pic-vs-cover-photo-sq.png" alt="{{ url('storage/' . $user->profile_photo) }}">
+                <div class="mt-4">
+                <p class="d-inline pr-3"><span>@</span>{{$user->username}}<span>.</span></p>
+                <h6 class="d-inline-block">{{$user->name}}</h6>
                 <br>
                 <p class="whatsapp d-inline text-secondary pr-3">{{$user->show_phone_number ? $user->phone_number : str_repeat("*", strlen($user->phone_number))}}
                   <img  class=" ml-" src="{{asset('assets/img/front/whatsapp_ic.png ') }}" alt=""></p>
@@ -46,13 +46,23 @@
 
                    <br>
                    <div class="social-links ">
-                   <a class="good-reads" target="_blank" href="{{$user->twitter_link}}"><img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt=""></a>
-                   <a class="twitter" target="_blank" href="{{$user->goread_link}}"><i class="fab fa-twitter"></i></a>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <a class="good-reads ref__link d-flex align-items-center justify-content-center" 
+                                target="_blank" href="{{$user->twitter_link}}">
+                                <img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <a class="twitter ref__link d-flex align-items-center justify-content-center" target="_blank" href="{{$user->goread_link}}">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ref__link__btn">
+                            @livewire('chat.profile-chat-button', ['user_id' => $user->id])
+                        </div>
+                    </div>
                    {{-- <button class="btn counting">30 <span>counting</span></button> --}}
-                   <div style="position: absolute; margin: 0 0;float: right;right: 33%;top: 468px">
-                    @livewire('chat.profile-chat-button', ['user_id' => $user->id])
-
-                   </div>
                   </div>
               </div>
                 </div>

@@ -35,8 +35,8 @@
             <div class="chat-container">
                 <div class="msg-chat-header ">
                     <div class="user-avatar" onclick="openChatBubble()">
-                        <div>
-                            <h5>Message</h5>
+                        <div class="w-100">
+                            <h5>Chat</h5>
                         </div>
                     </div>
                 </div>

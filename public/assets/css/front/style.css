@@ -302,11 +302,13 @@ i.badge1 {
   margin-top: 100px;
   padding: 20px;
 }
+
 .profile-info .profile-img {
   height: 130px;
   width: 130px;
   border-radius: 50%;
   margin-top: -60px;
+  box-shadow: 0 0 17px 0px rgb(4 4 4 / 14%);
 }
 .profile-info h6 {
   font-weight: bold;
@@ -358,11 +360,18 @@ i.badge1 {
 }
 .form-col{
   padding: 0px 15px !important;
-  border: 1px solid !important;
+  border: 1px solid rgb(112 112 112 / 20%) !important;
    border-radius: 50px !important;
+   overflow: hidden;
 }
 .form-col .form-bor{
-  border:none !important
+  border:none !important;
+  resize: none;
+
+
+}
+.form-col textarea{
+  height: 100px !important;
 }
 .form-col .form-width{
   width: 60% !important;
@@ -1108,6 +1117,7 @@ i.badge1 {
   }
   .main form div i{
     margin-right: 28px;
+    padding-top:9px;
   }
   .form-col .code{
     border: none !important;
@@ -1461,7 +1471,8 @@ i.badge1 {
   color: gray;
 }
 .msg-chat-header .user-avatar h5{
-  margin-left: 175px;
+  /* margin-left: 175px; */
+  text-align: center;
 }
 .notification_ul hr{
   margin-top: 2rem;
@@ -1764,9 +1775,12 @@ i.badge1 {
   text-decoration: none;
 }
 .rating-stars i {
-  font-size: 14px;
+  font-size: 18px;
   color: #ccc;
   display: inline;
+}
+.rating-star-counter{
+  font-size:18px;
 }
 .form-ele-with-icon input{
   padding-left:25px !important;

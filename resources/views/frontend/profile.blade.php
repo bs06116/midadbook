@@ -19,17 +19,18 @@
 
             <div class="profile w-100 text-center">
                 <div class="profile-info">
-                <img class="profile-img  " src="https://www.postplanner.com/hs-fs/hub/513577/file-2886416984-png/blog-files/facebook-profile-pic-vs-cover-photo-sq.png?width=250&height=250&name=facebook-profile-pic-vs-cover-photo-sq.png" alt="{{ url('storage/' . $user->profile_photo) }}">
+                <img class="profile-img " src="{{ url('storage/' . $user->profile_photo) }}" alt="{{$user->name}}" />
                 <div class="mt-4">
-                <p class="d-inline pr-3"><span>@</span>{{$user->username}}<span>.</span></p>
+                <p class="d-inline"><span>@</span>{{$user->username}}<span class="px-3" style="font-size: 25px;color:#949296;line-height: 1;">.</span></p>
                 <h6 class="d-inline-block">{{$user->name}}</h6>
                 <br>
-                <p class="whatsapp d-inline text-secondary pr-3">{{$user->show_phone_number ? $user->phone_number : str_repeat("*", strlen($user->phone_number))}}
-                  <img  class=" ml-" src="{{asset('assets/img/front/whatsapp_ic.png ') }}" alt=""></p>
-                <p class="d-inline text-secondary pl-3">{{$user->city->name}}
-                   <i class="fal fa-map-marker-alt"></i></p>
+                <p class="whatsapp mt-2 d-inline-flex align-items-center text-secondary pr-3">{{$user->show_phone_number ? $user->phone_number : str_repeat("*", strlen($user->phone_number))}}
+                  <img  class=" ml-3" src="{{asset('assets/img/front/whatsapp_ic.png ') }}" alt=""></p>
+                <p class="d-inline-flex mt-2 align-items-center text-secondary pl-3">{{$user->city->name}}
+                   <i class="fal fa-map-marker-alt ml-3"></i></p>
 
-                    <div class="rating-wrap">
+                    <div class="rating-wrap d-flex justify-content-center align-items-center mt-3">
+                        <span class="mr-2 rating-star-counter">{{$user->ratings->count()}}{{$user->ratings->count()>0?.0:""}}</span>
                         <ul class="rating-stars"  data-toggle="modal" data-target="#RatingModal">
                             <li style="width:{{ ($user->ratings->sum('rating')/($user->ratings->count() == 0 ? 1 : $user->ratings->count()))*20 }}%" class="stars-active">
                                 @for ($i = 1; $i <= 5; $i++)

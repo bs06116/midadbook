@@ -1,4 +1,4 @@
-<div class="card chat-app shadow">
+<div class="card chat-app shadow h-100">
     <div id="plist" class="people-list" style="{{ !empty($receiver) ? '' : 'left:0px;' }}">
         @livewire('chat.chat-user-list', ['user_id' => request()->user_id])
     </div>

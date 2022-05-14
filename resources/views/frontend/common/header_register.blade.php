@@ -5,7 +5,7 @@
             <nav class="navbar navbar-expand-lg align-items-center navbar-light users-img py-2">
                 <div class="user-profile-img ">
                     <!-- <img id="user-icon" src="{{ url('storage/' . Auth::user()->profile_photo) }}" alt=""> -->
-                    <img id="user-icon" src="https://www.postplanner.com/hs-fs/hub/513577/file-2886416984-png/blog-files/facebook-profile-pic-vs-cover-photo-sq.png?width=250&height=250&name=facebook-profile-pic-vs-cover-photo-sq.png" alt="">
+                    <img id="user-icon" src="{{ url('storage/' . Auth::user()->profile_photo) }}" alt="{{ Auth::user()->name }}">
                 </div>
                 <div class="user-name login-user1 text-light ">
                     <span class="d-block font-weight-bold">{{ Auth::user()->name }}</span>

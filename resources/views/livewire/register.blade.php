@@ -1,3 +1,8 @@
+<style>
+    .form-control.form-bor{
+        height:50px !important;
+    }
+</style>
 <div class="container-fluid main">
     <div class="row w-100">
         <div class="col-xs-2 col-sm-2   col-md-3 col-lg-3"></div>
@@ -107,9 +112,9 @@
                             </div>
                         </div>
                         @error('password') <span class="text-danger error">{{ $message }}</span>@enderror
-                        <div class="col-12 py-2 mt-4 form-col">
-                            <i class="fal fa-map-marker-alt"></i>
-                            <select class="form-select " class="form-bor" wire:model="country"
+                        <div class="col-12 mt-4 form-col">
+                            <i class="fal fa-map-marker-alt" style="margin-top: 10px;"></i>
+                            <select class="form-select " style="height:50px;" class="form-bor" wire:model="country"
                                 aria-label="Default select example">
                                 <option selected value="">{{ __('translation.country') }}</option>
                                 @foreach ($countries_options as $option)
@@ -119,10 +124,10 @@
                         </div>
                         @error('country') <span class="text-danger error">{{ $message }}</span>@enderror
 
-                        <div class="col-12 py-2 mt-4 form-col">
-                            <i class="fa fa-map-marker-alt"></i>
+                        <div class="col-12 mt-4 form-col">
+                            <i class="fa fa-map-marker-alt" style="margin-top: 10px;"></i>
                             <select class="form-select " class="form-bor" wire:model="city"
-                                aria-label="Default select example" style="font-size:14px">
+                                aria-label="Default select example" style="font-size:14px;height:50px;">
                                 <option selected value="">{{ __('translation.city') }}</option>
                                 {{-- <option value="1">One <img src="{{asset('assets/img/front/upload_img.png') }}"  /></option> --}} --}}
                                 @foreach ($cities_options as $option)
@@ -139,7 +144,7 @@
                                     <input type="number" class="form-control form-bor form-width text-right"
                                     wire:model="phone_number" aria-label="Number">
                                     <input type="text" placeholder="+966" class=" form-control code text-right disabled"
-                                    aria-label="Number">
+                                    aria-label="Number" height="35px" style="margin-top:8px;">
                                 </div>
                                 <i class="fa fa-phone position-absolute"></i>
                             </div>
@@ -148,14 +153,14 @@
 
                         <div class="col-12 mt-4 form-col form-link overflow-hidden">
                             <div class="input-group flex-nowrap ">
-                                <i class="fab fa-twitter px-2 py-2 twi"></i>
+                                <i class="fab fa-twitter px-2 py-2 twi" style="    margin-top: 8px !important;"></i>
                                 <input type="text" class=" form-control form-bor form-width text-right"
                                     wire:model="twitter_link" aria-label="Number">
                             </div>
                         </div>
                         <div class="col-12 mt-4 form-col form-link overflow-hidden">
                             <div class="input-group flex-nowrap">
-                                <i class="fab fa-goodreads-g px-2 py-2 good"></i>
+                                <i class="fab fa-goodreads-g px-2 py-2 good" style="    margin-top: 8px !important;"></i>
                                 <input type="text" class="form-control form-bor form-width text-right"
                                     wire:model="goread_link" aria-label="Number">
                             </div>

@@ -31,8 +31,8 @@
                     <div class="row form-row mx-0">
 
                         <div class="col-12 mt-4 form-col text-right">
-                            <div class="position-relative form-ele-with-icon">
-                                <input type="text" class="form-control form-bor text-right" placeholder="{{__('translation.email')}}"
+                            <div class="position-relative form-ele-with-icon" style="height:50px;overflow:hidden;">
+                                <input type="text" class="form-control h-100 form-bor text-right" placeholder="{{__('translation.email')}}"
                                 wire:model="email" aria-label="Email">
                                 <i class="fa fa-user position-absolute"></i>
                             </div>
@@ -43,8 +43,8 @@
                       
 
                         <div class="col-12 mt-4 form-col">
-                            <div class="position-relative form-ele-with-icon">
-                                <input type="password" class="form-control form-bor text-right" placeholder="{{__('translation.password')}}"
+                            <div class="position-relative form-ele-with-icon" style="height:50px;overflow:hidden;">
+                                <input type="password" class="form-control h-100 form-bor text-right" placeholder="{{__('translation.password')}}"
                                 wire:model="password" aria-label="Password">
                                 <i class="fa fa-lock position-absolute"></i>
                             </div>

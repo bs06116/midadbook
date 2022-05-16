@@ -1,5 +1,5 @@
 <div class="post-container mt-4 px-3 pt-4">
-
+    <div class="d-flex align-items-center">
     @if ($post->book_type == 1)
         <div class="butn d-inline">
             <button class='rounded-pill'><span class='px-1'>{{ __('translation.required') }}</span>
@@ -19,13 +19,16 @@
 
     @endif
 
-    <div class="text-right d-inline user-info">
-        <span class="text-muted"><span>@</span>{{ $post->user->username }}</span>
-        <h6 class="d-inline"><a href="{{ $post->user->username }}">{{ $post->user->name }}</a></h6>
-        <span class="d-block text-right text-muted">{{ $post->user->city->name }}</span>
+    <div class="text-right d-flex align-items-center user-info ml-auto" style="position:static;">
+        <div >
+            <span class="text-muted"><span>@</span>{{ $post->user->username }}</span>
+            <h6 class="d-inline"><a href="{{ $post->user->username }}">{{ $post->user->name }}</a></h6>
+            <span class="d-block text-right text-muted">{{ $post->user->city->name }}</span>
+        </div>
     </div>
-    <img src="{{ url('storage/' . $post->user->profile_photo) }}" class="user-img "
-        alt="{{ $post->user->name }}">
+    <img src="{{ url('storage/' . $post->user->profile_photo) }}" class="user-img ml-3"
+        alt="{{ $post->user->name }}" style="position:static;">
+</div>
         <!-- <img src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" class="user-img "
         alt="{{ $post->user->name }}"> -->
     <hr class="mt-3">

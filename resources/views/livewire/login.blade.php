@@ -57,17 +57,17 @@
                     </div>
 
                     <div class="col-12 text-center mt-4">
-                        <div class="text-center">
-                            <button type="submit" class="text-center btn  login_btn"
+                        <div class="text-center d-flex flex-wrap align-items-center justify-content-center">
+                            <button type="submit" class="text-center btn mr-sm-3 login_btn"
 
                             wire:click.prevent="login">    <span wire:target="login" wire:loading.class="spinner-border spinner-border-sm"></span>
                             {{__('translation.login')}}
-                            <i class="fa fa-arrow-right ml-2 mr-0"></i>
-                        </button>
-                        <button type="button" class="text-center btn mt-3 login_btn" style="background:#5d001d !important;"> 
+                            <i class="fa fa-arrow-right ml-2 pt-0 mr-0"></i>
+                            </button>
+                        <a href="{{ route('user/signup') }}" class="text-center text-decoration-none btn mt-sm-0 mt-3 login_btn" style="background:#5d001d !important;"> 
                             {{__('translation.signup')}}
-                            <i class="fa fa-user ml-2 mr-0"></i>
-                        </button>
+                            <i class="fa fa-user ml-2 mr-0 pt-0"></i>
+                        </a>
                         </div>
                     </div>
             </div>

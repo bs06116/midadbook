@@ -1,9 +1,10 @@
-<style>
-    .form-control.form-bor{
-        height:50px !important;
-    }
-</style>
+
 <div class="container-fluid main">
+    <style>
+        .form-control.form-bor{
+            height:50px !important;
+        }
+    </style>
     <div class="row w-100">
         <div class="col-xs-2 col-sm-2   col-md-3 col-lg-3"></div>
         <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 main-div">
@@ -21,6 +22,7 @@
                 </div>
 
                 <form method="POST" enctype="multipart/form-data">
+                    @csrf_field
                     <div class="row gx-5 mx-2  px-4">
                         <div class="col-2 text-center dropzone ">
 

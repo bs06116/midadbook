@@ -14,7 +14,7 @@
     @endauth
    
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/front/style.css?v=1') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/front/style.css?v=2') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/front/chat.css?v=1') }}">
     <!-- FontAwsome  -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet">

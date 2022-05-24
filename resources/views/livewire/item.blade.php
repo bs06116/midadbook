@@ -107,7 +107,7 @@
                                     alt="">
                             @endisset
 
-                            <a href="#" class="pl-5 ml-3 text-danger"
+                            <a href="#" class="ml-auto text-danger"
                                 wire:click.prevent="report({{ $post->id }})"><i
                                     class="fas fa-exclamation-triangle"></i></a>
                         @endif

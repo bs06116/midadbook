@@ -1,3 +1,8 @@
+<style>
+    .container-fluid.main{
+        overflow:hidden;
+    }
+</style>
 <div class="container-fluid main">
     <div class="row w-100">
         <div class="col-xs-2 col-sm-2   col-md-3 col-lg-3"></div>

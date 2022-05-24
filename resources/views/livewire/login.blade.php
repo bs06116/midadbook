@@ -1,4 +1,4 @@
-<div class="container-fluid main pt-5">
+<div class="container-fluid main pt-md-5 pt-3">
     <div class="row login_page w-100">
         <div class="col-xs-2 col-sm-2   col-md-3 col-lg-3"></div>
         <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 main-div">
@@ -63,6 +63,10 @@
                             wire:click.prevent="login">    <span wire:target="login" wire:loading.class="spinner-border spinner-border-sm"></span>
                             {{__('translation.login')}}
                             <i class="fa fa-arrow-right ml-2 mr-0"></i>
+                        </button>
+                        <button type="button" class="text-center btn mt-3 login_btn" style="background:#5d001d !important;"> 
+                            {{__('translation.signup')}}
+                            <i class="fa fa-user ml-2 mr-0"></i>
                         </button>
                         </div>
                     </div>

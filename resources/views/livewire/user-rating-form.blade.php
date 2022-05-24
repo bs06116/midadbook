@@ -23,14 +23,14 @@
                     </div>
                     <div class="form-group">
                         <label for="comment">Comment</label>
-                        <textarea wire:model="comment" placeholder=" منذ شهر" rows="4" class="w-100 border"></textarea>
+                        <textarea wire:model="comment" placeholder="اكتب تقييمك هنا " rows="4" class="w-100 border"></textarea>
                         {{-- <textarea wire:model="comment" class="form-control shadow-none rounded-0 text-right" id="comment" cols="30" rows="3"></textarea> --}}
                         @error('comment')
                             <small id="helpId" class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
                     <div class="form-group text-center">
-                        <button class="mt-3 btn-success border-0 text-white px-5" type="submit">شهر</button>
+                        <button class="mt-3 btn-success border-0 text-white px-5" type="submit">نشر التقييم</button>
                     </div>
                 </form>
             </div>

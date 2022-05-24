@@ -2,14 +2,14 @@
     <div class="row py-2 d-flex ">
         <div class="col-4  d-flex nav2">
 
-            <nav class="navbar navbar-expand-lg align-items-center navbar-light users-img py-2">
+            <nav class="navbar navbar-expand-lg align-items-center navbar-light users-img py-2" style="flex-wrap:nowrap !important">
                 <div class="user-profile-img ">
                     <!-- <img id="user-icon" src="{{ url('storage/' . Auth::user()->profile_photo) }}" alt=""> -->
                     <img id="user-icon" src="{{ url('storage/' . Auth::user()->profile_photo) }}" alt="{{ Auth::user()->name }}">
                 </div>
                 <div class="user-name login-user1 text-light ">
                     <span class="d-block font-weight-bold">{{ Auth::user()->name }}</span>
-                    <p class="mb-0">السعودیۃ، جدہ</p>
+                    {{--<p class="mb-0 d-none d-md-block">{{ Auth::user()->name }}</p>--}}
                 </div>
             </nav>
 
@@ -158,7 +158,7 @@
             </ul>
         </div>
         <div class="col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 text-center logo   ">
-            <a class=" px-4 navbar-brand text-light" href="{{ url('/') }}"><img
+            <a class=" px-4 navbar-brand text-light mr-0" href="{{ url('/') }}"><img
                     src="{{ asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
         </div>
 

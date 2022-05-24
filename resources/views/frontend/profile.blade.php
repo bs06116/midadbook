@@ -48,13 +48,13 @@
                    <br>
                    <div class="social-links ">
                     <div class="row">
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
                             <a class="good-reads ref__link d-flex align-items-center justify-content-center" 
                                 target="_blank" href="{{$user->twitter_link}}">
                                 <img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt="">
                             </a>
                         </div>
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
                             <a class="twitter ref__link d-flex align-items-center justify-content-center" target="_blank" href="{{$user->goread_link}}">
                                 <i class="fab fa-twitter"></i>
                             </a>

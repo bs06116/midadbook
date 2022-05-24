@@ -1,10 +1,10 @@
 <div class="container-fluid">
-    <div class="row py-2 d-flex text-center">
+    <div class="row py-md-2 d-flex text-center">
         <div class=" col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 ">
             <nav class="px-1 navbar navbar-expand-lg navbar-light  w-100">
                 <div class="container-fluid">
 
-                    <button class="nav-toggle-menu pt-2">
+                    <button class="nav-toggle-menu text-white">
                         <i id="menu" class="fas fa-align-justify"></i>
                     </button>
 
@@ -31,13 +31,13 @@
             href="{{ route('user/login') }}"> {{ __('translation.login') }}
         </a></h4>
         </div>
-    <div class="col-3 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 text-center logo">
+    <div class="col-4 col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-4 text-center logo">
         <a class="px-4 navbar-brand text-light"  href="{{url('/')}}"><img src="{{ asset('assets/img/front/midad_ul_maktaba_logo_header.png') }}" alt=""></a>
     </div>
     <div class=" col-5 col-xs-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 text-left btn1-div">
         <a href="{{route('post/create')}}">
-        <button class="d-flex   nav-btn nav-btnn rounded-pill pull-right  mt-3 text-light"><span
-                class="pt-2 px-2 ">{{ __('translation.add_book') }}</span> <i class="py-2 pull-right  fa fa-plus" aria-hidden="true"></i></button></a>
+        <button class="d-flex align-items-center  nav-btn nav-btnn rounded-pill pull-right  mt-3 text-light"><span
+                class=" px-2 ">{{ __('translation.add_book') }}</span> <i class="py-2 pull-right  fa fa-plus" aria-hidden="true"></i></button></a>
     </div>
   </div>
 

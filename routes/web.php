@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/foo', function(){
+    Artisan::call('view:clear');
+    Artisan::call('config:cache');
+    Artisan::call('cache:clear');
+            Artisan::call('route:clear');
+return 'success';
+});
 
 Route::get('/', 'HomeController@index');
 Route::get('/post/create', 'PostController@create')->name('post/create');

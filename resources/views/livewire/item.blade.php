@@ -1,5 +1,5 @@
 <div class="post-container mt-4 px-3 pt-4">
-
+    <div class="d-flex align-items-center">
     @if ($post->book_type == 1)
         <div class="butn d-inline">
             <button class='rounded-pill'><span class='px-1'>{{ __('translation.required') }}</span>
@@ -19,19 +19,25 @@
 
     @endif
 
-    <div class="text-right d-inline user-info">
-        <span class="text-muted"><span>@</span>{{ $post->user->username }}</span>
-        <h6 class="d-inline"><a href="{{ $post->user->username }}">{{ $post->user->name }}</a></h6>
-        <span class="d-block text-right text-muted">{{ $post->user->city->name }}</span>
+    <div class="text-right d-flex align-items-center user-info ml-auto" style="position:static;">
+        <div >
+            <span class="text-muted"><span>@</span>{{ $post->user->username }}</span>
+            <h6 class="d-inline"><a href="{{ $post->user->username }}">{{ $post->user->name }}</a></h6>
+            <span class="d-block text-right text-muted">{{ $post->user->city->name }}</span>
+        </div>
     </div>
-    <img src="{{ url('storage/' . $post->user->profile_photo) }}" class="user-img "
-        alt="{{ $post->user->name }}">
+    <img src="{{ url('storage/' . $post->user->profile_photo) }}" class="user-img ml-3"
+        alt="{{ $post->user->name }}" style="position:static;">
+</div>
+        <!-- <img src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" class="user-img "
+        alt="{{ $post->user->name }}"> -->
     <hr class="mt-3">
     <div class="post-title text-right pt-2">
         <h4>{{ $post->post_title }} </h4>
         <p class="text-muted pt-2">{{ $post->post_body }}
         </p>
     </div>
+<<<<<<< HEAD
     <div class="d-flex post_images" style="max-height: 300px">
         <img class="w-50 mr-1" style="{{$post->image_second =='' ? 'object-fit:contain ;width: 100% !important;':'object-fit:initial' }}" src="{{ url('storage/' . $post->featured_image) }}"
             alt="{{ $post->post_title }}">
@@ -39,6 +45,25 @@
             <img class="w-50" style="object-fit:initial" src="{{ url('storage/' . $post->image_second) }}"
                 alt="{{$post->image_second}}">
         @endif
+=======
+    <div class="d-flex post_images ">
+            <!-- <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
+            src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" alt="{{ $post->post_title }}"> -->
+            @if ($post->image_second == '')
+            <img class="w-100" style="max-height: 300px;object-fit:cover"
+            src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
+            @else
+            <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
+            src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
+            @endif
+            @if ($post->image_second != '')
+            <img class="w-50" style="max-height: 200px;object-fit:cover"
+            src="{{ url('storage/' . $post->image_second) }}" alt="">
+        <!-- <img class="w-50" style="max-height: 200px;object-fit:cover"
+            src="{{ asset('assets/img/front/profile_thumbnail_large.png') }}" alt=""> -->
+            @else
+            @endif
+>>>>>>> 0de4aa0fe232ae5d6fe2ebcb605f49986431f794
 
 
     </div>
@@ -58,10 +83,10 @@
 
 
     <div class="row f-post pt-2">
-        <div class="col-5 col-xs-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-            <p class="whatsapp mr-2">
+        <div class="col-5 col-xs-5 mt-3 col-sm-5 col-md-6 col-lg-6 col-xl-6">
+            <p class="whatsapp mr-2 d-flex align-items-center">
                 @if ($post->user->show_phone_number)
-                    <a href=" https://wa.me/{{ $post->user->phone_number }}">{{ $post->user->phone_number }}</a>
+                    <a href=" https://wa.me/{{ $post->user->phone_number }}" class="mr-3">{{ $post->user->phone_number }}</a>
                     <img src="{{ asset('assets/img/front/whatsapp_ic.png') }}" alt="">
                 @else
                     {{ $post->user->show_phone_number ? $post->user->phone_number : str_repeat('*', strlen($post->user->phone_number)) }}
@@ -72,6 +97,7 @@
         <div class="col-7 col-xs-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">
 
             <div class="row d-flex">
+<<<<<<< HEAD
                 <div class="col-6 text-right">
                     @if (Auth::check())
 
@@ -83,12 +109,18 @@
                             {{ $comment_count }} <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
                         </p>
                     @endif
+=======
+                <div class="col-6 mt-3 text-right">
+                    <p class="message d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#commentModal{{ $post->id }}">
+                       <span class="counter_span mr-2">{{ $comment_count }}</span> <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
+                    </p>
+>>>>>>> 0de4aa0fe232ae5d6fe2ebcb605f49986431f794
                 </div>
 
-                <div class="col-6 text-center">
-                    <p class="heart">
+                <div class="col-6 mt-3 text-center">
+                    <p class="heart d-flex align-items-center justify-content-end">
                         {{-- {{ $post->like }} --}}
-                        {{ $post->like->count() }}
+                        <span class="counter_span mr-2">{{ $post->like->count() }}</span>
                         @if (!Auth::check())
                             <img wire:key="like-{{ $post->id }}" wire:loading.attr="disabled"
                                 src="{{ asset('assets/img/front/heart_line.png') }}" alt="">
@@ -103,7 +135,11 @@
                                     alt="">
                             @endisset
 
+<<<<<<< HEAD
                             <a href="javascript:void()" class="pl-5 ml-3 text-danger"
+=======
+                            <a href="#" class="ml-auto text-danger"
+>>>>>>> 0de4aa0fe232ae5d6fe2ebcb605f49986431f794
                                 wire:click.prevent="report({{ $post->id }})"><i
                                     class="fas fa-exclamation-triangle"></i></a>
                         @endif

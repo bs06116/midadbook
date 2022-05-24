@@ -51,6 +51,7 @@
                                             class="avatar avatar-xl  rounded-circle"
                                             data-toggle="tooltip" data-original-title="{{ $user->name }} Logo"
                                             src="{{ asset($user->profile_photo) }}">
+                                            
                                         </a>
                                     @endif
                             </div>

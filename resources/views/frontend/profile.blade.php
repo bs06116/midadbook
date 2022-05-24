@@ -19,17 +19,18 @@
 
             <div class="profile w-100 text-center">
                 <div class="profile-info">
-                <img class="profile-img  " src="{{ url('storage/' . $user->profile_photo) }}" alt="">
-                <div class="">
-                <p class="d-inline pr-3"><span>@</span>{{$user->username}}</p>
-                <h6 class="d-inline-block ml-3 pl-3">{{$user->name}}</h6>
+                <img class="profile-img " src="{{ url('storage/' . $user->profile_photo) }}" alt="{{$user->name}}" />
+                <div class="mt-4">
+                <p class="d-inline"><span>@</span>{{$user->username}}<span class="px-3" style="font-size: 25px;color:#949296;line-height: 1;">.</span></p>
+                <h6 class="d-inline-block">{{$user->name}}</h6>
                 <br>
-                {{-- <p class="whatsapp d-inline text-secondary pr-3">{{$user->show_phone_number ? $user->phone_number : str_repeat("*", strlen($user->phone_number))}}
-                  <img  class=" ml-" src="{{asset('assets/img/front/whatsapp_ic.png ') }}" alt=""></p> --}}
-                <p class="d-inline text-secondary pl-3">{{$user->city->name}}
-                   <i class="fal fa-map-marker-alt"></i></p>
+                <p class="whatsapp mt-2 d-inline-flex align-items-center text-secondary pr-3">{{$user->show_phone_number ? $user->phone_number : str_repeat("*", strlen($user->phone_number))}}
+                  <img  class=" ml-3" src="{{asset('assets/img/front/whatsapp_ic.png ') }}" alt=""></p>
+                <p class="d-inline-flex mt-2 align-items-center text-secondary pl-3">{{$user->city->name}}
+                   <i class="fal fa-map-marker-alt ml-3"></i></p>
 
-                    <div class="rating-wrap">
+                    <div class="rating-wrap d-flex justify-content-center align-items-center mt-3">
+                        <span class="mr-2 rating-star-counter">{{$user->ratings->count()}}{{$user->ratings->count()>0?.0:""}}</span>
                         <ul class="rating-stars"  data-toggle="modal" data-target="#RatingModal">
                             <li style="width:{{ ($user->ratings->sum('rating')/($user->ratings->count() == 0 ? 1 : $user->ratings->count()))*20 }}%" class="stars-active">
                                 @for ($i = 1; $i <= 5; $i++)
@@ -45,13 +46,24 @@
                     </div>
 
                    <br>
-                   <div class="social-links bottom">
-                   <a class="good-reads mr-md-3" target="_blank" href="{{$user->twitter_link}}"><img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt=""></a>
-                   <a class="twitter mr-md-3" target="_blank" href="{{$user->goread_link}}"><i class="fab fa-twitter"></i></a>
+                   <div class="social-links ">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+                            <a class="good-reads ref__link d-flex align-items-center justify-content-center"
+                                target="_blank" href="{{$user->twitter_link}}">
+                                <img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+                            <a class="twitter ref__link d-flex align-items-center justify-content-center" target="_blank" href="{{$user->goread_link}}">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ref__link__btn">
+                            @livewire('chat.profile-chat-button', ['user_id' => $user->id])
+                        </div>
+                    </div>
                    {{-- <button class="btn counting">30 <span>counting</span></button> --}}
-                   <div>
-                        @livewire('chat.profile-chat-button', ['user_id' => $user->id])
-                   </div>
                   </div>
               </div>
                 </div>

@@ -1,6 +1,6 @@
 <div>
     <form>
-        <div class="text-center rounded-pill mt-4 px-1 py-1">
+        <div class="text-center rounded-pill mt-4 px-1 py-1 d-flex">
             <i class="fa fa-search  rounded-pill search" aria-hidden="true"></i>
             <input wire:model.debounce.500ms="search" class="px-4 rounded-pill text-right search-input" type="search">
         </div>
@@ -18,7 +18,7 @@
                 var r = confirm("Are you sure you want to delete comment?");
                 if (r == true) {
                     Livewire.emit('deletePostComment'+array.post_id, array.comment_id, array.post_id);
-                } 
+                }
             });
 
             Livewire.on('triggerPostReport', (msg) => {

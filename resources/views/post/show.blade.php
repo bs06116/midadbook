@@ -23,6 +23,9 @@
                                 <a href="{{ asset('storage/'.$post->featured_image) }}" target="_blank">
                                     <img width="150" height="150" class="img-fluid" src="{{ asset('storage/'.$post->featured_image) }}" alt="">
                                 </a>
+                                <!-- <a href="{{ asset('storage/'.$post->featured_image) }}" target="_blank">
+                                    <img width="150" height="150" class="img-fluid" src="{{ asset('img/front/profile_thumbnail_large.png') }}" alt="">
+                                </a> -->
                             @endif
                         </div>
                     </div>

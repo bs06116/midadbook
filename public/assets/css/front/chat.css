@@ -197,7 +197,8 @@
 }
 
 .chat .chat-history .my-message {
-  background: #efefef
+  background: #25B034;
+  color:#fff;
 }
 
 .chat .chat-history .my-message:after {
@@ -209,19 +210,19 @@
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-bottom-color: #efefef;
+  border-bottom-color: #25B034;
   border-width: 10px;
   margin-left: -10px
 }
 
 .chat .chat-history .other-message {
-  background: #007bff;
+  background: #29252D;
   text-align: left;
   color: white;
 }
 
 .chat .chat-history .other-message:after {
-  border-bottom-color: #007bff;
+  border-bottom-color: #29252D;
   left: unset;
 }
 

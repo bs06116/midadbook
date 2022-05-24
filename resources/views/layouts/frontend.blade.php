@@ -14,8 +14,8 @@
     @endauth
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/front/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/front/chat.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/front/style.css?v=2') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/front/chat.css?v=1') }}">
     <!-- FontAwsome  -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
@@ -33,9 +33,11 @@
     @auth
         <div id="chat-bubble">
             <div class="chat-container">
-                <div class="msg-chat-header" style="background-color:#5d001d;">
-                    <div class="user-avatar d-flex justify-content-center" onclick="openChatBubble()">
-                        <h5 class="m-0" style="color:white;"><i class="fas fa-envelope-open"></i></h5>
+                <div class="msg-chat-header ">
+                    <div class="user-avatar" onclick="openChatBubble()">
+                        <div class="w-100">
+                            <h5>Chat</h5>
+                        </div>
                     </div>
                 </div>
             </div>

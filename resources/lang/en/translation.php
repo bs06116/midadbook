@@ -15,6 +15,7 @@ return [
 
     'login' => 'Login',
     'signup' => 'Signup',
+    'edit_profile' => 'edit profile',
     'email' => 'Email',
     'password' => 'Password',
     'fullname' => 'Full Name',

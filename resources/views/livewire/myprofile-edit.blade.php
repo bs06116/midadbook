@@ -1,3 +1,13 @@
+<style>
+    .container-fluid.main{
+        overflow:hidden;
+    }
+    .form-ele-with-icon,
+    .form-control.form-bor{
+        height:50px !important;
+    }
+</style>
+</style>
 <div class="container-fluid main">
     <div class="row w-100">
         <div class="col-xs-2 col-sm-2   col-md-3 col-lg-3"></div>
@@ -150,14 +160,14 @@
 
                         <div class="col-12 mt-4 form-col form-link">
                             <div class="input-group flex-nowrap ">
-                                <i class="fab fa-twitter px-2 py-2 twi"></i>
+                                <i class="fab fa-twitter px-2 py-2 twi" style="    margin-top: 8px !important;"></i>
                                 <input type="text" class=" form-control form-bor form-width text-right"
                                     wire:model="twitter_link" aria-label="Number">
                             </div>
                         </div>
                         <div class="col-12 mt-4 form-col form-link">
                             <div class="input-group flex-nowrap">
-                                <i class="fab fa-goodreads-g px-2 py-2 good"></i>
+                                <i class="fab fa-goodreads-g px-2 py-2 good" style="    margin-top: 8px !important;"></i>
                                 <input type="text" class="form-control form-bor form-width text-right"
                                     wire:model="goread_link" aria-label="Number">
                             </div>

@@ -12,7 +12,7 @@
     @auth
         <meta name="auth-user-id" content="{{ auth()->user()->id }}">
     @endauth
-   
+
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/front/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/front/chat.css') }}">
@@ -33,11 +33,9 @@
     @auth
         <div id="chat-bubble">
             <div class="chat-container">
-                <div class="msg-chat-header ">
-                    <div class="user-avatar" onclick="openChatBubble()">
-                        <div>
-                            <h5>Message</h5>
-                        </div>
+                <div class="msg-chat-header" style="background-color:#5d001d;">
+                    <div class="user-avatar d-flex justify-content-center" onclick="openChatBubble()">
+                        <h5 class="m-0" style="color:white;"><i class="fas fa-envelope-open"></i></h5>
                     </div>
                 </div>
             </div>
@@ -45,7 +43,7 @@
         </div>
     @endauth
 
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -77,7 +75,7 @@
 
             window.livewire.on('urlChange', (url) => {
                 history.pushState(null, null, url);
-            }); 
+            });
         });
         window.onscroll = function(ev) {
             if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -90,11 +88,11 @@
             element.classList.toggle("open")
         }
 
-        Pusher.logToConsole = true; 
+        Pusher.logToConsole = true;
     </script>
     @stack('scripts')
 
-    
+
 </body>
 
 </html>

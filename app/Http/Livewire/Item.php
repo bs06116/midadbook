@@ -68,5 +68,14 @@ class Item extends Component
         }
 
     }
+    public function deleteComment($comment_id, $post_id){
+        $comment = Comment::find($comment_id);
+        if($comment->user_id == Auth::user()->id){
+            $comment->delete();
+            session()->flash('message', 'Your comment was deleted successfully.');
+            $this->emitTo('comment-list','rerenderComments'.$post_id);
+        }
+    }
+
 
 }

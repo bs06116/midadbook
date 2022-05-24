@@ -3,7 +3,6 @@
         <div class="col-xs-2 col-sm-2   col-md-3 col-lg-3"></div>
         <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 main-div">
             <!-- Post -->
-            <form>
                 <div class="post-container mt-4 px-3 pt-4 pb-4">
                     <div class="row add-head">
                         <div class="col-12 mx-4">
@@ -13,6 +12,7 @@
                         </div>
                     </div>
 
+                    <form>
 
                     <div class="row d-flex  gx-5  add-img ">
 
@@ -39,7 +39,7 @@
 
                         </div> --}}
 
-                        <div class="col-6 d-flex text-center dropzone ">
+                        <div class="col-12 d-flex text-center dropzone ">
                             <div class=" profile-images-card">
                                 <div class="profile-image">
                                     @if (!empty($book_photo))
@@ -54,7 +54,7 @@
 
                                     @endif
                                 </div>
-                                <div wire:loading wire:target="book_photo">Uploading Images...</div>
+                                <div wire:loading wire:target="book_photo">جاري تحميل الصورة</div>
 
                                 <div class="custom-file">
 

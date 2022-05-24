@@ -32,32 +32,29 @@
         <p class="text-muted pt-2">{{ $post->post_body }}
         </p>
     </div>
-    <div class="d-flex post_images ">
-        <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
-            src="{{ url('storage/' . $post->featured_image) }}" alt="{{ $post->post_title }}">
-            @if ($post->image_second != '')
-
-        <img class="w-50" style="max-height: 200px;object-fit:cover"
-            src="{{ url('storage/' . $post->image_second) }}" alt="">
-            @endif
+    <div class="d-flex post_images" style="max-height: 300px">
+        <img class="w-50 mr-1" style="{{$post->image_second =='' ? 'object-fit:contain ;width: 100% !important;':'object-fit:initial' }}" src="{{ url('storage/' . $post->featured_image) }}"
+            alt="{{ $post->post_title }}">
+        @if ($post->image_second != '')
+            <img class="w-50" style="object-fit:initial" src="{{ url('storage/' . $post->image_second) }}"
+                alt="{{$post->image_second}}">
+        @endif
 
 
     </div>
-    <div class="d-flex post_images mt-1">
-
+    @if ($post->image_third != '')
+    <div class="d-flex post_images mt-1" style="max-height: 300px">
         @if ($post->image_third != '')
-            <img class="w-50 mr-1" style="max-height: 200px;object-fit:cover"
-                src="{{ url('storage/' . $post->image_third) }}" alt="{{ $post->image_third }}">
-
+            <img class="w-50 mr-1" style="object-fit:initial" src="{{ url('storage/' . $post->image_third) }}"
+                alt="{{ $post->image_third }}">
         @endif
         @if ($post->image_fourth != '')
-
-            <img class="w-50" style="max-height: 200px;object-fit:cover"
-                src="{{ url('storage/' . $post->image_fourth) }}" alt="{{ $post->image_fourth }}">
-
-            @endif
+            <img class="w-50" style="object-fit:initial" src="{{ url('storage/' . $post->image_fourth) }}"
+                alt="{{ $post->image_fourth }}">
+        @endif
 
     </div>
+    @endif
 
 
     <div class="row f-post pt-2">
@@ -76,9 +73,16 @@
 
             <div class="row d-flex">
                 <div class="col-6 text-right">
-                    <p class="message" data-toggle="modal" data-target="#commentModal{{ $post->id }}">
-                        {{ $comment_count }} <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
-                    </p>
+                    @if (Auth::check())
+
+                        <p class="message" data-toggle="modal" data-target="#commentModal{{ $post->id }}">
+                            {{ $comment_count }} <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
+                        </p>
+                    @else
+                        <p class="message" data-toggle="modal">
+                            {{ $comment_count }} <img src="{{ asset('assets/img/front/comment_ic.png') }}" alt="">
+                        </p>
+                    @endif
                 </div>
 
                 <div class="col-6 text-center">
@@ -99,7 +103,7 @@
                                     alt="">
                             @endisset
 
-                            <a href="#" class="pl-5 ml-3 text-danger"
+                            <a href="javascript:void()" class="pl-5 ml-3 text-danger"
                                 wire:click.prevent="report({{ $post->id }})"><i
                                     class="fas fa-exclamation-triangle"></i></a>
                         @endif

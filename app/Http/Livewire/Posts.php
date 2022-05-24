@@ -44,7 +44,7 @@ class Posts extends Component
             'description' => 'required|max:255',
             'city' => 'required',
             'country' => 'required',
-            'book_photo.*' => 'image|max:1024', // 1MB Max
+            'book_photo.*' => 'image|mimes:png,jpg|max:8048', // 1MB Max
 
         ]);
         // if (!$this->book_photo || !$this->book_photo_two) {

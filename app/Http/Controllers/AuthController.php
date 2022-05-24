@@ -32,7 +32,7 @@ class AuthController extends Controller
     public function profile($username)
     {
         $user = User::where('username',$username)->first();
-        $posts = $user->posts()->get();
+        $posts = $user->posts()->orderBy('id', 'desc')->get();
         return view('frontend.profile',compact('user','posts'));
     }
     public function logout()

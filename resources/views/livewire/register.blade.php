@@ -39,7 +39,7 @@
                                         </div>
 
                                     </div>
-                                    <div wire:loading wire:target="photo">Uploading Images...</div>
+                                    <div wire:loading wire:target="photo">جاري تحميل الصورة</div>
 
                                 </div>
                                 @error('photo') <span class="text-danger error">{{ $message }}</span>@enderror

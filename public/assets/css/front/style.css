@@ -8,6 +8,34 @@
   font-family: arabic-bold;
   src: url('../../fonts/Cairo/Cairo-Bold.ttf');
 }
+.social-links.bottom {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.social-links.bottom a {
+  line-height: 1.3 !important;
+  height: 50px;
+  padding: 6px 20px !important;
+  width: 150px;
+}
+.social-links.bottom .btn-primary {
+  height: 45px;
+  width: 150px;
+  border-radius: 10px;
+}
+@media (max-width:768px) {
+  .social-links.bottom {
+    flex-direction: column;
+  }
+  .social-links.bottom a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .social-links.bottom .btn-primary {
+    width: 100%;
+  }
+}
 .chat-box{
   position: relative;
 }

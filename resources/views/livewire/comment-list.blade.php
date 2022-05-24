@@ -1,7 +1,7 @@
 <div>
 
     <!-- Comment Modal -->
-<div class="modal fade custom-edit-modal" id="commentModal{{$post_id}}" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+<div  wire:ignore.self class="modal fade custom-edit-modal" id="commentModal{{$post_id}}" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
           <div class="modal-header text-center py-2">
@@ -34,20 +34,26 @@
                       </div>
                   </div>
                   <div class="added-comment text-right">
-                      <p class="mb-0 mt-2"> {{ $comment->comment }}
+                    <p class="mb-0 mt-2">
+                        @if($edit_comment_id == $comment->id)
+                            <input type="text" class="form-control" wire:model="edit_comment_value">
+                            @error('comment') <span class="text-danger error">{{ $message }}</span>@enderror
+                        @else
+                            {{ $comment->comment }}
+                        @endif
                         @if(Auth::check())
-                        @if($comment->user_id == Auth::user()->id)
-                            @if($edit_comment_id == $comment->id)
-                                <div class="py-2">
-                                    <a class="mr-2" style="cursor: pointer;" wire:click.prevent="updateComment({{ $comment->id }})"><i class="far fa-check" style="color: #5d001d; font-size: 18px !important;" ></i></a>
-                                    <a class="text-danger" style="cursor: pointer;" wire:click.prevent="cancelCommentEdit"><i class="fa fa-times" style="font-size: 18px !important;" aria-hidden="true"></i></a>
-                                </div>
-                            @else
-                                <a class="mr-2" style="cursor: pointer;" wire:click.prevent="editComment({{ $comment->id }})"><i class="fa fa-edit" aria-hidden="true"  style="color: #5d001d; font-size: 18px !important;"></i></a>
-                                <a class="text-danger" style="cursor: pointer;" wire:click.prevent="$emit('triggerCommentDelete',{'comment_id' : {{ $comment->id }}, 'post_id' : {{ $comment->post_id }}})"><i class="fa fa-trash"  style="font-size: 18px !important;" aria-hidden="true"></i></a>
+                            @if($comment->user_id == Auth::user()->id)
+                                @if($edit_comment_id == $comment->id)
+                                    <div class="py-2">
+                                        <a class="mr-2" style="cursor: pointer;" wire:click.prevent="updateComment({{ $comment->id }})"><i class="far fa-check" style="color: #5d001d; font-size: 18px !important;" ></i></a>
+                                        <a class="text-danger" style="cursor: pointer;" wire:click.prevent="cancelCommentEdit"><i class="fa fa-times" style="font-size: 18px !important;" aria-hidden="true"></i></a>
+                                    </div>
+                                @else
+                                    <a class="mr-2" style="cursor: pointer;" wire:click.prevent="editComment({{ $comment->id }})"><i class="fa fa-edit" aria-hidden="true"  style="color: #5d001d; font-size: 18px !important;"></i></a>
+                                    <a class="text-danger" style="cursor: pointer;" wire:click.prevent="$emit('triggerCommentDelete',{'comment_id' : {{ $comment->id }}, 'post_id' : {{ $comment->post_id }}})"><i class="fa fa-trash"  style="font-size: 18px !important;" aria-hidden="true"></i></a>
+                                @endif
                             @endif
                         @endif
-                    @endif
                     </p>
                   </div>
               </div>

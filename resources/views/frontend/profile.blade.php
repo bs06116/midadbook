@@ -24,8 +24,8 @@
                 <p class="d-inline pr-3"><span>@</span>{{$user->username}}</p>
                 <h6 class="d-inline-block ml-3 pl-3">{{$user->name}}</h6>
                 <br>
-                <p class="whatsapp d-inline text-secondary pr-3">{{$user->show_phone_number ? $user->phone_number : str_repeat("*", strlen($user->phone_number))}}
-                  <img  class=" ml-" src="{{asset('assets/img/front/whatsapp_ic.png ') }}" alt=""></p>
+                {{-- <p class="whatsapp d-inline text-secondary pr-3">{{$user->show_phone_number ? $user->phone_number : str_repeat("*", strlen($user->phone_number))}}
+                  <img  class=" ml-" src="{{asset('assets/img/front/whatsapp_ic.png ') }}" alt=""></p> --}}
                 <p class="d-inline text-secondary pl-3">{{$user->city->name}}
                    <i class="fal fa-map-marker-alt"></i></p>
 
@@ -45,18 +45,17 @@
                     </div>
 
                    <br>
-                   <div class="social-links ">
-                   <a class="good-reads" target="_blank" href="{{$user->twitter_link}}"><img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt=""></a>
-                   <a class="twitter" target="_blank" href="{{$user->goread_link}}"><i class="fab fa-twitter"></i></a>
+                   <div class="social-links bottom">
+                   <a class="good-reads mr-md-3" target="_blank" href="{{$user->twitter_link}}"><img src="{{asset('assets/img/front/good_reads_logo.png ') }}" alt=""></a>
+                   <a class="twitter mr-md-3" target="_blank" href="{{$user->goread_link}}"><i class="fab fa-twitter"></i></a>
                    {{-- <button class="btn counting">30 <span>counting</span></button> --}}
-                   <div style="position: absolute; margin: 0 0;float: right;right: 33%;top: 468px">
-                    @livewire('chat.profile-chat-button', ['user_id' => $user->id])
-
+                   <div>
+                        @livewire('chat.profile-chat-button', ['user_id' => $user->id])
                    </div>
                   </div>
               </div>
                 </div>
-                
+
               </div>
 
             <!-- Post -->
@@ -75,22 +74,22 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="modal-header text-center py-2">
-            <h5 class="modal-title mx-auto" id="RatingModalLabel">الطائف</h5>
+            <h5 class="modal-title mx-auto" id="RatingModalLabel">التقييم</h5>
             <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="modal-body p-0"> 
+        <div class="modal-body p-0">
             <div class="mt-3 mb-4 px-3 rating-feedback-area" data-direction="rtl">
                 @livewire('user-rating-form',['user_id' => $user->id])
             </div>
             <div class="modal-header no-radius text-center py-2">
-                <h5 class="modal-title mx-auto">الطائف</h5>
+                <h5 class="modal-title mx-auto">التقييم</h5>
             </div>
             @livewire('user-rating-list',['user_id' => $user->id])
         </div>
         <div class="modal-footer mt-5 border-0">
-            
+
         </div>
     </div>
   </div>
